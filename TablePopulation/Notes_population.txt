@@ -41,7 +41,21 @@ Tables to ne populated: original table called "Test"
     Sant'' Elpidio A Mare       Sant'Elpidio a Mare     (Sant'Elpidio a Mare)  
 
 #2 Industries
-    Check character encoding.
+    -Check character encodin:
+    (All good)
+
+    -Check Atomisation:  
+    ------------------------------
+    Fashion & Retail
+    Finance & Investments
+    Media & Entertainment
+    Food & Beverage
+    Gambling & Casinos
+    Metals & Mining
+    Construction & Engineering
+    (Considering how these entries appear, and how the ellements of these cells never appear alone
+    , these will be accepted as atomic) 
+
     Create Industries tbl from distinct industry entries from Test tbl.
 
 #3 SourcesOfWealth (source.txt, parseSource.py, atomised_source_v2.csv)
