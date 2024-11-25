@@ -1,0 +1,57 @@
+*SQLite research
+<3   https://www.sqlitetutorial.net/
+
+Tables to ne populated: original table "test"
+1   Cities          ☑	
+2   Industries      ☑	
+3   SourcesOfWealth 
+9   Activities      	
+4   CountryNames    ☑	
+5   CountryDetails
+6   States
+7   USCities
+8   Billionaires
+
+#1 Cities (create_Cities.sql)
+    -Atomisation issues
+    City,Info       ===>    City
+    -----------------------------------
+    Krotoszyn,              Krotoszyn
+    St. Brelade, Jersey     St. Brelade
+    Tawau, Sabah            Tawau
+    London, Suffolk         London
+    Nakano, Tokyo           Tokyo
+
+    -Format changes
+    City        ==>     CITY
+    ----------------------------------
+    London              London
+    ...                 ...
+
+    -Characer encoding errors
+    current     ==>     fix      |  Real Name             | Ocurances (assumed 1)
+    ----------------------------------
+    A CoruÃ±a           A Coruna    (A Coruña)
+    KÃ¼snacht           Kussnacht   (Küssnacht)
+    GÃ¶teborg           Goteborg    (Göteborg)
+    GrÃ¤felfing         Grafelfing  (Gräfelfing)
+    Rheda-WiedenbrÃ¼ck  Rheda-Wiedenbruck   (Rheda-Wiedenbrück) x2
+    SÃ£o Paulo          Sao Paulo   (São Paulo)                 x3
+    FelcsÃºt            Felcsút     (Felcsút)
+    Sant'' Elpidio A Mare       Sant'Elpidio a Mare     (Sant'Elpidio a Mare)  
+
+#2 Industries
+    Check character encoding.
+    Create Industries tbl from distinct industry entries from Test tbl.
+
+#3 SourcesOfWealth (source.txt, parseSource.py, atomised_source_v2.csv)
+    Exported test.source column to cvs, atomised the entries with python
+    , and saved in cvs format. Fixed Character encoding errors (L'Oreal and Estee Lauder)
+    Import cvs as a new table SourceTemp.
+    Check if number of distinct sources (adjusting for multi source cells)
+    , is equal to the number of rows in the SourceTemp tbl. (check_source_count.sql)
+    Create SourcesOfWealth tbl from disitnct entries from SourceTemp
+
+#5 CountryNames
+    Check for character encoding errors.
+    Created CountryNames tbl from the UNION of citizenship and country_of_residence.
