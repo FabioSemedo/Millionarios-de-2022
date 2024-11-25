@@ -1,11 +1,11 @@
 *SQLite research
 <3   https://www.sqlitetutorial.net/
 
-Tables to ne populated: original table "test"
+Tables to ne populated: original table called "Test"
 1   Cities          ☑	
 2   Industries      ☑	
-3   SourcesOfWealth 
-9   Activities      	
+3   SourcesOfWealth ☑
+9   Activities      ☑	
 4   CountryNames    ☑	
 5   CountryDetails
 6   States
@@ -45,12 +45,33 @@ Tables to ne populated: original table "test"
     Create Industries tbl from distinct industry entries from Test tbl.
 
 #3 SourcesOfWealth (source.txt, parseSource.py, atomised_source_v2.csv)
-    Exported test.source column to cvs, atomised the entries with python
-    , and saved in cvs format. Fixed Character encoding errors (L'Oreal and Estee Lauder)
-    Import cvs as a new table SourceTemp.
-    Check if number of distinct sources (adjusting for multi source cells)
-    , is equal to the number of rows in the SourceTemp tbl. (check_source_count.sql)
-    Create SourcesOfWealth tbl from disitnct entries from SourceTemp
+    Created a new table Billionaires = {personID} X Test
+    Queried for (personID, source[]) paires
+    Exported result to cvs, atomised the entries with python
+    , and saved in cvs format.
+
+    -Atomisation
+    original     ==>    current     
+    -----------------------------
+    Tesla, SpaceX       Tesla
+                        SpaceX
+    Infrastructure, commodities     Infrastructure
+                                    Commodities
+    ...                 ...
+    
+    -Fixed Character encoding errors and unatomised sources (Manual changes)
+    original    ==>   fix           |  Real Name    | Ocurances (assumed 1)
+    -------------------------------------------
+    L'OrÃ©al          L'Oreal       L'Oréal
+    EstÃ©e Lauder     Estee Lauder  Estée Lauder    x2
+    Casinos/hotels    Casinos       n/a
+                      Hotels
+    
+
+    Import cvs to a new table Activities.
+    Check if number of sources (adjusting for multi source cells)
+    , is equal to the number of rows in the Activities tbl. (check_source_count.sql)
+    Create SourcesOfWealth tbl from distinct entries from Activities.source
 
 #5 CountryNames
     Check for character encoding errors.
