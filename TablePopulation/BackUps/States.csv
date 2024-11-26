@@ -1,0 +1,47 @@
+stateID,state,region
+1,Alabama,South
+2,Arizona,West
+3,Arkansas,South
+4,California,South
+5,Colorado,West
+6,Connecticut,Northeast
+7,Florida,South
+8,Georgia,South
+9,Hawaii,West
+10,Idaho,West
+11,Illinois,Midwest
+12,Indiana,Midwest
+13,Iowa,Midwest
+14,Kansas,Midwest
+15,Kentucky,South
+16,Louisiana,South
+17,Maine,Northeast
+18,Maryland,South
+19,Massachusetts,Northeast
+20,Michigan,Midwest
+21,Minnesota,Midwest
+22,Mississippi,South
+23,Missouri,Midwest
+24,Montana,West
+25,Nebraska,Midwest
+26,Nevada,West
+27,New Hampshire,Northeast
+28,New Jersey,Northeast
+29,New York,Northeast
+30,No subdivisions info,No subdivisions info
+31,North Carolina,South
+32,Ohio,Midwest
+33,Oklahoma,South
+34,Oregon,West
+35,Pennsylvania,Northeast
+36,Rhode Island,Northeast
+37,South Carolina,South
+38,South Dakota,Midwest
+39,Tennessee,South
+40,Texas,South
+41,U.S. Virgin Islands,U.S. Territories
+42,Utah,West
+43,Virginia,South
+44,Washington,West
+45,Wisconsin,Midwest
+46,Wyoming,South

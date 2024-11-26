@@ -8,8 +8,8 @@ SELECT *
              FROM test
        )
 ;
-/*
+-------------------------------------------------
 CREATE TABLE CountryNames(
   countryNameID INTEGER NOT NULL PRIMARY KEY,
   name TEXT NOT NULL 
-);*/
+);

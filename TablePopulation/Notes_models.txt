@@ -1,10 +1,3 @@
-Observation on Source, the origin of a billionaire's wealth. It is one of two things in our dataset:
-    A company. Eg. Google, Aldi, H&M, Trader Joe's 
-    Or A Industry Market. (Since Industry already means something in our dadaset, call this Market)
-    , which can be thought of as a generalisation of a company instance or the common market of a set of companies.
-    Since Source.IndustryMarket does imply a specific Industry in our data
-    , we chose to not associate nor generalise industries and sources. 
-
 Run a querry to check for unusual characters in TEXT columns "*[^A-za-z0-9 ,/\-]*", eg:
     original.xlsx   |   After I ran it in Python    |   Likely meaning
     L'OrÃ©al        |   11,L'Or├â┬®al               |   L'Oréal
@@ -60,6 +53,7 @@ Considerations in the UML and relational table diagram:
     Antarctica is not in the list of continets
         At present settlements in Antarctica are research bases/stations/outposts and all the people there reside on a temporary basis.
         In light of this we are not expecting to consider settlers in Antarctica
+    
     Observations on Inheritance
     -Following 1st Order Normalisation, our database avoids nulls whick led to countries not being a single class.
     -Citizenship and country_of_residence come from the same pull of names representing any 1 of the 195+ countries in the world.
@@ -83,3 +77,13 @@ Considerations in the UML and relational table diagram:
             All states are part of a Country 
                 (The Unites States to be exact)
                 (In reality other countries, such as Canada and Australia, can have 'state'-esk subdivisions however our data only considered the states of the US so our Models reflect that)
+    
+    One person can have many SourcesOfWealth, so sources will have to be a ceperate table.
+    Having Industries be its own table can help front end in a dropdown menu of existing industries.
+    
+    Observation on Source, the origin of a billionaire's wealth. It is one of two things in our dataset:
+        A company. Eg. Google, Aldi, H&M, Trader Joe's 
+        Or A Industry Market. (Since Industry already means something in our dadaset, call this Market)
+        , which can be thought of as a generalisation of a company instance or the common market of a set of companies.
+        Since Source.IndustryMarket does not imply a specific Industry in our data
+        , we chose to not associate nor generalise industries and sources. 

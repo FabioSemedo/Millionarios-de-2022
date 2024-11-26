@@ -2,13 +2,13 @@
 <3   https://www.sqlitetutorial.net/
 
 Tables to ne populated: original table called "Test"
+9   Activities      ☑	
 1   Cities          ☑	
 2   Industries      ☑	
 3   SourcesOfWealth ☑
-9   Activities      ☑	
 4   CountryNames    ☑	
 5   CountryDetails
-6   States
+6   States          ☑
 7   USCities
 8   Billionaires
 
@@ -86,7 +86,31 @@ Tables to ne populated: original table called "Test"
     Check if number of sources (adjusting for multi source cells)
     , is equal to the number of rows in the Activities tbl. (check_source_count.sql)
     Create SourcesOfWealth tbl from distinct entries from Activities.source
-
-#5 CountryNames
+ 
+#4 CountryNames
     Check for character encoding errors.
     Created CountryNames tbl from the UNION of citizenship and country_of_residence.
+
+#9 Activities
+    Billionaire.personID, SourcesOfWealth.source ID
+    Conjuction (Inner join) people and sources on Billionaire.source = SourcesOfWealth.source
+
+#6 States
+    Found Inconsistant entries:
+    States      region  #Ocurances
+    --------------------------------
+    California	South	1
+    California	Unknown	1
+    California	West	176
+    Florida	    South	92
+    Florida	    Unknown	2
+    Illinois	Midwest	22
+    Illinois	Unknown	2
+    Ohio	    Midwest	6
+    Ohio	    Unknown	1
+    Texas	    South	69
+    Texas	    Unknown	1
+
+    Wrote a querry to create and populate table States based on the most common region per state.
+    (It was a realy good query)
+

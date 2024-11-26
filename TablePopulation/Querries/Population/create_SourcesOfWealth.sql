@@ -1,20 +1,10 @@
-Alter Table Sources
-RENAME TO SourcesOfWealth;
-
-INSERT INTO Sources(name)
-    SELECT Distinct source 
-    FROM Activities 
-    ORDER BY source
-RETURNING *;
-
-
--- Fixed entry {128,Casinos/hotels} -> {128,Casinos},{128,Hotels}
-INSERT INTO Activities
-VALUES 
-    (128,"Casinos"),
-    (128,"Hotels")
-RETURNING*;
-
-DELETE FROM Activities
-WHERE source LIKE "Casinos/hotels"
-RETURNING*;
+INSERT INTO SourcesOfWealth(source)
+SELECT DISTINCT a.source
+FROM Activities a
+ORDER BY a.source;
+-------------------------------------------------
+Create TABLE SourcesOfWealth(
+    sourceID INTEGER NOT NULL PRIMARY KEY,
+    source TEXT NOT NULL UNIQUE
+);
+--Import atomised_source_v2.csv into new table Acivites 

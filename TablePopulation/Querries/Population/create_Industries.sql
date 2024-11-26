@@ -11,10 +11,10 @@ SELECT DISTINCT industry
 FROM test
 ORDER BY industry
 RETURNING *;
-
+-------------------------------------------------
 
 --CHECK industry ~~~~~ atomic, character encoding
 SELECT distinct industry
 from test
---WHERE industry glob "*[^-A-Za-z0-9 ]*" OR industry in ("Food")
+WHERE industry glob "*[^-A-Za-z0-9 ]*" OR industry in ("Food")
 order by industry;
