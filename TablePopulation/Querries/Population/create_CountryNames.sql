@@ -1,3 +1,9 @@
+-------------------------------------------------
+CREATE TABLE CountryNames(
+  countryNameID INTEGER NOT NULL PRIMARY KEY,
+  name TEXT NOT NULL 
+);
+
 INSERT INTO CountryNames(name)
 SELECT *
   FROM (
@@ -8,8 +14,9 @@ SELECT *
              FROM test
        )
 ;
--------------------------------------------------
-CREATE TABLE CountryNames(
-  countryNameID INTEGER NOT NULL PRIMARY KEY,
-  name TEXT NOT NULL 
-);
+
+--find errors (if any) in the Countries.name column
+SELECT name
+FROM Countries
+WHERE name GLOB "*[^.A-Za-z' ]*"
+;

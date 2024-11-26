@@ -12,13 +12,14 @@ ORDER BY city_of_residence;
 
 COMMIT;
 
---find errors in the city column
+--find errors (if any) in the city column
+/*
 SELECT country_of_residence ,city_of_residence
 FROM test
 WHERE city_of_residence GLOB "*[^-.A-Za-z0-9' ]*";
-
+*/
 --Character encoding errors:----------------------------------------------------------------
-
+/*
 UPDATE test
     SET city_of_residence = "Sant'Elpidio a Mare"          
     WHERE city_of_residence = "Sant'' Elpidio A Mare"          
@@ -51,31 +52,28 @@ UPDATE test
     SET city_of_residence = "Felcsut" 
     WHERE city_of_residence = "FelcsÃºt" 
     RETURNING country_of_residence, city_of_residence;
-
+*/
 
 --Atomisation issues:----------------------------------------------------------------
-
+/*
 UPDATE test
 SET city_of_residence = "Krotoszyn"
 WHERE city_of_residence = "Krotoszyn,"
 RETURNING *;
-
 UPDATE test
 SET city_of_residence = "St. Brelade"
 WHERE city_of_residence = "St. Brelade, Jersey"
 RETURNING *;
-
 UPDATE test
 SET city_of_residence = "Tawau"
 WHERE city_of_residence = "Tawau, Sabah"
 RETURNING *;
-
 UPDATE test
 SET city_of_residence = "London"
 WHERE city_of_residence = "London, Suffolk"
 RETURNING *;
-
 UPDATE test
 SET city_of_residence = "Tokyo"
 WHERE city_of_residence = "Nakano, Tokyo"
 RETURNING *;
+*/

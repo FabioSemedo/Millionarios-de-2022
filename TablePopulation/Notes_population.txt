@@ -9,8 +9,10 @@ Tables to ne populated: original table called "Test"
 4   CountryNames    ☑	
 5   CountryDetails
 6   States          ☑
-7   USCities
-8   Billionaires
+7   USCities        ☑
+8   Billionaires    ☑
+
+PLEASE FOLLOW ALONG. See create_[tableName].sql queries for more information on how the tables were populated.
 
 #1 Cities (create_Cities.sql)
     -Atomisation issues
@@ -90,10 +92,12 @@ Tables to ne populated: original table called "Test"
 #4 CountryNames
     Check for character encoding errors.
     Created CountryNames tbl from the UNION of citizenship and country_of_residence.
+    (See create_CountryNames.sql for more)
 
 #9 Activities
     Billionaire.personID, SourcesOfWealth.source ID
-    Conjuction (Inner join) people and sources on Billionaire.source = SourcesOfWealth.source
+    Conjuction (Inner join) of people and sources based on Billionaire.source = SourcesOfWealth.source
+    (See create_Activities.sql for more)
 
 #6 States
     Found Inconsistant entries:
@@ -111,6 +115,9 @@ Tables to ne populated: original table called "Test"
     Texas	    South	69
     Texas	    Unknown	1
 
-    Wrote a querry to create and populate table States based on the most common region per state.
-    (It was a realy good query)
+    Populated table States based on the most common region per state.
+    (See create_States.sql for more)
 
+#7 USCities
+    Created this table from the Conjuction of Cities, Test, States table. (inner join)
+    (See create_USCitites.sql for more)
