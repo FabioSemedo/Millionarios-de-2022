@@ -1,0 +1,19 @@
+<ul class="nav">
+  <li><a href="{{ url_for('index') }}" class="nav-link">
+    Home
+  </a></li>
+  <li><a href="{{ url_for('billionaires') }}" class="nav-link">
+    Billionaires
+  </a></li>
+   <li><a href="{{ url_for('country') }}" class="nav-link">
+    Country
+   </a></li>>
+  <li><a href="{{ url_for('stats') }}" class="nav-link">
+    Statistics
+  </a></li>
+  <li><a href="{{ url_for('about') }}" class="nav-link">
+    About
+  </a></li>
+</ul>
+
+
