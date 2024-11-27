@@ -1,0 +1,89 @@
+Run a querry to check for unusual characters in TEXT columns "*[^A-za-z0-9 ,/\-]*", eg:
+    original.xlsx   |   After I ran it in Python    |   Likely meaning
+    L'OrÃ©al        |   11,L'Or├â┬®al               |   L'Oréal
+    EstÃ©e Lauder   |   539,Est├â┬®e Lauder         |   Estée Lauder
+    - Consider UFT-8 character encoding where possible
+    - I have manually changed pID 11's source to L'Oreal, pID 539 and pID 2156 to Estee Lauder
+        This decision was made based on the fact that nowhere else do we find special characters and "Estee Lauder" shows up 4 seperate times elsewhere in the database
+    - Run a querry that shows the user existing sources that are similar to a new source they wish to enter into the database.
+        Eg. New source Esteé Lauder,  System message: We found similar fields (select column_name from table where column_name glob "Est?e Lauder")
+
+*Antarctica research
+    https://education.nationalgeographic.org/resource/antarctica/
+    https://polarguidebook.com/is-antarctica-guarded/
+    https://eu.usatoday.com/story/news/2022/12/30/do-people-live-antarctica-details-population-icy-continent/10563338002/
+
+*UML and Relational Model research
+    https://www.uml-diagrams.org/data-type.html
+    Slides das aulas teoricas. Most noteably: UML Diagrama de classes, TraducaoUML-Relacional
+
+*city and country name length research
+    SQLite max string length
+    https://sqlite.org/limits.html#max_length
+
+    https://www.atlasobscura.com/places/longest-place-name
+    https://largest.org/geography/city-names/
+    https://en.wikipedia.org/wiki/List_of_long_place_names
+    
+    https://www.worldatlas.com/articles/what-is-the-longest-country-name-in-the-world.html
+    https://worldpopulationreview.com/country-rankings/country-with-the-longest-name
+
+*edge case research
+    countries without cities 
+    https://inshorts.com/en/news/nauru-is-the-only-country-without-a-capital-1484365870108
+
+    countries with states 
+    https://worldpopulationreview.com/country-rankings/what-countries-have-states
+
+*sqlite research
+    https://www.sqlitetutorial.net/
+    https://sqlite.org/datatype3.html
+    https://stackoverflow.com/questions/16847574/how-to-use-row-number-in-sqlite
+
+*number of countries in the world
+    https://www.worldatlas.com/geography/how-many-countries-are-there-in-the-world.html
+    https://www.worldometers.info/geography/how-many-countries-are-there-in-the-world/#:~:text=Of%20the%20195%20countries%20in%20the%20world%3A%201,14%20in%20Oceania%206%202%20in%20Northern%20America
+    https://en.wikipedia.org/wiki/List_of_sovereign_states
+    
+Considerations in the UML and relational table diagram:
+    Legnth of string type attributes
+        The following was our thinking process. It is woth mentioning that SQLite TEXT does not impose string length limits.
+        Varchar(50) and varchar(100) are an industry standard and varchar is dinamic which optimises storage space
+    
+    Antarctica is not in the list of continets
+        At present settlements in Antarctica are research bases/stations/outposts and all the people there reside on a temporary basis.
+        In light of this we are not expecting to consider settlers in Antarctica
+    
+    Observations on Inheritance
+    -Following 1st Order Normalisation, our database avoids nulls whick led to countries not being a single class.
+    -Citizenship and country_of_residence come from the same pull of names representing any 1 of the 195+ countries in the world.
+        Strictly speaking, all a country's details coulb be encapsulated in a Country class
+        , name, tax info, pulation, etc.
+        However, since citizenship is not dependant on country_of_residence and vice versa
+        , we decided to allow for the introduction of country names without the need to know additional details
+        , to prevent the repetition of names CountryDetails (table storing country detials other than its name) is given a foreign key to CountryNames (table storing the names of countries {citizenship} U {country_of_residence}).
+    -Cities, States, and Countries are not in an Inheritance hierarchy
+        We could have City and State as child classes of the Country class
+        , but we saw no need to have this implemented
+        , so for the sake of simplicity we chose to agregate the classes:
+            Not all countries have states
+                (Only the states of United States are present in our data)
+            Not all countries have official cities 
+                (such a case is not present in our data)
+                (this is true for the country Nauru but it is very rare edge case)
+                (since this edge case does not affect the structure of the relational model, we allow for countries without cities)
+            All cities are part of a Country
+            Some cities are part of a state
+            All states are part of a Country 
+                (The Unites States to be exact)
+                (In reality other countries, such as Canada and Australia, can have 'state'-esk subdivisions however our data only considered the states of the US so our Models reflect that)
+    
+    One person can have many SourcesOfWealth, so sources will have to be a ceperate table.
+    Having Industries be its own table can help front end in a dropdown menu of existing industries.
+    
+    Observation on Source, the origin of a billionaire's wealth. It is one of two things in our dataset:
+        A company. Eg. Google, Aldi, H&M, Trader Joe's 
+        Or A Industry Market. (Since Industry already means something in our dadaset, call this Market)
+        , which can be thought of as a generalisation of a company instance or the common market of a set of companies.
+        Since Source.IndustryMarket does not imply a specific Industry in our data
+        , we chose to not associate nor generalise industries and sources. 

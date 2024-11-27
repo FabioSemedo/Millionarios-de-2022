@@ -1,0 +1,2966 @@
+personId,source,sourceID
+1,LVMH,370
+2,Tesla,689
+2,SpaceX,634
+3,Amazon,25
+4,Oracle,484
+5,Berkshire Hathaway,62
+6,Microsoft,423
+7,Bloomberg LP,76
+8,Telecom,681
+9,Diversified,187
+10,Microsoft,423
+11,L'Oreal,367
+12,Google,287
+13,Zara,757
+14,Google,287
+15,Beverages,64
+15,Pharmaceuticals,517
+16,Facebook,229
+17,Koch Industries,366
+18,Koch Industries,366
+19,Walmart,741
+20,Walmart,741
+21,Walmart,741
+22,Media,405
+23,Dell Technologies,172
+24,Infrastructure,347
+24,Commodities,132
+25,Nike,456
+26,TikTok,694
+27,Retail,573
+28,Luxury goods,393
+29,Shipping,603
+30,Nutella,458
+30,Chocolates,113
+31,Candy,91
+31,Pet food,508
+32,Candy,91
+32,Pet food,508
+33,Diversified,187
+34,Internet media,353
+35,Casinos,99
+36,Hedge funds,312
+37,Red Bull,568
+38,Batteries,54
+39,Fashion retail,232
+40,Music,441
+40,Chemicals,109
+41,Chanel,103
+42,Chanel,103
+43,Shipping,603
+44,Shipping,603
+45,E-commerce,194
+46,Fasteners,236
+47,Real estate,560
+48,Trading,709
+48,Investments,360
+49,Hedge funds,312
+50,Investments,360
+51,BMW,45
+51,Pharmaceuticals,517
+52,Mining,426
+53,Online games,474
+54,Mining,426
+55,Software services,621
+56,Coal,120
+57,Discount brokerage,184
+58,Fertilizers,240
+58,Coal,120
+59,BMW,45
+60,Amazon,25
+61,Banking,49
+61,Tobacco,700
+62,Metals,419
+63,E-commerce,194
+64,Home appliances,317
+65,Mining,426
+66,Banking,49
+66,Tobacco,700
+67,Chemicals,109
+68,Vaccines,725
+69,Internet,351
+69,Telecom,681
+70,Steel,658
+70,Transport,711
+71,Cheese,105
+72,Fidelity,242
+73,Gas,278
+73,Chemicals,109
+74,Walmart,741
+75,Package delivery,488
+76,Semiconductors,597
+77,Estee Lauder,223
+78,Sensors,600
+79,Steel,658
+79,Investments,360
+80,Oil,462
+81,Hospitals,325
+82,Mining,426
+83,Hedge funds,312
+84,Automobiles,39
+85,Mining,426
+85,Copper products,153
+86,Real estate,560
+86,Shipping,603
+87,Pig breeding,523
+88,Batteries,54
+88,Automobiles,39
+89,Oil & gas,463
+90,Hedge funds,312
+91,Oil,462
+91,Gas,278
+92,Quicken Loans,555
+93,Steel,658
+94,Hedge funds,312
+95,Investments,360
+96,Steel,658
+97,Real estate,560
+98,Home improvement stores,319
+99,Newspapers,453
+99,TV network,674
+100,Banking,49
+101,Aldi,21
+101,Trader Joe's,708
+102,Finance,243
+102,Telecommunications,683
+103,Medical devices,407
+104,H&M,294
+105,Google,287
+106,Hedge funds,312
+107,Soy sauce,632
+108,Supermarkets,669
+109,Beer,60
+110,Real estate,560
+111,Pharmaceuticals,517
+112,Wireless networking,755
+113,Retail,573
+113,Investments,360
+114,Batteries,54
+115,Diversified,187
+116,Retail,573
+117,Alcohol,19
+117,Real estate,560
+118,Heineken,313
+119,Medical devices,407
+120,Automobiles,39
+121,Steel,658
+121,Telecom,681
+121,Investments,360
+122,Paints,492
+123,Commodities,132
+124,Cement,101
+124,Sugar,667
+125,Real estate,560
+126,Shipping,603
+127,Hospitals,325
+128,Casinos,99
+128,Hotels,327
+129,Shipping,603
+130,Building supplies,83
+131,WhatsApp,750
+132,Dallas Cowboys,164
+133,Oil & gas,463
+133,Banking,49
+134,Real estate,560
+135,Automobiles,39
+135,Batteries,54
+136,Real estate,560
+137,Banking,49
+138,Sports,641
+138,Real estate,560
+139,Oil,462
+139,Banking,49
+139,Telecom,681
+140,Energy,216
+141,Coal,120
+142,Vaccines,725
+143,Auto parts,37
+144,Apple,29
+144,Disney,185
+145,Palm oil,493
+145,Shipping,603
+145,Property,550
+146,Real estate,560
+147,Messaging app,416
+148,Pharmaceuticals,517
+149,Pharmaceuticals,517
+150,Agribusiness,8
+151,Online retail,478
+152,Hedge funds,312
+153,Fertilizer,239
+153,Real estate,560
+154,Manufacturing,397
+155,Investments,360
+156,Luxury goods,393
+157,Luxury goods,393
+158,Video surveillance,734
+159,Internet media,353
+160,Energy,216
+160,Sports,641
+160,Entertainment,221
+161,Gas stations,279
+162,Retail,573
+162,Media,405
+163,Media,405
+164,Manufacturing,397
+164,New England Patriots,451
+165,Beer,60
+166,Gold,284
+167,E-commerce,194
+168,Cryptocurrency exchange,159
+169,Banks,50
+169,Real estate,560
+170,Software,619
+171,Medical devices,407
+172,Business software,84
+173,Oil,462
+174,Steel,658
+175,Facebook,229
+176,Auto parts,37
+177,Walmart,741
+178,Software,619
+179,Banking,49
+179,Property,550
+180,Real estate,560
+181,Oil,462
+182,Diversified,187
+183,Infrastructure,347
+183,Commodities,132
+184,Hermes,315
+185,Shipping,603
+186,Shipping,603
+187,Shipping,603
+188,Investments,360
+189,Fertilizers,240
+190,Private equity,549
+191,Smartphones,612
+192,Manufacturing,397
+193,Pharmaceuticals,517
+194,Warehouse automation,742
+195,Solar panels,629
+196,Chemicals,109
+197,Candy,91
+197,Pet food,508
+198,Candy,91
+198,Pet food,508
+199,Candy,91
+199,Pet food,508
+200,Candy,91
+200,Pet food,508
+201,Investments,360
+202,Diversified,187
+203,Biotech,70
+203,Investments,360
+204,Food delivery,260
+205,Airbnb,12
+206,Vacuums,726
+207,Steel,658
+207,Investments,360
+208,Diversified,187
+209,Energy,216
+209,Investments,360
+210,Cable television,87
+211,Software services,621
+212,Discount brokerage,184
+213,Hardware stores,299
+214,Google,287
+215,Mining,426
+216,Real estate,560
+217,Alcoholic beverages,20
+218,Hydraulic machinery,330
+219,Packaging,489
+220,Packaging,489
+221,Packaging,489
+222,Ecommerce,198
+223,Venture capital,729
+224,E-commerce,194
+225,Facebook,229
+226,EBay,196
+226,PayPal,497
+227,Batteries,54
+228,Oil,462
+229,Chemicals,109
+230,Retail,573
+230,Real estate,560
+231,Private equity,549
+232,Investments,360
+233,Soft drinks,618
+233,Fast food,235
+234,Software,619
+235,Beer,60
+236,Real estate,560
+237,Google,287
+238,Investments,360
+239,Walmart,741
+240,Solar wafers and modules,631
+241,Media,405
+241,Automotive,40
+242,Diamonds,179
+243,Media,405
+243,Automotive,40
+244,Aluminum products,24
+245,Sporting goods retail,640
+246,Drugstores,192
+247,Investments,360
+248,Real estate,560
+249,Oil,462
+249,Banking,49
+249,Telecom,681
+250,Cement,101
+250,Sugar,667
+251,Private equity,549
+252,Real estate,560
+253,Real estate,560
+254,Real estate,560
+255,Diversified,187
+256,Diversified,187
+257,Houston Rockets,329
+257,Entertainment,221
+258,Diversified,187
+259,Oil and gas,464
+259,IT,335
+259,Lotteries,388
+260,Airbnb,12
+261,Oil,462
+262,Home Depot,316
+263,Insurance,349
+264,Private equity,549
+265,Coal mines,121
+266,Investments,360
+267,Private equity,549
+268,Sports apparel,642
+269,Walmart,741
+270,Samsung,579
+271,Private equity,549
+272,Hedge funds,312
+273,Metals and mining,420
+274,Real estate,560
+274,Construction,140
+275,Telecom,681
+276,Petrochemicals,511
+277,Petrochemicals,511
+278,Financial information,246
+279,Furniture,270
+280,Shoes,604
+281,Cheese,105
+282,Cheese,105
+283,Movies,440
+283,Record labels,567
+284,Internet search,354
+285,Agribusiness,8
+286,Semiconductors,597
+287,Medical devices,407
+288,Real estate,560
+289,Photovoltaic equipment,521
+290,Pharmaceuticals,517
+291,Chemicals,109
+292,Airbnb,12
+293,Real Estate,559
+294,Chemicals,109
+295,Real estate,560
+296,E-commerce,194
+297,Pharmaceuticals,517
+298,Home Depot,316
+299,Supermarkets,669
+300,Sports apparel,642
+301,Hedge funds,312
+302,Private equity,549
+303,Restaurants,572
+304,Software,619
+305,Petrochemicals,511
+306,Textiles,692
+306,Apparel,28
+307,Real estate,560
+308,Manufacturing,397
+308,Investments,360
+309,Construction,140
+309,Investments,360
+310,Agriculture,9
+311,Cement,101
+312,Mining,426
+312,Metals,419
+312,Machinery,395
+313,Fashion retail,232
+314,Ports,532
+315,Electronics components,212
+316,Trading,709
+316,Investments,360
+317,Electronics,211
+318,Real estate,560
+318,Investments,360
+319,Auto loans,36
+320,Pipelines,525
+321,Fintech,250
+322,Personal care goods,506
+323,Beverages,64
+324,Healthcare software,307
+325,Gambling,273
+326,Self storage,593
+327,Construction equipment,141
+328,Health care,301
+329,Banking,49
+330,Electronics,211
+331,Business software,84
+332,Online games,474
+333,Online games,474
+334,Mapping software,398
+335,Paints,492
+336,Apparel,28
+337,Real estate,560
+338,Diversified,187
+339,Diversified,187
+340,Food distribution,261
+341,Food distribution,261
+342,Beverages,64
+343,Diversified,187
+344,Homebuilding,323
+344,Insurance,349
+345,Cargill,95
+346,Hedge fund,311
+347,Lithium batteries,381
+348,Real estate,560
+349,Zara,757
+350,Medical equipment,410
+351,Pipelines,525
+352,Media,405
+353,Online gambling,473
+354,Pipelines,525
+355,Pipelines,525
+356,Fidelity,242
+357,Tech investments,678
+358,Intel,350
+359,Hedge funds,312
+360,Hedge funds,312
+361,Metals,419
+361,Investments,360
+362,Electronics components,212
+363,Pipelines,525
+364,Money management,432
+365,Hedge funds,312
+366,Lego,374
+367,Lego,374
+368,Lego,374
+369,Pharmaceuticals,517
+370,Batteries,54
+371,Solar panel components,627
+372,Chemicals,109
+373,Internet,351
+373,Telecom,681
+374,Natural gas,445
+375,Real estate,560
+376,Real estate,560
+377,Hedge funds,312
+378,Computer hardware,136
+379,Lego,374
+380,Computer hardware,136
+381,Snacks,614
+381,Beverages,64
+382,Chemicals,109
+383,Chick-fil-A,111
+384,Chick-fil-A,111
+385,Chick-fil-A,111
+386,Hedge funds,312
+387,Semiconductors,597
+388,Investments,360
+389,Private equity,549
+390,Microsoft,423
+391,Retail,573
+391,Real estate,560
+392,Real estate,560
+393,Investments,360
+393,Real estate,560
+394,Real estate,560
+394,Investments,360
+395,Real estate,560
+396,Investments,360
+397,Staffing,652
+397,Baltimore Ravens,48
+398,Hedge funds,312
+399,Biomedical products,68
+400,Oil,462
+400,Banking,49
+400,Telecom,681
+401,Fertilizer,239
+402,Banking,49
+403,Construction,140
+403,Mining,426
+404,Construction equipment,141
+405,Solar equipment,625
+406,Private equity,549
+407,Pharmaceuticals,517
+408,Natural gas distribution,446
+409,Metalworking tools,421
+410,Beer,60
+410,Investments,360
+411,Investments,360
+412,Temp agency,686
+413,Beverages,64
+414,Power strips,541
+415,Power strip,540
+416,Investments,360
+417,Telecom,681
+417,Oil,462
+418,Private equity,549
+419,Coffee,127
+420,Coffee,127
+421,Hotels,327
+421,Energy,216
+422,Steel,658
+422,Mining,426
+423,Real estate,560
+423,Retail,573
+424,Real estate,560
+425,Convinience stores,149
+426,Security software,591
+427,Retail,573
+427,Investments,360
+428,Diversified,187
+429,Investments,360
+430,Investments,360
+431,Investments,360
+432,IT provider,337
+433,Retail,573
+434,Real estate,560
+435,Diversified,187
+436,Hedge funds,312
+437,Finance,243
+438,Food,258
+438,Beverages,64
+439,Private equity,549
+440,Medical devices,407
+441,Pharmaceuticals,517
+442,Steel,658
+442,Coal,120
+443,Medical equipment,410
+444,Record label,566
+445,Oil,462
+446,Real estate,560
+446,Investments,360
+447,Cement,101
+448,Shipping,603
+449,Investments,360
+450,Investments,360
+451,Investments,360
+452,Shipping,603
+453,Oil,462
+453,Real estate,560
+454,Package delivery,488
+455,Motorcycles,435
+456,Investments,360
+457,Pharmaceutical ingredients,515
+458,Hotels,327
+458,Investments,360
+459,Hotels,327
+459,Investments,360
+460,Gambling software,275
+461,Biotech,70
+462,Auto parts,37
+463,Carnival Cruises,96
+464,Media,405
+464,Automotive,40
+465,Electronics,211
+466,Payments software,501
+467,Payment software,499
+468,Timberland,696
+468,Lumber mills,392
+469,Automobiles,39
+470,Toyota dealerships,705
+471,Diversified,187
+472,Chemicals,109
+473,Pharmaceuticals,517
+474,Pharmaceuticals,517
+475,Manufacturing,397
+475,Investments,360
+476,Media,405
+476,Automotive,40
+477,Finance,243
+478,Hedge funds,312
+479,Medical packaging,411
+480,Media,405
+480,Automotive,40
+481,Software,619
+482,Biotech,70
+483,Luxury goods,393
+484,Paints,492
+485,Mortgage lender,433
+486,IT provider,337
+487,Textiles,692
+487,Petrochemicals,511
+488,Kitchen appliances,365
+489,Luxury goods,393
+490,Consumer goods,145
+491,Consumer goods,145
+492,Consumer goods,145
+493,Consumer goods,145
+494,Finance,243
+495,Real estate,560
+496,Carpet,97
+497,Fidelity,242
+498,Venture capital,729
+499,Petrochemicals,511
+500,Hotels,327
+500,Investments,360
+501,Agriculture,9
+502,Agriculture,9
+503,Pest control,507
+504,Finance,243
+504,Asset management,33
+505,Furniture,270
+506,Poultry genetics,535
+507,Retail,573
+508,Investments,360
+509,Soy sauce,632
+510,Real estate management,563
+511,Apparel,28
+512,Retail,573
+513,Telecoms,684
+513,Media,405
+513,Oil-services,468
+514,Electronics,211
+515,Frozen foods,269
+516,Online gambling,473
+517,Microsoft,423
+518,Plush toys,529
+518,Real estate,560
+519,Real estate,560
+519,Private equity,549
+520,Steel,658
+521,Investments,360
+522,Franklin Templeton,268
+523,Online games,474
+524,Private equity,549
+525,Shipping,603
+525,Seafood,586
+526,Private equity,549
+527,Pharmaceuticals,517
+528,Software,619
+529,Medical devices,407
+530,San Francisco 49ers,580
+531,Money management,432
+532,Oil,462
+532,Investments,360
+533,Biotech and investments,71
+534,Trading,709
+535,Software,619
+535,Investments,360
+536,Telecom,681
+537,Pharmaceuticals,517
+538,Online services,480
+539,Estee Lauder,223
+540,Sporting goods,639
+541,Star Wars,655
+542,Energy,216
+542,Sports,641
+543,Biotechnology,73
+544,Real estate,560
+545,Dental implants,173
+546,Food,258
+547,Lululemon,390
+548,Real estate,560
+549,New Balance,450
+550,Pharmaceuticals,517
+551,Dolby Laboratories,188
+552,E-commerce,194
+553,Payroll services,503
+554,Investments,360
+555,Investments,360
+556,Palm oil,493
+556,Nickel mining,455
+557,Medical devices,407
+558,Cheese,105
+559,U-Haul,719
+560,Washington Commanders,743
+561,Diversified,187
+562,Pipelines,525
+563,E-commerce,194
+564,Sports retailing,645
+565,Supermarkets,669
+566,Hospitals,325
+567,Gas stations,279
+567,Retail,573
+568,Cleaning products,115
+569,Cleaning products,115
+570,Cleaning products,115
+571,Venture capital,729
+572,IT provider,337
+573,Cleaning products,115
+574,Pharmaceuticals,517
+575,Manufacturing,397
+576,Mining,426
+577,Energy,216
+577,Investments,360
+578,New Orleans Saints,452
+579,Electronics,211
+580,Carpet,97
+581,Banking,49
+582,Real estate,560
+583,Samsung,579
+584,Hair dryers,296
+585,Bloomberg LP,76
+586,Aluminum,23
+586,Diversified,187
+587,Video games,731
+588,Vodka,739
+589,Online media,475
+589,Dallas Mavericks,165
+590,Cable television,87
+591,Twitter,715
+591,Square,651
+592,Petrochemicals,511
+593,Mining,426
+594,Financial services,247
+595,Estee Lauder,223
+596,Renewable energy,571
+597,Gaming,276
+598,Telecom,681
+599,Supermarkets,669
+600,Supermarkets,669
+601,Supermarkets,669
+602,Food,258
+603,FedEx,237
+604,Private equity,549
+605,Heating,309
+605,Cooling equipment,151
+606,Energy drinks,218
+607,Healthcare,304
+608,Tequila,688
+609,Software,619
+610,Acoustic components,4
+611,Software,619
+612,Dairy,162
+613,Software services,621
+614,Retail,573
+614,Real estate,560
+615,Private equity,549
+616,Real estate,560
+617,Fintech,250
+618,Chemicals,109
+619,Retail,573
+620,Chemicals,109
+620,Spandex,635
+621,Biotech,70
+621,Vaccines,725
+622,Computer services,138
+622,Real estate,560
+623,Defense,170
+624,Staffing & recruiting,653
+625,Construction,140
+626,Biochemicals,67
+627,Retail,573
+628,Real estate,560
+629,Philadelphia Eagles,520
+630,Investment research,359
+631,Home-cleaning robots,321
+632,Titanium,699
+633,Telecom,681
+634,Private equity,549
+635,Banking,49
+636,Private equity,549
+637,Pharmaceuticals,517
+638,Trucking,714
+639,Little Caesars Pizza,384
+640,Pharmacies,518
+641,Metals,419
+642,Banking,49
+643,Banking,49
+644,Cargill,95
+645,Real estate,560
+646,Diversified,187
+647,Medical equipment,410
+648,Finance,243
+649,Finance,243
+650,Drones,190
+651,Solar inverters,626
+652,Business software,84
+653,Investments,360
+654,Carnival Cruises,96
+655,Oil,462
+655,Banking,49
+655,Telecom,681
+656,Real estate,560
+657,Real estate,560
+658,Insurance,349
+659,Franklin Templeton,268
+660,Coal,120
+661,Navigation equipment,447
+662,Finance,243
+663,Groupon,292
+663,Investments,360
+664,Smartphones,612
+665,Investments,360
+666,Venture capital,729
+667,Hotels,327
+667,Investments,360
+668,U-Haul,719
+669,EBay,196
+670,In-N-Out Burger,339
+671,Supermarkets,669
+672,Diversified,187
+673,Facebook,229
+673,Investments,360
+674,Agriculture,9
+675,Food services,264
+676,Publishing,552
+677,Beverages,64
+678,Oil,462
+678,Real estate,560
+679,Software,619
+680,Spirits,638
+681,Elevators,213
+681,Escalators,222
+682,Paint,491
+683,Food service,263
+684,Tobacco distribution,701
+684,Retail,573
+685,Campbell Soup,90
+686,Banking,49
+686,Minerals,424
+687,Banking,49
+687,Minerals,424
+688,Billboards,65
+688,Los Angeles Angels,387
+689,Train cars,710
+690,Real estate,560
+691,Construction equipment,141
+691,Media,405
+692,Cybersecurity,161
+693,Biotech,70
+694,Oil,462
+694,Investments,360
+695,Email marketing,214
+696,Subway,666
+697,Conglomerate,139
+698,Electrical equipment,207
+699,Sports,641
+700,Uber,720
+701,Aluminum,23
+702,Email marketing,214
+703,Battery separators,56
+704,E-commerce,194
+705,Car dealerships,92
+706,Telecom,681
+707,Telecom,681
+708,Marvel comics,400
+709,Banking,49
+709,Real estate,560
+710,Telecom,681
+711,Movies,440
+712,Pharmaceuticals,517
+713,Oil trading,467
+714,Steel,658
+715,Valves,728
+716,Auto parts,37
+717,Cargill,95
+718,Cargill,95
+719,Insurance,349
+719,Beverages,64
+720,Insurance,349
+721,Hyundai,333
+722,Investments,360
+723,Coffee makers,128
+724,Optometry,483
+725,Oil,462
+726,Indianapolis Colts,340
+727,Diversified,187
+728,Cargill,95
+729,Hospitals,325
+730,Banking,49
+730,Minerals,424
+731,Banking,49
+731,Minerals,424
+732,Videogames,735
+733,Consumer goods,145
+734,Consumer goods,145
+735,Consumer goods,145
+736,Glass,283
+737,Venture capital,729
+738,Finance,243
+739,Consumer goods,145
+740,Pharmaceuticals,517
+741,Semiconductors,597
+742,Pharmaceuticals,517
+743,Aviation,44
+744,Cement,101
+744,Diversified,187
+745,Online media,475
+746,Investments,360
+747,Private equity,549
+748,Airline,14
+749,Poultry processing,536
+750,Book distribution,77
+750,Transportation,712
+751,Electric vehicles,205
+752,Real estate,560
+753,Real estate,560
+754,Oil & gas,463
+755,Mobile phone retailer,430
+756,Healthcare,304
+757,Finance,243
+758,Aircraft leasing,13
+759,Packaging materials,490
+760,Packaging materials,490
+761,Fintech,250
+762,Insurance,349
+763,Real estate,560
+764,Real estate,560
+765,Imaging systems,338
+766,Logistics,386
+767,Hotels,327
+767,Motels,434
+768,Advertising,6
+769,IT provider,337
+770,Real estate,560
+771,Fintech,250
+772,Retail,573
+773,Motors,437
+774,Hedge funds,312
+775,Retail,573
+776,Hotels,327
+776,Investments,360
+777,Software,619
+778,Starbucks,656
+779,Best Buy,63
+780,Real estate,560
+781,Electrical equipment,207
+782,Diversified,187
+783,Diversified,187
+784,Venture capital,729
+785,Private equity,549
+786,Auto parts,37
+786,Distribution,186
+787,Beer,60
+788,Hotels,327
+789,Banking,49
+790,Casinos,99
+791,Hedge funds,312
+792,Car dealerships,92
+793,Investments,360
+794,Fintech,250
+795,Venture capital,729
+796,Real estate,560
+797,Real estate,560
+798,Hedge funds,312
+799,Diversified,187
+800,Shoes,604
+801,Software,619
+802,Software,619
+803,Software,619
+804,Hotels,327
+804,Investments,360
+805,Supermarkets,669
+806,Real estate,560
+807,Fashion investments,231
+808,Shipping,603
+809,Liquor,378
+810,Automobiles,39
+810,Batteries,54
+811,Smartphone components,610
+812,Electric bikes,202
+812,Scooters,585
+813,Eyeglasses,227
+814,Generic drugs,281
+815,Investments,360
+816,Microchip testing,422
+817,Private equity,549
+818,Eyeglasses,227
+819,Eyeglases,226
+820,Eyeglasses,227
+821,Eyeglasses,227
+822,Eyeglasses,227
+823,Eyeglasses,227
+824,Investing,356
+825,Skincare,608
+826,Software,619
+827,Oil,462
+827,Coal,120
+827,Real estate,560
+828,Paper,494
+829,Infant formula,345
+830,Hedge funds,312
+831,Commodities,132
+832,Hospitals,325
+833,Investments,360
+834,Drugstores,192
+835,Construction,140
+835,Pipes,526
+835,Banking,49
+836,Winter jackets,753
+837,Biopharmaceuticals,69
+838,Auto parts,37
+839,Private equity,549
+840,Business software,84
+841,Manufacturing,397
+842,Fertilizer,239
+843,Cybersecurity,161
+844,Shipping,603
+845,Eyeglasses,227
+846,Steel,658
+847,Hedge funds,312
+848,Renewable energy,571
+849,Metals,419
+850,Diversified,187
+851,Consumer goods,145
+852,Chemicals,109
+853,Virgin,736
+854,Finance,243
+855,Spirits,638
+856,Diamond jewelry,178
+857,Cable television,87
+858,Johnson & Johnson,364
+858,Sports,641
+859,Investments,360
+860,Estee Lauder,223
+861,Tobacco,700
+862,Online retail,478
+863,Web hosting,747
+864,TD Ameritrade,671
+865,Real estate,560
+866,Pharmaceuticals,517
+867,Publishing,552
+868,Flavorings,255
+869,Pharmaceuticals,517
+870,Software,619
+871,Zoom Video Communications,758
+872,Bloomberg LP,76
+873,Scaffolding,583
+873,Cement mixers,102
+874,Hedge funds,312
+875,Hearing aids,308
+876,Quartz products,554
+877,Campbell Soup,90
+878,Beer,60
+879,Car dealerships,92
+880,Surveillance equipment,670
+881,Shopping malls,606
+882,Homebuilding,323
+883,Diversified,187
+884,Investments,360
+885,Movie making,438
+886,Home furnishings,318
+887,Fertilizer,239
+888,Discount brokerage,184
+889,Casinos,99
+889,Real estate,560
+890,Telecom,681
+891,Venture capital,729
+892,Software,619
+893,Finance and investments,244
+894,Fintech,250
+895,Hedge fund,311
+896,Investments,360
+897,Furniture,270
+898,Retail,573
+899,Fashion retail,232
+899,Investments,360
+900,Fashion retail,232
+900,Investments,360
+901,Chemicals,109
+902,Supermarkets,669
+902,Investments,360
+903,Household chemicals,328
+904,Fashion,230
+905,Chemicals,109
+906,Biotech,70
+907,Satellite TV,582
+908,Yahoo,756
+909,Logistics,386
+909,Real estate,560
+910,Retail,573
+911,Software services,621
+912,Department stores,176
+913,Investment,357
+914,Pharmaceuticals,517
+915,Investments,360
+916,Samsung,579
+917,Lithium,380
+918,Manufacturing,397
+919,Pharmaceuticals,517
+919,Power,538
+920,Pharmaceuticals,517
+920,Power,538
+921,Mining,426
+921,Commodities,132
+922,Real estate,560
+923,Cars,98
+924,Construction,140
+925,Private equity,549
+926,Energy drinks,218
+927,Ticketing service,693
+928,Oil & gas,463
+928,Investments,360
+929,Packaging,489
+930,Retail,573
+931,Investment banking,358
+932,Medical equipment,410
+933,Transport,711
+933,Engineering,220
+933,Real estate,560
+934,Software,619
+935,Software,619
+936,Electronic trading,210
+937,Wine,752
+938,Casinos,99
+938,Hotels,327
+939,Video games,731
+940,Auto parts,37
+941,Auto parts,37
+942,Online gambling,473
+943,Investments,360
+944,Flavorings,255
+945,Paints,492
+946,Paints,492
+947,Investments,360
+948,Aviation,44
+949,Real estate,560
+950,Digital advertising,181
+951,Netflix,448
+952,Education,200
+953,Cosmetics,155
+954,Palm oil,493
+955,Estee Lauder,223
+956,Meat processing,404
+957,Glass,283
+958,Chemical industry,107
+959,Mining,426
+959,Commodities,132
+960,Readymade garments,558
+961,Diversified,187
+962,Private equity,549
+963,Real estate,560
+964,Real estate,560
+965,Banking,49
+966,Hotels,327
+966,Investments,360
+967,Diversified,187
+968,Fashion,230
+969,Publishing,552
+970,Real estate,560
+971,Stock brokerage,662
+972,Nutrition,459
+972,Wellness products,749
+973,Online games,474
+974,Diversified,187
+975,Diversified,187
+976,Real estate,560
+976,Investments,360
+977,Oil & gas,463
+978,Art,31
+978,Car dealerships,92
+979,Software,619
+979,Investments,360
+980,Pharmaceuticals,517
+981,Spirits,638
+982,Real estate,560
+983,Hair care products,295
+984,Real estate,560
+985,Private equity,549
+986,Drugstores,192
+987,Shopping centers,605
+988,Private equity,549
+989,Copper,152
+989,Education,200
+990,Used cars,723
+991,Frozen foods,269
+992,Banking,49
+993,Hearing aids,308
+994,Real estate,560
+995,Chemicals,109
+996,Fashion retail,232
+997,Pharmaceuticals,517
+998,Supermarkets,669
+999,Electronics,211
+1000,Consumer goods,145
+1001,Laboratory services,371
+1002,Pharmaceuticals,517
+1003,Hedge funds,312
+1004,Pharmaceuticals,517
+1005,Fashion retail,232
+1006,Sports apparel,642
+1007,Liquor,378
+1008,Real estate,560
+1009,Restaurants,572
+1010,Palm oil,493
+1011,Diversified,187
+1012,Diversified,187
+1013,Education,200
+1014,Gaming,276
+1015,Pharmaceuticals,517
+1016,Investments,360
+1017,Solar panel materials,628
+1018,Fashion retail,232
+1019,Automotive brakes,41
+1020,Pharmaceuticals,517
+1021,Real estate,560
+1022,Mobile phones,431
+1023,Netscape,449
+1023,Investments,360
+1024,Convenience stores,148
+1025,Hair products,297
+1025,Tequila,688
+1026,Formula One,267
+1027,Defense,170
+1027,Hotels,327
+1028,Live entertainment,385
+1029,Furniture,270
+1030,Engineering,220
+1031,Medical devices,407
+1032,Homebuilding,323
+1033,Real estate,560
+1034,Diversified,187
+1035,Samsung,579
+1036,Consumer products,146
+1037,Healthcare,304
+1038,Packaging,489
+1039,Flavorings,255
+1040,Spotify,650
+1041,Energy,216
+1042,Drugstores,192
+1043,Software,619
+1044,Real estate,560
+1045,Real estate,560
+1046,Oil & gas,463
+1047,Investments,360
+1048,Tires,698
+1049,Pharmaceuticals,517
+1050,TV network,674
+1050,Investments,360
+1051,Energy drinks,218
+1052,Hedge fund,311
+1053,Medical devices,407
+1054,Hedge funds,312
+1055,Chewing gum,110
+1056,Supermarkets,669
+1057,Fashion retail,232
+1058,Jewelry,363
+1059,Pharmaceuticals,517
+1060,Uber,720
+1061,Casinos,99
+1061,Property,550
+1061,Energy,216
+1062,Hotels,327
+1063,Hyundai,333
+1064,Consumer goods,145
+1065,Supermarkets,669
+1066,Chemicals,109
+1067,Casinos,99
+1067,Mixed martial arts,428
+1068,Sensor technology,599
+1069,Consumer goods,145
+1070,Diversified,187
+1071,Palm oil,493
+1071,Property,550
+1072,Construction materials,142
+1073,Chemicals,109
+1074,Walmart,741
+1074,Logistics,386
+1075,Telecom,681
+1076,Telecom,681
+1077,Real estate,560
+1078,Consumer goods,145
+1079,Art collection,32
+1080,Software services,621
+1081,Retail,573
+1082,Retail,573
+1082,Real estate,560
+1083,Education,200
+1084,Adhesives,5
+1085,Facebook,229
+1086,Drug distribution,191
+1087,Video streaming,732
+1088,Metals,419
+1088,Coal,120
+1089,Petrochemicals,511
+1090,Shipping,603
+1091,EBay,196
+1092,Building materials,82
+1093,Pharmaceuticals,517
+1094,Electrical equipment,207
+1095,Investments,360
+1096,Investments,360
+1097,Diversified,187
+1098,Diversified,187
+1099,Diversified,187
+1100,Diversified,187
+1101,Commodities,132
+1102,Biopharmaceuticals,69
+1103,Pharmaceuticals,517
+1104,Pharmaceuticals,517
+1105,Metals,419
+1105,Mining,426
+1106,Fast food,235
+1107,Hedge funds,312
+1108,Oil & gas,463
+1109,Casinos,99
+1109,Mixed martial arts,428
+1110,Automobiles,39
+1111,Money management,432
+1112,Hotels,327
+1113,Mining,426
+1114,Mining,426
+1114,Steel,658
+1115,Consumer goods,145
+1116,Building materials,82
+1117,Financial services,247
+1118,Real estate,560
+1119,Real estate,560
+1120,Diversified,187
+1121,Banking,49
+1121,Insurance,349
+1121,Media,405
+1122,Real estate,560
+1123,Real Estate,559
+1124,3D printing,1
+1125,Scientific equipment,584
+1126,Real estate,560
+1127,Casinos,99
+1128,Software,619
+1129,Nutritional supplements,460
+1130,Entertainment,221
+1131,Mining,426
+1132,Telecom,681
+1133,Diversified,187
+1134,Copy machines,154
+1134,Software,619
+1135,Consumer goods,145
+1136,Consumer goods,145
+1137,Real estate,560
+1138,Biotech investing,72
+1139,Facebook,229
+1140,Technology services,680
+1141,Agrochemicals,10
+1142,Real estate,560
+1142,Airport,16
+1143,Snapchat,615
+1144,Printing,548
+1145,Movies,440
+1145,Investments,360
+1146,Mining,426
+1146,Banking,49
+1146,Hotels,327
+1147,Fish farming,251
+1148,Furniture,270
+1149,Medical equipment,410
+1150,Pharmaceuticals,517
+1151,Real estate,560
+1152,Biotech investing,72
+1153,Investing,356
+1154,Online games,474
+1155,Beef processing,59
+1156,Beef packing,58
+1157,Magazines,396
+1157,Media,405
+1158,Chemicals,109
+1159,Pharmaceuticals,517
+1160,Investments,360
+1161,E-cigarettes,193
+1162,Airport management,17
+1163,Pipelines,525
+1164,Construction,140
+1165,Battery components,55
+1166,Campbell Soup,90
+1167,Investments,360
+1168,Investments,360
+1169,Manufacturing,397
+1170,Berkshire Hathaway,62
+1171,Cosmetics,155
+1172,Construction,140
+1173,Airport,16
+1174,Construction,140
+1174,Investments,360
+1175,Real estate,560
+1176,Hedge funds,312
+1177,Bakeries,46
+1178,Software,619
+1179,Auto dealerships,35
+1180,Education,200
+1181,Investments,360
+1182,Diversified,187
+1183,Travel,713
+1184,Chemicals,109
+1184,Investments,360
+1185,Investments,360
+1186,Prosthetics,551
+1187,Retailing,575
+1188,Investments,360
+1189,Real estate,560
+1189,Airport,16
+1190,Hotels,327
+1190,Investments,360
+1191,Beer,60
+1192,Payroll software,504
+1193,Auto parts,37
+1194,Pharmaceuticals,517
+1195,Chemicals,109
+1196,Liquefied natural gas,377
+1197,Brakes,78
+1197,Investments,360
+1198,Food processing,262
+1199,Heating and cooling equipment,310
+1200,Electronics,211
+1201,Security software,591
+1202,Slim-Fast,609
+1203,Shoes,604
+1204,Shoes,604
+1205,Shoes,604
+1206,Engineering,220
+1206,Construction,140
+1207,Investments,360
+1208,Liquor,378
+1209,Consumer goods,145
+1210,Car dealerships,92
+1211,Video streaming app,733
+1212,Fast food,235
+1213,Fast food,235
+1214,Hedge funds,312
+1215,Cement,101
+1216,Beef processing,59
+1217,Aluminum,23
+1217,Utilities,724
+1218,Software,619
+1219,Hedge funds,312
+1220,Plastic pipes,527
+1221,Fertilizer,239
+1222,Information technology,346
+1223,Private equity,549
+1224,Gas stations,279
+1225,Investments,360
+1226,Music,441
+1227,Engineering,220
+1228,Energy,216
+1229,Tobacco,700
+1230,Engineering,220
+1231,Paper & related products,495
+1232,Real estate,560
+1233,Jewelry,363
+1234,Coffee,127
+1234,Shipping,603
+1235,Medical devices,407
+1236,Tractors,707
+1237,Snapchat,615
+1238,Shopping centers,605
+1239,Aerospace,7
+1240,Hotels,327
+1240,Investments,360
+1241,Semiconductors,597
+1242,Diversified,187
+1243,Steel production,660
+1244,Online games,474
+1244,Investments,360
+1245,Real estate,560
+1246,Diversified,187
+1247,Diversified,187
+1248,Oil & gas,463
+1248,Investments,360
+1249,Investments,360
+1250,Real estate,560
+1251,Auto repair,38
+1252,Retail,573
+1253,TV shows,676
+1254,Bakery chain,47
+1255,Cobalt,123
+1256,Retail,573
+1257,WhatsApp,750
+1258,Auto dealers,34
+1258,Investments,360
+1259,Oil,462
+1259,Investments,360
+1260,Media,405
+1260,Investments,360
+1261,Medical technology,415
+1262,Herbal products,314
+1263,Retail,573
+1264,Private equity,549
+1265,Gap,277
+1266,Banking,49
+1267,Pharmaceuticals,517
+1268,Private equity,549
+1269,Gambling,273
+1270,Real estate,560
+1271,Financial services,247
+1272,Pharmaceuticals,517
+1273,Diversified,187
+1274,Valve manufacturing,727
+1275,Media,405
+1276,Cryptocurrency,158
+1277,Aerospace,7
+1278,Soy sauce,632
+1279,Commodities,132
+1280,Hotels,327
+1280,Investments,360
+1281,Real estate,560
+1282,Hand tools,298
+1283,Diversified,187
+1284,Financial services,247
+1285,Payments software,501
+1286,Diversified,187
+1287,Diversified,187
+1288,Diversified,187
+1289,Semiconductors,597
+1290,Cable television,87
+1291,Real estate,560
+1292,Private equity,549
+1293,Yahoo,756
+1294,Machinery,395
+1295,Chemicals,109
+1296,Real estate,560
+1296,Media,405
+1297,Hedge funds,312
+1298,Oil,462
+1298,Investments,360
+1299,Sensor systems,598
+1300,Sensor systems,598
+1301,Columbia Sportswear,130
+1302,Semiconductors,597
+1303,Real estate,560
+1304,Flavorings,255
+1305,Software services,621
+1306,Tires,698
+1306,Diversified,187
+1307,Tires,698
+1307,Diversified,187
+1308,Spotify,650
+1309,Gap,277
+1310,Retail,573
+1311,Construction,140
+1312,Private equity,549
+1313,Manufacturing,397
+1314,Private equity,549
+1315,Online retailing,479
+1316,Soy sauce,632
+1317,Pharmaceuticals,517
+1318,Financial services,247
+1319,Restaurants,572
+1320,Financial services,247
+1321,Casinos,99
+1322,Consumer goods,145
+1323,Pet food,508
+1324,Retail,573
+1325,Agriculture,9
+1325,Land,372
+1326,Dole,189
+1326,Real estate,560
+1327,Art collection,32
+1328,Investments,360
+1329,Candy,91
+1330,Candy,91
+1331,Luxury goods,393
+1332,Luxury goods,393
+1333,Diversified,187
+1334,Liquor,378
+1335,Investments,360
+1336,Medical devices,407
+1337,Real estate,560
+1337,Grains,288
+1338,Fashion retail,232
+1339,Measuring instruments,403
+1340,Finance,243
+1341,Computer networking,137
+1342,Real estate,560
+1342,Investments,360
+1343,Real estate,560
+1344,Tires,698
+1345,Real estate,560
+1346,Chicken processing,112
+1347,Pearlescent pigments,505
+1348,Construction,140
+1348,Mining machinery,427
+1349,Dental materials,174
+1350,Precision machinery,545
+1351,Real estate,560
+1351,Investments,360
+1352,Cryptocurrency,158
+1353,Oil,462
+1353,Mining,426
+1354,Diversified,187
+1355,Business software,84
+1356,Retail,573
+1356,Agribusiness,8
+1357,Insurance,349
+1358,Investments,360
+1359,Pharmaceuticals,517
+1360,Finance,243
+1361,Pharmaceuticals,517
+1362,Fashion,230
+1363,Poultry,533
+1364,Hedge funds,312
+1365,Investments,360
+1366,Pharmaceuticals,517
+1367,Automotive,40
+1368,SAP,577
+1369,Hospitals,325
+1370,Real estate,560
+1371,Finance,243
+1372,Sunglasses,668
+1373,Damaged cars,166
+1374,Sports apparel,642
+1375,Cryptocurrency,158
+1376,Retail,573
+1377,Conglomerate,139
+1378,Diversified,187
+1379,Software,619
+1380,Investments,360
+1381,Private equity,549
+1382,Berkshire Hathaway,62
+1383,WeWork,746
+1384,Airlines,15
+1385,Beverages,64
+1386,Manufacturing,397
+1386,Investment,357
+1387,Software,619
+1388,Health IT,300
+1389,Healthcare,304
+1390,Sports teams,648
+1391,Payroll processing,502
+1392,Jewelry,363
+1393,Biotech,70
+1394,Software,619
+1395,Venture capital,729
+1395,Google,287
+1396,Real estate,560
+1397,Software,619
+1398,Hedge funds,312
+1399,Diversified,187
+1400,Diversified,187
+1401,Real estate,560
+1402,Textiles,692
+1402,Petrochemicals,511
+1403,Software,619
+1404,H&M,294
+1405,Healthcare,304
+1406,Business software,84
+1407,Sports apparel,642
+1408,Budget airline,80
+1409,Coca-Cola Israel,125
+1410,Batteries,54
+1411,Agribusiness,8
+1412,Electronics,211
+1413,Package delivery,488
+1414,Investments,360
+1415,Steel,658
+1416,Batteries,54
+1417,Mining,426
+1417,Commodities,132
+1418,Coffee,127
+1419,Construction,140
+1419,Media,405
+1420,Casinos,99
+1420,Banking,49
+1421,Consumer goods,145
+1422,Manufacturing,397
+1423,Electronics,211
+1424,Software,619
+1425,Oil & gas,463
+1426,Hearing aids,308
+1427,Luxury goods,393
+1428,Internet service provider,355
+1429,Animal health,27
+1429,Investments,360
+1430,Animal health,27
+1430,Investments,360
+1431,Real estate,560
+1432,Oil refining,466
+1433,Luxury goods,393
+1434,Steel,658
+1435,Getty Oil,282
+1436,Space,633
+1436,Energy,216
+1437,Clinical trials,117
+1438,Diversified,187
+1439,Diversified,187
+1440,Real estate,560
+1441,Consumer goods,145
+1442,Real estate,560
+1442,Investments,360
+1443,Supermarkets,669
+1444,Diversified,187
+1445,Machinery,395
+1446,Payment processing,498
+1447,Software,619
+1448,Retail,573
+1449,Retail,573
+1450,Real estate,560
+1451,Smartphone screens,611
+1452,Hedge funds,312
+1453,Accounting services,3
+1454,Sports teams,648
+1455,Real estate,560
+1456,Power supply equipment,542
+1457,Retail,573
+1458,Snack bars,613
+1459,Internet search,354
+1460,Diversified,187
+1461,Footwear,265
+1462,Investments,360
+1463,Biopharmaceuticals,69
+1464,Auto parts,37
+1465,E-commerce,194
+1466,Building materials,82
+1467,Metals,419
+1467,Banking,49
+1467,Fertilizers,240
+1468,Appliances,30
+1469,Construction,140
+1470,Steel pipes,659
+1470,Diversified,187
+1471,E-commerce,194
+1472,Education technology,201
+1473,Infrastructure,347
+1474,Fast fashion,234
+1475,Medical cosmetics,406
+1476,Investments,360
+1477,Biotech,70
+1478,Two-wheelers,717
+1479,Dick's Sporting Goods,180
+1480,Edible oil,199
+1481,Real estate,560
+1482,Pet food,508
+1483,Food processing,262
+1484,Greek yogurt,289
+1485,Furniture retailing,272
+1486,Food,258
+1486,Beverages,64
+1487,Food,258
+1487,Beverages,64
+1488,Food,258
+1488,Beverages,64
+1489,Food,258
+1489,Beverages,64
+1490,Casinos,99
+1490,Hotels,327
+1491,Auto parts,37
+1492,Retail,573
+1493,Glass,283
+1494,Metal processing,418
+1495,Chemicals,109
+1496,Pharmaceuticals,517
+1497,Engineering,220
+1498,Retail,573
+1498,Investments,360
+1499,Online dating,471
+1500,Security,589
+1501,Software,619
+1502,Pharmaceuticals,517
+1503,Semiconductors,597
+1504,Stationery,657
+1505,Diversified,187
+1506,Energy,216
+1506,Chemicals,109
+1507,Nutella,458
+1507,Chocolates,113
+1508,Low-cost airlines,389
+1509,Pharmaceuticals,517
+1510,Real estate,560
+1511,Mining,426
+1512,Technology,679
+1513,Silicon,607
+1514,Amusement parks,26
+1515,Finance,243
+1516,Charlotte Hornets,104
+1516,Endorsements,215
+1517,Real estate,560
+1518,Software,619
+1518,Investments,360
+1519,Dental products,175
+1520,E-commerce,194
+1521,Semiconductor,594
+1522,TikTok,694
+1523,Appliances,30
+1524,Energy,216
+1524,Real estate,560
+1525,Petrochemicals,511
+1526,Real estate,560
+1527,Investments,360
+1528,Telecom,681
+1529,Power equipment,539
+1530,Logistics,386
+1531,Investments,360
+1532,Mining,426
+1533,Cybersecurity,161
+1534,Hotels,327
+1534,Investments,360
+1535,Infrastructure,347
+1536,Mining,426
+1537,Mining,426
+1538,Banking,49
+1538,Credit cards,156
+1539,Engineering,220
+1540,TV broadcasting,673
+1541,Cosmetics,155
+1542,Data centers,168
+1543,Sports,641
+1544,Investments,360
+1545,Banking,49
+1545,Insurance,349
+1546,Mining,426
+1547,Plastics,528
+1548,Touch screens,703
+1549,Semiconductor,594
+1550,Electronics components,212
+1551,Software,619
+1552,Solar energy equipment,624
+1553,Healthcare,304
+1554,Forestry,266
+1554,Mining,426
+1555,Oil & gas,463
+1556,Sports,641
+1557,Banking,49
+1558,Oil,462
+1558,Gas,278
+1559,Luxury goods,393
+1560,Supermarkets,669
+1561,Furniture retailing,272
+1562,Stationery,657
+1563,Batteries,54
+1564,Communication equipment,133
+1565,Diversified,187
+1566,Diversified,187
+1567,Cargill,95
+1568,Coca-Cola bottler,126
+1569,Las Vegas Raiders,373
+1570,Hedge funds,312
+1571,Auto parts,37
+1572,Pharmaceuticals,517
+1572,Diversified,187
+1573,Pharmaceuticals,517
+1573,Diversified,187
+1574,Airports,18
+1574,Investments,360
+1575,Real estate,560
+1576,Cosmetics,155
+1577,Electrical equipment,207
+1578,Conglomerate,139
+1579,Banking,49
+1579,Investments,360
+1580,LinkedIn,376
+1581,Chemicals,109
+1582,Storage facilities,665
+1583,Real estate,560
+1584,Private equity,549
+1585,Investments,360
+1586,Diversified,187
+1587,Sears,588
+1588,Diversified,187
+1589,Cheese,105
+1590,Real estate,560
+1591,Real estate,560
+1592,Cargill,95
+1593,Telecom,681
+1594,Retail,573
+1595,Price comparison website,546
+1596,Restaurants,572
+1597,Adhesives,5
+1598,Adhesives,5
+1599,Hotels,327
+1599,Investments,360
+1600,Jewellery,362
+1601,Kitchen appliances,365
+1602,Hedge funds,312
+1603,Homebuilding,323
+1603,NFL team,443
+1604,Photovoltaics,522
+1605,Diversified,187
+1606,Semiconductors,597
+1607,Plastics,528
+1608,Investments,360
+1609,Cargill,95
+1610,Diversified,187
+1611,Paints,492
+1612,Construction,140
+1613,Drugstores,192
+1614,Oil and gas,464
+1615,Real estate,560
+1616,Real estate,560
+1617,Retail,573
+1618,Campbell Soup,90
+1619,Pharmaceuticals,517
+1620,Chemicals,109
+1620,Logistics,386
+1621,Precious metals,544
+1621,Real estate,560
+1622,Oil,462
+1622,Banking,49
+1623,Chemicals,109
+1624,Software,619
+1625,Home furnishings,318
+1626,Hotels,327
+1626,Diversified,187
+1627,Sports team,647
+1628,Home sales,320
+1629,Fashion retail,232
+1629,Investments,360
+1630,Internet,351
+1631,Hedge funds,312
+1632,Oil & gas,463
+1633,Dairy,162
+1634,Diversified,187
+1635,Software,619
+1636,Apple,29
+1637,Finance,243
+1638,TV programs,675
+1639,Construction,140
+1640,Software,619
+1641,Pharmaceuticals,517
+1642,Nascar,444
+1642,Racing,557
+1643,Pharmaceuticals,517
+1644,Insurance,349
+1645,Salsa,578
+1646,Pharmaceuticals,517
+1647,Hedge funds,312
+1648,Real estate,560
+1649,Auto parts,37
+1650,Pharmaceuticals,517
+1651,Medical equipment,410
+1652,Software,619
+1653,LG,369
+1654,Security software,591
+1655,Golden State Warriors,285
+1656,Blockchain,74
+1656,Technology,679
+1657,Investments,360
+1658,Mining,426
+1659,Media,405
+1660,Media,405
+1661,Media,405
+1662,Medical patents,412
+1663,Electronics components,212
+1664,Real estate,560
+1665,Fintech,250
+1666,Real estate,560
+1667,Art,31
+1668,Industrial explosives,342
+1669,Diversified,187
+1670,Electronics,211
+1671,Media,405
+1672,Leveraged buyouts,375
+1673,Cloud computing,118
+1674,Media,405
+1674,Real estate,560
+1675,Chemicals,109
+1676,Information technology,346
+1677,Steel pipes,659
+1678,Agribusiness,8
+1679,Chemical,106
+1680,Software services,621
+1681,Cosmetics,155
+1682,Dairy & consumer products,163
+1683,Hygiene products,332
+1684,Logistics,386
+1685,Steel,658
+1686,Software,619
+1687,E-cigarettes,193
+1688,Payments software,501
+1689,Heating and cooling equipment,310
+1690,Blockchain technology,75
+1691,Online media,475
+1692,Twitter,715
+1693,Investments,360
+1694,Finance,243
+1695,Batteries,54
+1696,Medical equipment,410
+1697,Real estate,560
+1698,Cosmetics,155
+1699,Steel,658
+1700,Real estate,560
+1701,Tennessee Titans,687
+1702,Venture capital investing,730
+1703,Steel,658
+1704,Real estate,560
+1705,Entertainment,221
+1706,Mutual funds,442
+1707,Venture capital,729
+1708,Household chemicals,328
+1709,Shipbuilding,602
+1710,Energy drink,217
+1711,Investments,360
+1712,Health IT,300
+1713,FIAT,228
+1713,Investments,360
+1714,Motorhomes,436
+1714,RVs,556
+1715,Video games,731
+1716,Money management,432
+1717,Insurance,349
+1718,Real estate,560
+1719,Shoes,604
+1720,Retail,573
+1721,Software,619
+1722,Hotels,327
+1723,Real estate finance,562
+1724,Elevators,213
+1724,Escalators,222
+1725,Real estate,560
+1726,Insurance,349
+1726,Investments,360
+1727,Chemicals,109
+1728,Transportation,712
+1729,Biotech,70
+1730,Apparel,28
+1731,Fashion retail,232
+1732,Real estate,560
+1733,Real estate,560
+1734,Palm oil,493
+1734,Property,550
+1735,Cloud computing,118
+1736,Pharmaceuticals,517
+1737,Medical products,413
+1738,Soy sauce,632
+1739,Sandwich chain,581
+1740,Iron ore mining,361
+1741,Drones,190
+1742,Virtual reality,737
+1743,Bloomberg LP,76
+1744,Online retail,478
+1745,Supermarkets,669
+1746,Chemicals,109
+1747,Wedding dresses,748
+1748,Adhesives,5
+1749,Retail,573
+1750,Real estate,560
+1751,Steel pipes,659
+1752,Pharmaceutical,514
+1753,Comcast,131
+1754,Waffle House,740
+1755,Chemicals,109
+1756,Homebuilder,322
+1757,Agribusiness,8
+1758,Healthcare,304
+1759,Agrochemicals,10
+1760,Cosmetics,155
+1761,Real estate development,561
+1762,Insurance,349
+1762,NFL team,443
+1763,Call centers,89
+1764,Footwear,265
+1765,Semiconductor,594
+1766,Sports teams,648
+1767,Real estate services,564
+1768,Energy services,219
+1769,Packaging,489
+1770,Bars,51
+1771,Coking,129
+1772,Telecom,681
+1772,Investments,360
+1773,Financial technology,248
+1774,Logistics,386
+1775,Manufacturing,397
+1776,Electronics,211
+1777,Biotech,70
+1778,Engineering,220
+1778,Automotive,40
+1779,Investment banking,358
+1780,Real estate,560
+1781,Money management,432
+1782,Hedge funds,312
+1783,Shoes,604
+1784,Frozen foods,269
+1785,Electronics,211
+1786,Semiconductors,597
+1787,Real estate,560
+1788,Oil,462
+1788,Semiconductor,594
+1789,Real estate,560
+1790,Construction,140
+1791,Real estate,560
+1791,Private equity,549
+1792,Venture capital,729
+1793,Logistics,386
+1793,Baseball,52
+1794,Transport,711
+1794,Logistics,386
+1795,Banking,49
+1796,Software,619
+1797,Banking,49
+1798,Commodities,132
+1798,Investments,360
+1799,Financial services,247
+1800,Convinience stores,149
+1801,Pharmaceuticals,517
+1802,Pharmaceuticals,517
+1803,Investments,360
+1804,Investments,360
+1805,Telecommunication,682
+1805,Sports,641
+1806,Oil & gas,463
+1806,Investments,360
+1807,Elevators,213
+1807,Escalators,222
+1808,Executive search,225
+1808,Investments,360
+1809,DirecTV,183
+1810,Hygiene products,332
+1811,Non-ferrous metals,457
+1812,Real estate,560
+1813,Retail,573
+1813,Wholesale,751
+1814,Pharmaceuticals,517
+1815,Oil,462
+1815,Investments,360
+1816,Investments,360
+1817,Package delivery,488
+1818,Biotech,70
+1819,Manufacturing,397
+1820,Banking,49
+1820,Shipping,603
+1821,Palm oil,493
+1821,Property,550
+1822,Real estate,560
+1823,Real estate,560
+1824,Online games,474
+1825,Semiconductor devices,595
+1826,Real estate,560
+1827,Telecom,681
+1828,Mobile payments,429
+1829,Real estate,560
+1830,Oil refinery,465
+1831,Investments,360
+1832,Automotive,40
+1833,Mutual funds,442
+1834,Mutual funds,442
+1835,Electric power,203
+1836,Steel,658
+1836,Autoparts,43
+1837,Steel,658
+1837,Investments,360
+1838,Beer,60
+1839,Energy drinks,218
+1840,Manufacturing,397
+1841,Alcohol,19
+1842,Metals,419
+1842,Investments,360
+1843,Cloud computing,118
+1844,Pulp and paper,553
+1844,Diversified,187
+1845,Education,200
+1846,Insurance,349
+1846,NFL team,443
+1847,Insurance,349
+1848,Batteries,54
+1848,Investments,360
+1849,Pharmaceutical services,516
+1850,Petrochemicals,511
+1851,Business software,84
+1852,Mining,426
+1853,TV,672
+1853,Movie production,439
+1854,Toys,706
+1855,Fitness equipment,254
+1856,Natural gas,445
+1857,Retailing,575
+1858,Retailing,575
+1859,Retailing,575
+1860,Roku,576
+1861,Materials,401
+1862,Pharmaceuticals,517
+1863,Electronics,211
+1864,Waste disposal,744
+1865,Software,619
+1866,Pharmaceuticals,517
+1867,Electronics,211
+1868,Auto dealerships,35
+1869,Conglomerate,139
+1870,Electronic components,209
+1871,Online games,474
+1872,Aluminum,23
+1873,Wine,752
+1874,Gambling products,274
+1875,Snacks,614
+1876,Petroleum,512
+1876,Diversified,187
+1877,Diversified,187
+1878,Gym equipment,293
+1879,Investments,360
+1880,Investments,360
+1881,Forestry,266
+1881,Mining,426
+1882,Pharmaceuticals,517
+1883,Fashion retail,232
+1883,Investments,360
+1884,Mining,426
+1885,Banking,49
+1885,Oil,462
+1886,Luxury goods,393
+1887,Consumer goods,145
+1888,Energy,216
+1888,Banking,49
+1888,Construction,140
+1889,Software,619
+1890,Shipping,603
+1890,Airlines,15
+1891,Manufacturing,397
+1892,Finance,243
+1892,Real estate,560
+1893,Banking,49
+1894,Electrodes,208
+1895,IT consulting,336
+1896,Diversified,187
+1897,Private equity,549
+1898,Manufacturing,397
+1899,Cable television,87
+1900,Retail stores,574
+1901,Ports,532
+1902,Art collection,32
+1903,Consumer electronics,144
+1904,Software,619
+1905,Private equity,549
+1906,Investments,360
+1907,Chemicals,109
+1908,Real estate,560
+1909,Consumer products,146
+1909,Banking,49
+1910,Semiconductors,597
+1911,Movies,440
+1911,Digital effects,182
+1912,Money management,432
+1913,Phamaceuticals,513
+1914,Pharmaceuticals,517
+1915,Investments,360
+1916,Diversified,187
+1917,Retail,573
+1918,Beer,60
+1919,Real estate,560
+1919,Hotels,327
+1920,Banking,49
+1920,Shipping,603
+1921,Machine tools,394
+1922,Machine tools,394
+1923,Manufacturing,397
+1924,Lithium-ion battery cap,383
+1925,Chemicals,109
+1926,Apparel,28
+1927,Stainless steel products,654
+1928,Optical components,482
+1929,Chemicals,109
+1930,Education,200
+1931,Logistics,386
+1932,Diversified,187
+1933,Hotels,327
+1934,Utilities,724
+1934,Diversified,187
+1935,Private equity,549
+1936,Shoes,604
+1937,Fine jewelry,249
+1938,Transportation,712
+1939,Semiconductors,597
+1940,Diversified,187
+1941,Sugar,667
+1941,Ethanol,224
+1942,Investments,360
+1943,Toll roads,702
+1944,H&M,294
+1945,Sports drink,644
+1946,Beer distribution,61
+1947,Real estate,560
+1947,Hotels,327
+1948,Finance,243
+1949,Hedge fund,311
+1950,Healthcare services,306
+1951,Facebook,229
+1952,Automotive technology,42
+1953,Social media,617
+1954,Retail,573
+1955,Investments,360
+1956,Pharmaceuticals,517
+1957,Software,619
+1958,Airports,18
+1958,Real estate,560
+1959,Real estate,560
+1960,Hedge funds,312
+1961,Liquor stores,379
+1961,Supermarkets,669
+1962,Utilities,724
+1962,Real estate,560
+1963,Instagram,348
+1964,Feed,238
+1965,Beverages,64
+1966,Semiconductors,597
+1967,Paints,492
+1968,Healthcare IT,305
+1969,Contact Lens,147
+1970,Telecom,681
+1971,Investments,360
+1971,Art,31
+1972,Automotive,40
+1973,Telecom,681
+1974,Gambling products,274
+1975,Pharmaceuticals,517
+1976,Medical devices,407
+1977,Natural gas,445
+1978,Real estate,560
+1979,Software,619
+1980,Online games,474
+1981,Electronics,211
+1982,Brewery,79
+1983,Education,200
+1984,Online games,474
+1985,Education,200
+1986,Solar,622
+1987,Jewelry,363
+1988,Diversified,187
+1989,Investments,360
+1990,Retail,573
+1991,Flipkart,256
+1992,Pharmaceuticals,517
+1993,Real estate,560
+1993,Manufacturing,397
+1994,Oil,462
+1995,Consumer goods,145
+1996,Nickel,454
+1997,AOL,2
+1998,Testing equipment,690
+1999,Real estate,560
+2000,Banking,49
+2001,Mining,426
+2002,Chemicals,109
+2003,Investments,360
+2004,Beauty products,57
+2005,Data analytics,167
+2006,Diversified,187
+2007,Textiles,692
+2007,Paper,494
+2008,Cruises,157
+2009,Construction,140
+2009,Investments,360
+2010,Banking,49
+2010,Investments,360
+2011,Electric vehicles,205
+2012,Consumer goods,145
+2013,Fashion retail,232
+2014,Cloud storage service,119
+2015,Chemicals,109
+2016,Textiles,692
+2017,Pharmaceuticals,517
+2018,Online games,474
+2019,Real estate,560
+2019,Hotels,327
+2020,Building materials,82
+2021,Financial services,247
+2022,Diversified,187
+2023,Real estate,560
+2024,Real estate,560
+2025,Real estate,560
+2026,Real estate,560
+2027,Diversified,187
+2028,Diversified,187
+2029,Real estate,560
+2030,Diversified,187
+2031,Mutual funds,442
+2032,Cruises,157
+2033,Fashion retailer,233
+2034,Mining,426
+2035,Electric vehicles,205
+2036,Powdered metal,537
+2037,Manufacturing,397
+2038,Paper,494
+2039,Investments,360
+2040,Drugstores,192
+2041,Agribusiness,8
+2042,Cable TV,86
+2042,Investments,360
+2043,Cooking appliances,150
+2044,Manufacturing,397
+2045,Chemicals,109
+2046,Real estate,560
+2047,Clinical diagnostics,116
+2048,Real estate,560
+2049,Software,619
+2050,Medical diagnostic equipment,408
+2051,Steel,658
+2052,Energy drinks,218
+2052,Investments,360
+2053,Investments,360
+2054,Manufacturing,397
+2055,Real estate,560
+2056,Medical devices,407
+2057,H&M,294
+2058,Electric scooters,204
+2059,Tire,697
+2060,Pharmaceuticals,517
+2061,Diversified,187
+2062,Music,441
+2062,Cosmetics,155
+2063,Construction,140
+2063,Pipes,526
+2063,Chemicals,109
+2064,Real estate,560
+2065,Building materials,82
+2066,Generic drugs,281
+2067,Real estate,560
+2068,Refinery,570
+2068,Chemicals,109
+2069,Refinery,570
+2069,Chemicals,109
+2070,Retail,573
+2071,Cloud computing,118
+2072,H&M,294
+2073,Pharmaceuticals,517
+2074,Pharmaceuticals,517
+2075,Diversified,187
+2076,Fiber optic cables,241
+2077,Logistics,386
+2078,Manufacturing,397
+2079,Carbon fiber products,94
+2080,Chemicals,109
+2081,Electronic components,209
+2082,Industrial machinery,344
+2083,Money management,432
+2084,Machinery,395
+2085,Chemicals,109
+2086,Drones,190
+2087,Motors,437
+2088,Beverages,64
+2089,Real estate,560
+2090,Pharmaceuticals,517
+2091,Machinery,395
+2092,Real estate,560
+2093,Real estate,560
+2094,Machinery,395
+2095,Electrical equipment,207
+2096,Real estate,560
+2097,Fashion retail,232
+2098,Pulp and paper,553
+2098,Diversified,187
+2099,Damaged cars,166
+2100,Chemicals,109
+2101,Pharmaceuticals,517
+2102,Pharmaceuticals,517
+2103,Real estate,560
+2104,Banking,49
+2104,Development,177
+2105,Automotive technology,42
+2106,Flipkart,256
+2107,Coal,120
+2108,Investments,360
+2108,Real estate,560
+2109,Pharmaceuticals,517
+2110,Banking,49
+2110,Insurance,349
+2111,Diversified,187
+2112,Pharmaceuticals,517
+2112,Food,258
+2113,Messaging software,417
+2114,Electronic components,209
+2115,Software,619
+2116,Industrial equipment,341
+2117,Real estate,560
+2117,Electronics,211
+2118,Minerals processing,425
+2119,Power tools,543
+2120,Auto parts,37
+2121,Cell phone distribution,100
+2122,Investments,360
+2123,Real estate,560
+2124,Food,258
+2125,Technology,679
+2126,Media,405
+2127,Financial services,247
+2128,Financial services,247
+2129,Vaccines,725
+2130,Energy,216
+2131,Video games,731
+2132,Video games,731
+2133,Online payments,476
+2134,Real estate,560
+2135,Chemical products,108
+2136,Trading,709
+2136,Investments,360
+2137,Investments,360
+2138,Elevators,213
+2138,Escalators,222
+2139,Real estate,560
+2140,Asset management,33
+2141,Industrial equipment,341
+2142,Auto parts,37
+2143,Manufacturing,397
+2144,Manufacturing,397
+2145,Asset management,33
+2146,Insurance,349
+2147,Call centers,89
+2148,Real estate,560
+2148,Gambling,273
+2149,Software firm,620
+2150,Medical devices,407
+2151,Investments,360
+2152,Video games,731
+2153,Retail,573
+2154,Software,619
+2155,Payments,500
+2155,Banking,49
+2156,Estee Lauder,223
+2157,Internet,351
+2158,Genentech,280
+2158,Apple,29
+2159,Seed production,592
+2160,Steel,658
+2160,Diversified,187
+2161,Petro Firbe,510
+2162,Machinery,395
+2163,Pharmaceuticals,517
+2164,Agribusiness,8
+2165,Online games,474
+2166,Medical equipment,410
+2167,Agribusiness,8
+2168,Diversified,187
+2169,E-commerce,194
+2170,Real estate,560
+2171,Laboratory services,371
+2172,Finance services,245
+2173,Aircraft leasing,13
+2174,Investments,360
+2175,Investments,360
+2175,Energy,216
+2176,Consumer products,146
+2176,Banking,49
+2177,Casinos,99
+2178,Biotech,70
+2179,Defense contractor,171
+2180,E-commerce,194
+2181,Real estate,560
+2182,Infrastructure,347
+2183,Pharmaceuticals,517
+2184,Pharmaceuticals,517
+2185,Supermarkets,669
+2186,Investments,360
+2186,Real estate,560
+2187,Chemicals,109
+2188,Diversified,187
+2189,Beverages,64
+2190,Video games,731
+2190,Pachinko,486
+2191,Software,619
+2192,Healthcare,304
+2193,Refinery,570
+2193,Chemicals,109
+2194,Food,258
+2194,Retail,573
+2195,Machinery,395
+2196,Sports,641
+2197,Sports,641
+2198,Sports,641
+2199,Gold,284
+2199,Coal mining,122
+2200,Refinery,570
+2200,Chemicals,109
+2201,Meat processing,404
+2202,Meat processing,404
+2203,Real estate,560
+2204,Hospitals,325
+2205,Retail,573
+2206,Airline,14
+2207,Electronics components,212
+2208,Software,619
+2209,Health products,303
+2210,Battery components,55
+2211,Internet,351
+2212,Medical devices,407
+2213,Software,619
+2214,Software,619
+2215,Aluminum products,24
+2216,Online recruitment,477
+2217,Hotels,327
+2218,Mining,426
+2219,Semiconductor materials,596
+2220,Banking,49
+2221,Investments,360
+2222,Pharmaceuticals,517
+2223,Steel,658
+2224,Finance,243
+2225,Software,619
+2226,Hospitals,325
+2227,Real estate,560
+2228,Real estate,560
+2229,Real estate,560
+2230,Lithium battery,382
+2231,Money management,432
+2232,Medical technology,415
+2233,Medical technology,415
+2234,Medical technology,415
+2235,Property,550
+2235,Healthcare,304
+2236,Food,258
+2237,Pharmaceuticals,517
+2238,Retail,573
+2239,Software,619
+2240,Shoes,604
+2241,Specialty chemicals,637
+2242,Publishing,552
+2243,Sneakers,616
+2243,Sportswear,649
+2244,Fashion retail,232
+2245,Media,405
+2246,Solar panels,629
+2247,Diversified,187
+2248,Diversified,187
+2249,Home appliances,317
+2250,Pulp and paper,553
+2251,Manufacturing,397
+2252,Fitness clothing,253
+2253,Furniture retail,271
+2254,Mining,426
+2255,Textiles,692
+2256,Private equity,549
+2257,Steel tubes,661
+2258,Technology,679
+2259,Construction,140
+2259,Investments,360
+2260,Urban Outfitters,722
+2261,Financial services,247
+2262,Software,619
+2263,Casinos,99
+2264,Textiles,692
+2264,Apparel,28
+2265,Technology,679
+2266,Communications,134
+2267,Food & beverage retailing,259
+2268,Finance,243
+2269,Shapewear,601
+2269,Cosmetics,155
+2269,Reality TV,565
+2270,Auto parts,37
+2271,Retailing,575
+2272,Real estate,560
+2273,Building materials,82
+2274,Building materials,82
+2275,Auto parts,37
+2276,Cirque du Soleil,114
+2277,Hospitality,324
+2278,Petro Fibre,509
+2279,Pharmaceuticals,517
+2280,Medical services,414
+2281,Lithium batteries,381
+2282,Conglomerate,139
+2283,Natural gas distribution,446
+2284,Software,619
+2285,Cargill,95
+2286,Cargill,95
+2287,Cargill,95
+2288,Cargill,95
+2289,Diversified,187
+2290,Manufacturing,397
+2291,Construction,140
+2292,Diversified,187
+2293,Data management,169
+2294,Healthcare services,306
+2295,Diversified,187
+2296,Private equity,549
+2297,Candy,91
+2298,Stock photos,664
+2299,Fisheries,252
+2300,Shopping malls,606
+2301,Computer games,135
+2302,Online games,474
+2303,Diversified,187
+2304,Health care,301
+2305,Pig breeding,523
+2306,Lumber,391
+2307,Investments,360
+2308,Agribusiness,8
+2309,Finance,243
+2310,Real estate,560
+2311,Hedge funds,312
+2312,Cheese,105
+2313,Engineering,220
+2313,Sugar,667
+2314,Finance,243
+2315,Cosmetics,155
+2316,Online apparel retail,470
+2317,Software,619
+2318,Car rentals,93
+2319,Car rentals,93
+2320,Coal,120
+2320,Investments,360
+2321,Healthcare,304
+2322,Software,619
+2323,Chemical products,108
+2324,Chemical products,108
+2325,Hedge funds,312
+2326,Data analytics,167
+2327,Coal,120
+2328,Textile,691
+2328,Chemicals,109
+2329,Food,258
+2330,Manufacturing,397
+2331,Real estate,560
+2332,Financial services,247
+2333,Manufacturing,397
+2334,TV shows,676
+2335,Investment banking,358
+2336,Fashion,230
+2337,Real estate,560
+2338,Asset management,33
+2339,Pharmaceuticals,517
+2340,Pneumatic equipments,530
+2341,Lithium,380
+2342,Shoes,604
+2343,Coca Cola Israel,124
+2344,Cryptocurrency,158
+2345,Cryptocurrency,158
+2346,Manufacturing,397
+2347,Finance,243
+2348,Apparel,28
+2349,Batteries,54
+2350,Manufacturing,397
+2351,Wine,752
+2352,Manufacturing,397
+2353,Education,200
+2354,Petro Fibre,509
+2355,Pharmacy,519
+2356,Retail,573
+2357,Data analytics,167
+2358,Diversified,187
+2359,Telecom,681
+2360,Paper manufacturing,496
+2361,Pharmaceuticals,517
+2362,Chemicals,109
+2363,Construction,140
+2364,Sports shoes,646
+2365,Investments,360
+2366,Private equity,549
+2367,Liquor,378
+2368,Spanx,636
+2369,Banking,49
+2370,Banking,49
+2370,Investments,360
+2371,Real estate,560
+2372,Diversified,187
+2373,E-commerce software,195
+2374,Retail,573
+2375,Data centers,168
+2376,Consumer goods,145
+2377,Pharmaceuticals,517
+2378,Air compressors,11
+2379,Supermarkets,669
+2380,Supermarkets,669
+2381,Technology,679
+2382,Pharmaceutical,514
+2383,Solar energy,623
+2384,Package delivery,488
+2385,Electronics,211
+2386,Stationery,657
+2387,Poultry breeding,534
+2388,Semiconductors,597
+2389,Coca-Cola bottler,126
+2390,Paper,494
+2391,Insurance,349
+2392,Insurance,349
+2393,Hotels,327
+2394,Pulp and paper,553
+2395,Investments,360
+2396,Reebok,569
+2397,Gap,277
+2398,Fashion retail,232
+2399,Manufacturing,397
+2400,Pharmaceuticals,517
+2401,Mattresses,402
+2402,Private equity,549
+2403,Building,81
+2403,Development,177
+2404,Fashion retail,232
+2405,Fashion retail,232
+2406,Retail,573
+2406,Investments,360
+2407,EasyJet,197
+2408,Pig breeding,523
+2409,Coffee,127
+2410,Coffee,127
+2411,Software,619
+2412,Software,619
+2413,Printed circuit boards,547
+2414,Tires,698
+2415,Pachinko machines,487
+2416,Auto loans,36
+2417,Financial services,247
+2418,IKEA,334
+2419,IKEA,334
+2420,IKEA,334
+2421,Waste management,745
+2422,Auto parts,37
+2423,Energy,216
+2424,Retailing,575
+2425,Sports data,643
+2426,LG,369
+2427,Banking,49
+2428,Specialty chemicals,637
+2429,Medical diagnostics,409
+2430,Casinos,99
+2431,Construction,140
+2431,Real estate,560
+2432,Banking,49
+2432,Credit cards,156
+2433,Banking,49
+2434,Banking,49
+2434,Credit cards,156
+2435,Medical devices,407
+2436,Medical devices,407
+2437,Flooring,257
+2438,Telecommunication,682
+2439,Cosmetics,155
+2440,Internet and software,352
+2441,Two wheelers,716
+2442,Two wheelers,716
+2443,Motorcycles,435
+2444,Coal,120
+2445,Tires,698
+2445,Retail,573
+2446,Retail,573
+2447,Real estate,560
+2447,Diversified,187
+2448,Under Armour,721
+2449,Pharmaceuticals,517
+2450,Medical equipment,410
+2451,Pharmaceuticals,517
+2452,Security services,590
+2453,Cryptocurrency,158
+2454,Pinterest,524
+2455,Finance,243
+2456,Solar systems,630
+2457,Stock exchange,663
+2458,Investments,360
+2459,Liquor,378
+2460,Toys,706
+2461,Semiconductors,597
+2462,Oilfield equipment,469
+2463,Semiconductors,597
+2464,Gaming,276
+2465,Retail,573
+2466,Auto parts,37
+2467,Wire & cables,754
+2467,Paints,492
+2468,Food,258
+2469,Manufacturing,397
+2470,Search engine,587
+2471,Chemicals,109
+2472,Food,258
+2473,Airline,14
+2474,Video games,731
+2475,Electronics,211
+2476,Golf,286
+2477,Footwear,265
+2478,Electronics,211
+2479,Electronic components,209
+2480,Consumer,143
+2481,Pharmaceuticals,517
+2482,Vitamins,738
+2483,Cable,85
+2484,Manufacturing,397
+2485,Software,619
+2486,Soy sauce,632
+2487,Tourism,704
+2487,Cultural industry,160
+2488,Aluminium,22
+2489,Building materials,82
+2490,Supermarkets,669
+2491,Snacks,614
+2492,Semiconductors,597
+2493,Smartphones,612
+2494,Printed circuit boards,547
+2495,Snacks,614
+2496,Investments,360
+2497,Retail,573
+2498,Medical technology,415
+2499,Medical technology,415
+2500,Medical technology,415
+2501,Medical technology,415
+2502,Mining,426
+2502,Banking,49
+2503,Entertainment,221
+2503,Margaritaville,399
+2504,Pachinko machines,487
+2505,Asset management,33
+2506,Transportation,712
+2507,Manufacturing,397
+2508,Online entertainment,472
+2509,Polyester,531
+2510,Online games,474
+2511,Batteries,54
+2512,Liquor,378
+2513,Electrical appliances,206
+2514,Real estate,560
+2515,Financial services,247
+2515,Property,550
+2516,Diversified,187
+2517,Software,619
+2518,Office real estate,461
+2519,Software,619
+2520,Pharmaceuticals,517
+2521,Medical devices,407
+2522,Gap,277
+2523,Industrial lasers,343
+2524,Real estate,560
+2525,Financial services,247
+2526,EasyJet,197
+2527,EasyJet,197
+2528,Machinery,395
+2529,Manufacturing,397
+2530,Coal,120
+2531,Smartphones,612
+2532,Convenience stores,148
+2533,Bio-Pharma,66
+2534,Online universities,481
+2535,Investments,360
+2536,Cables & wires,88
+2537,Basketball,53
+2538,Grocery stores,291
+2539,Software,619
+2540,Tiles,695
+2541,Banking,49
+2542,Banking,49
+2542,Sports team,647
+2543,Software,619
+2543,Investments,360
+2544,Power,538
+2545,Cosmetics,155
+2546,Banking,49
+2546,Investments,360
+2547,Real estate,560
+2548,Electronics,211
+2549,Hotels,327
+2550,Real estate,560
+2551,Cement,101
+2552,Banking,49
+2553,Smartphones,612
+2554,Pharmacies,518
+2555,Healthcare,304
+2556,Electronics,211
+2557,LED lighting,368
+2558,Grocery delivery service,290
+2559,Appliances,30
+2560,Appliances,30
+2561,Construction materials,142
+2562,Hydraulic pumps,331
+2563,Movies,440
+2563,Television,685
+2564,Convenience stores,148
+2565,Beer,60
+2566,Energy services,219
+2567,Media,405
+2567,Tech,677
+2568,IT consulting,336
+2568,Outsourcing,485
+2569,Cloud computing,118
+2570,Hotels,327
+2571,Metals,419
+2571,Telecom,681
+2572,Finance,243
+2572,Development,177
+2573,Paints,492
+2574,Manufacturing,397
+2575,Hot sauce,326
+2576,Video games,731
+2577,Telecom,681
+2578,Software,619
+2579,Medical equipment,410
+2580,Insurance,349
+2580,Investments,360
+2581,Agribusiness,8
+2582,Sports,641
+2583,Apparel,28
+2584,Chemicals,109
+2585,Manufacturing,397
+2586,Pharmaceuticals,517
+2587,Health clinics,302
+2588,Beer,60
+2589,Tyre manufacturing machinery,718
+2590,Real estate,560
+2591,Diversified,187
