@@ -1,0 +1,759 @@
+sourceID,source
+1,3D printing
+2,AOL
+3,Accounting services
+4,Acoustic components
+5,Adhesives
+6,Advertising
+7,Aerospace
+8,Agribusiness
+9,Agriculture
+10,Agrochemicals
+11,Air compressors
+12,Airbnb
+13,Aircraft leasing
+14,Airline
+15,Airlines
+16,Airport
+17,Airport management
+18,Airports
+19,Alcohol
+20,Alcoholic beverages
+21,Aldi
+22,Aluminium
+23,Aluminum
+24,Aluminum products
+25,Amazon
+26,Amusement parks
+27,Animal health
+28,Apparel
+29,Apple
+30,Appliances
+31,Art
+32,Art collection
+33,Asset management
+34,Auto dealers
+35,Auto dealerships
+36,Auto loans
+37,Auto parts
+38,Auto repair
+39,Automobiles
+40,Automotive
+41,Automotive brakes
+42,Automotive technology
+43,Autoparts
+44,Aviation
+45,BMW
+46,Bakeries
+47,Bakery chain
+48,Baltimore Ravens
+49,Banking
+50,Banks
+51,Bars
+52,Baseball
+53,Basketball
+54,Batteries
+55,Battery components
+56,Battery separators
+57,Beauty products
+58,Beef packing
+59,Beef processing
+60,Beer
+61,Beer distribution
+62,Berkshire Hathaway
+63,Best Buy
+64,Beverages
+65,Billboards
+66,Bio-Pharma
+67,Biochemicals
+68,Biomedical products
+69,Biopharmaceuticals
+70,Biotech
+71,Biotech and investments
+72,Biotech investing
+73,Biotechnology
+74,Blockchain
+75,Blockchain technology
+76,Bloomberg LP
+77,Book distribution
+78,Brakes
+79,Brewery
+80,Budget airline
+81,Building
+82,Building materials
+83,Building supplies
+84,Business software
+85,Cable
+86,Cable TV
+87,Cable television
+88,Cables & wires
+89,Call centers
+90,Campbell Soup
+91,Candy
+92,Car dealerships
+93,Car rentals
+94,Carbon fiber products
+95,Cargill
+96,Carnival Cruises
+97,Carpet
+98,Cars
+99,Casinos
+100,Cell phone distribution
+101,Cement
+102,Cement mixers
+103,Chanel
+104,Charlotte Hornets
+105,Cheese
+106,Chemical
+107,Chemical industry
+108,Chemical products
+109,Chemicals
+110,Chewing gum
+111,Chick-fil-A
+112,Chicken processing
+113,Chocolates
+114,Cirque du Soleil
+115,Cleaning products
+116,Clinical diagnostics
+117,Clinical trials
+118,Cloud computing
+119,Cloud storage service
+120,Coal
+121,Coal mines
+122,Coal mining
+123,Cobalt
+124,Coca Cola Israel
+125,Coca-Cola Israel
+126,Coca-Cola bottler
+127,Coffee
+128,Coffee makers
+129,Coking
+130,Columbia Sportswear
+131,Comcast
+132,Commodities
+133,Communication equipment
+134,Communications
+135,Computer games
+136,Computer hardware
+137,Computer networking
+138,Computer services
+139,Conglomerate
+140,Construction
+141,Construction equipment
+142,Construction materials
+143,Consumer
+144,Consumer electronics
+145,Consumer goods
+146,Consumer products
+147,Contact Lens
+148,Convenience stores
+149,Convinience stores
+150,Cooking appliances
+151,Cooling equipment
+152,Copper
+153,Copper products
+154,Copy machines
+155,Cosmetics
+156,Credit cards
+157,Cruises
+158,Cryptocurrency
+159,Cryptocurrency exchange
+160,Cultural industry
+161,Cybersecurity
+162,Dairy
+163,Dairy & consumer products
+164,Dallas Cowboys
+165,Dallas Mavericks
+166,Damaged cars
+167,Data analytics
+168,Data centers
+169,Data management
+170,Defense
+171,Defense contractor
+172,Dell Technologies
+173,Dental implants
+174,Dental materials
+175,Dental products
+176,Department stores
+177,Development
+178,Diamond jewelry
+179,Diamonds
+180,Dick's Sporting Goods
+181,Digital advertising
+182,Digital effects
+183,DirecTV
+184,Discount brokerage
+185,Disney
+186,Distribution
+187,Diversified
+188,Dolby Laboratories
+189,Dole
+190,Drones
+191,Drug distribution
+192,Drugstores
+193,E-cigarettes
+194,E-commerce
+195,E-commerce software
+196,EBay
+197,EasyJet
+198,Ecommerce
+199,Edible oil
+200,Education
+201,Education technology
+202,Electric bikes
+203,Electric power
+204,Electric scooters
+205,Electric vehicles
+206,Electrical appliances
+207,Electrical equipment
+208,Electrodes
+209,Electronic components
+210,Electronic trading
+211,Electronics
+212,Electronics components
+213,Elevators
+214,Email marketing
+215,Endorsements
+216,Energy
+217,Energy drink
+218,Energy drinks
+219,Energy services
+220,Engineering
+221,Entertainment
+222,Escalators
+223,Estee Lauder
+224,Ethanol
+225,Executive search
+226,Eyeglases
+227,Eyeglasses
+228,FIAT
+229,Facebook
+230,Fashion
+231,Fashion investments
+232,Fashion retail
+233,Fashion retailer
+234,Fast fashion
+235,Fast food
+236,Fasteners
+237,FedEx
+238,Feed
+239,Fertilizer
+240,Fertilizers
+241,Fiber optic cables
+242,Fidelity
+243,Finance
+244,Finance and investments
+245,Finance services
+246,Financial information
+247,Financial services
+248,Financial technology
+249,Fine jewelry
+250,Fintech
+251,Fish farming
+252,Fisheries
+253,Fitness clothing
+254,Fitness equipment
+255,Flavorings
+256,Flipkart
+257,Flooring
+258,Food
+259,Food & beverage retailing
+260,Food delivery
+261,Food distribution
+262,Food processing
+263,Food service
+264,Food services
+265,Footwear
+266,Forestry
+267,Formula One
+268,Franklin Templeton
+269,Frozen foods
+270,Furniture
+271,Furniture retail
+272,Furniture retailing
+273,Gambling
+274,Gambling products
+275,Gambling software
+276,Gaming
+277,Gap
+278,Gas
+279,Gas stations
+280,Genentech
+281,Generic drugs
+282,Getty Oil
+283,Glass
+284,Gold
+285,Golden State Warriors
+286,Golf
+287,Google
+288,Grains
+289,Greek yogurt
+290,Grocery delivery service
+291,Grocery stores
+292,Groupon
+293,Gym equipment
+294,H&M
+295,Hair care products
+296,Hair dryers
+297,Hair products
+298,Hand tools
+299,Hardware stores
+300,Health IT
+301,Health care
+302,Health clinics
+303,Health products
+304,Healthcare
+305,Healthcare IT
+306,Healthcare services
+307,Healthcare software
+308,Hearing aids
+309,Heating
+310,Heating and cooling equipment
+311,Hedge fund
+312,Hedge funds
+313,Heineken
+314,Herbal products
+315,Hermes
+316,Home Depot
+317,Home appliances
+318,Home furnishings
+319,Home improvement stores
+320,Home sales
+321,Home-cleaning robots
+322,Homebuilder
+323,Homebuilding
+324,Hospitality
+325,Hospitals
+326,Hot sauce
+327,Hotels
+328,Household chemicals
+329,Houston Rockets
+330,Hydraulic machinery
+331,Hydraulic pumps
+332,Hygiene products
+333,Hyundai
+334,IKEA
+335,IT
+336,IT consulting
+337,IT provider
+338,Imaging systems
+339,In-N-Out Burger
+340,Indianapolis Colts
+341,Industrial equipment
+342,Industrial explosives
+343,Industrial lasers
+344,Industrial machinery
+345,Infant formula
+346,Information technology
+347,Infrastructure
+348,Instagram
+349,Insurance
+350,Intel
+351,Internet
+352,Internet and software
+353,Internet media
+354,Internet search
+355,Internet service provider
+356,Investing
+357,Investment
+358,Investment banking
+359,Investment research
+360,Investments
+361,Iron ore mining
+362,Jewellery
+363,Jewelry
+364,Johnson & Johnson
+365,Kitchen appliances
+366,Koch Industries
+367,L'Oreal
+368,LED lighting
+369,LG
+370,LVMH
+371,Laboratory services
+372,Land
+373,Las Vegas Raiders
+374,Lego
+375,Leveraged buyouts
+376,LinkedIn
+377,Liquefied natural gas
+378,Liquor
+379,Liquor stores
+380,Lithium
+381,Lithium batteries
+382,Lithium battery
+383,Lithium-ion battery cap
+384,Little Caesars Pizza
+385,Live entertainment
+386,Logistics
+387,Los Angeles Angels
+388,Lotteries
+389,Low-cost airlines
+390,Lululemon
+391,Lumber
+392,Lumber mills
+393,Luxury goods
+394,Machine tools
+395,Machinery
+396,Magazines
+397,Manufacturing
+398,Mapping software
+399,Margaritaville
+400,Marvel comics
+401,Materials
+402,Mattresses
+403,Measuring instruments
+404,Meat processing
+405,Media
+406,Medical cosmetics
+407,Medical devices
+408,Medical diagnostic equipment
+409,Medical diagnostics
+410,Medical equipment
+411,Medical packaging
+412,Medical patents
+413,Medical products
+414,Medical services
+415,Medical technology
+416,Messaging app
+417,Messaging software
+418,Metal processing
+419,Metals
+420,Metals and mining
+421,Metalworking tools
+422,Microchip testing
+423,Microsoft
+424,Minerals
+425,Minerals processing
+426,Mining
+427,Mining machinery
+428,Mixed martial arts
+429,Mobile payments
+430,Mobile phone retailer
+431,Mobile phones
+432,Money management
+433,Mortgage lender
+434,Motels
+435,Motorcycles
+436,Motorhomes
+437,Motors
+438,Movie making
+439,Movie production
+440,Movies
+441,Music
+442,Mutual funds
+443,NFL team
+444,Nascar
+445,Natural gas
+446,Natural gas distribution
+447,Navigation equipment
+448,Netflix
+449,Netscape
+450,New Balance
+451,New England Patriots
+452,New Orleans Saints
+453,Newspapers
+454,Nickel
+455,Nickel mining
+456,Nike
+457,Non-ferrous metals
+458,Nutella
+459,Nutrition
+460,Nutritional supplements
+461,Office real estate
+462,Oil
+463,Oil & gas
+464,Oil and gas
+465,Oil refinery
+466,Oil refining
+467,Oil trading
+468,Oil-services
+469,Oilfield equipment
+470,Online apparel retail
+471,Online dating
+472,Online entertainment
+473,Online gambling
+474,Online games
+475,Online media
+476,Online payments
+477,Online recruitment
+478,Online retail
+479,Online retailing
+480,Online services
+481,Online universities
+482,Optical components
+483,Optometry
+484,Oracle
+485,Outsourcing
+486,Pachinko
+487,Pachinko machines
+488,Package delivery
+489,Packaging
+490,Packaging materials
+491,Paint
+492,Paints
+493,Palm oil
+494,Paper
+495,Paper & related products
+496,Paper manufacturing
+497,PayPal
+498,Payment processing
+499,Payment software
+500,Payments
+501,Payments software
+502,Payroll processing
+503,Payroll services
+504,Payroll software
+505,Pearlescent pigments
+506,Personal care goods
+507,Pest control
+508,Pet food
+509,Petro Fibre
+510,Petro Firbe
+511,Petrochemicals
+512,Petroleum
+513,Phamaceuticals
+514,Pharmaceutical
+515,Pharmaceutical ingredients
+516,Pharmaceutical services
+517,Pharmaceuticals
+518,Pharmacies
+519,Pharmacy
+520,Philadelphia Eagles
+521,Photovoltaic equipment
+522,Photovoltaics
+523,Pig breeding
+524,Pinterest
+525,Pipelines
+526,Pipes
+527,Plastic pipes
+528,Plastics
+529,Plush toys
+530,Pneumatic equipments
+531,Polyester
+532,Ports
+533,Poultry
+534,Poultry breeding
+535,Poultry genetics
+536,Poultry processing
+537,Powdered metal
+538,Power
+539,Power equipment
+540,Power strip
+541,Power strips
+542,Power supply equipment
+543,Power tools
+544,Precious metals
+545,Precision machinery
+546,Price comparison website
+547,Printed circuit boards
+548,Printing
+549,Private equity
+550,Property
+551,Prosthetics
+552,Publishing
+553,Pulp and paper
+554,Quartz products
+555,Quicken Loans
+556,RVs
+557,Racing
+558,Readymade garments
+559,Real Estate
+560,Real estate
+561,Real estate development
+562,Real estate finance
+563,Real estate management
+564,Real estate services
+565,Reality TV
+566,Record label
+567,Record labels
+568,Red Bull
+569,Reebok
+570,Refinery
+571,Renewable energy
+572,Restaurants
+573,Retail
+574,Retail stores
+575,Retailing
+576,Roku
+577,SAP
+578,Salsa
+579,Samsung
+580,San Francisco 49ers
+581,Sandwich chain
+582,Satellite TV
+583,Scaffolding
+584,Scientific equipment
+585,Scooters
+586,Seafood
+587,Search engine
+588,Sears
+589,Security
+590,Security services
+591,Security software
+592,Seed production
+593,Self storage
+594,Semiconductor
+595,Semiconductor devices
+596,Semiconductor materials
+597,Semiconductors
+598,Sensor systems
+599,Sensor technology
+600,Sensors
+601,Shapewear
+602,Shipbuilding
+603,Shipping
+604,Shoes
+605,Shopping centers
+606,Shopping malls
+607,Silicon
+608,Skincare
+609,Slim-Fast
+610,Smartphone components
+611,Smartphone screens
+612,Smartphones
+613,Snack bars
+614,Snacks
+615,Snapchat
+616,Sneakers
+617,Social media
+618,Soft drinks
+619,Software
+620,Software firm
+621,Software services
+622,Solar
+623,Solar energy
+624,Solar energy equipment
+625,Solar equipment
+626,Solar inverters
+627,Solar panel components
+628,Solar panel materials
+629,Solar panels
+630,Solar systems
+631,Solar wafers and modules
+632,Soy sauce
+633,Space
+634,SpaceX
+635,Spandex
+636,Spanx
+637,Specialty chemicals
+638,Spirits
+639,Sporting goods
+640,Sporting goods retail
+641,Sports
+642,Sports apparel
+643,Sports data
+644,Sports drink
+645,Sports retailing
+646,Sports shoes
+647,Sports team
+648,Sports teams
+649,Sportswear
+650,Spotify
+651,Square
+652,Staffing
+653,Staffing & recruiting
+654,Stainless steel products
+655,Star Wars
+656,Starbucks
+657,Stationery
+658,Steel
+659,Steel pipes
+660,Steel production
+661,Steel tubes
+662,Stock brokerage
+663,Stock exchange
+664,Stock photos
+665,Storage facilities
+666,Subway
+667,Sugar
+668,Sunglasses
+669,Supermarkets
+670,Surveillance equipment
+671,TD Ameritrade
+672,TV
+673,TV broadcasting
+674,TV network
+675,TV programs
+676,TV shows
+677,Tech
+678,Tech investments
+679,Technology
+680,Technology services
+681,Telecom
+682,Telecommunication
+683,Telecommunications
+684,Telecoms
+685,Television
+686,Temp agency
+687,Tennessee Titans
+688,Tequila
+689,Tesla
+690,Testing equipment
+691,Textile
+692,Textiles
+693,Ticketing service
+694,TikTok
+695,Tiles
+696,Timberland
+697,Tire
+698,Tires
+699,Titanium
+700,Tobacco
+701,Tobacco distribution
+702,Toll roads
+703,Touch screens
+704,Tourism
+705,Toyota dealerships
+706,Toys
+707,Tractors
+708,Trader Joe's
+709,Trading
+710,Train cars
+711,Transport
+712,Transportation
+713,Travel
+714,Trucking
+715,Twitter
+716,Two wheelers
+717,Two-wheelers
+718,Tyre manufacturing machinery
+719,U-Haul
+720,Uber
+721,Under Armour
+722,Urban Outfitters
+723,Used cars
+724,Utilities
+725,Vaccines
+726,Vacuums
+727,Valve manufacturing
+728,Valves
+729,Venture capital
+730,Venture capital investing
+731,Video games
+732,Video streaming
+733,Video streaming app
+734,Video surveillance
+735,Videogames
+736,Virgin
+737,Virtual reality
+738,Vitamins
+739,Vodka
+740,Waffle House
+741,Walmart
+742,Warehouse automation
+743,Washington Commanders
+744,Waste disposal
+745,Waste management
+746,WeWork
+747,Web hosting
+748,Wedding dresses
+749,Wellness products
+750,WhatsApp
+751,Wholesale
+752,Wine
+753,Winter jackets
+754,Wire & cables
+755,Wireless networking
+756,Yahoo
+757,Zara
+758,Zoom Video Communications
