@@ -1,16 +1,22 @@
 *SQLite research
 <3   https://www.sqlitetutorial.net/
 
-Tables to ne populated: original table called "Test"
+Data should be cleaned at origin them split into our tables.*
+
+Tables to be populated: original table called "Test"
 9   Activities      ☑	
 1   Cities          ☑	
 2   Industries      ☑	
 3   SourcesOfWealth ☑
 4   CountryNames    ☑	
-5   CountryDetails
+5   CountryDetails  ☑
 6   States          ☑
 7   USCities        ☑
 8   Billionaires    ☑
+
+A1  Countries
+A2  EconomicDetails
+B   Persons (= Billionaires v2)
 
 PLEASE FOLLOW ALONG. See create_[tableName].sql queries for more information on how the tables were populated.
 
