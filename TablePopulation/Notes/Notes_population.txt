@@ -1,16 +1,22 @@
 *SQLite research
 <3   https://www.sqlitetutorial.net/
 
-Tables to ne populated: original table called "Test"
+Data should be cleaned at origin them split into our tables.*
+
+Tables to be populated: original table called "Test"
 9   Activities      ☑	
 1   Cities          ☑	
 2   Industries      ☑	
 3   SourcesOfWealth ☑
 4   CountryNames    ☑	
-5   CountryDetails
+5   CountryDetails  ☑
 6   States          ☑
 7   USCities        ☑
 8   Billionaires    ☑
+
+A1  Countries
+A2  EconomicDetails
+B   Persons (= Billionaires v2)
 
 PLEASE FOLLOW ALONG. See create_[tableName].sql queries for more information on how the tables were populated.
 
@@ -94,6 +100,11 @@ PLEASE FOLLOW ALONG. See create_[tableName].sql queries for more information on 
     Created CountryNames tbl from the UNION of citizenship and country_of_residence.
     (See create_CountryNames.sql for more)
 
+#9 Activities
+    Billionaire.personID, SourcesOfWealth.source ID
+    Conjuction (Inner join) of people and sources based on Billionaire.source = SourcesOfWealth.source
+    (See create_Activities.sql for more)
+
 #6 States
     Found Inconsistant entries:
     States      region  #Ocurances
@@ -116,18 +127,3 @@ PLEASE FOLLOW ALONG. See create_[tableName].sql queries for more information on 
 #7 USCities
     Created this table from the Conjuction of Cities, Test, States table. (inner join)
     (See create_USCitites.sql for more)
-
-#8 Billionaires 
-    Created Billionaires from taking its attributes from the Test tbl and introducing a rowID called personID.
-    Some last names have "* & family*". Used replace().
-    Resoleved character endcoding errors.
-    Inner joined Billionaires, Industries,  Cities, Countries
-    , to sunstitute Billionaires.industry, Billionaires.city, Billionaires.citizenship for their respective IDs.
-    (See create_Billionaires.sql for more)
-
-    Import and ran the cvs file throw some queries on https://sqliteonline.com/ while returning industryID (int) to industry (string) in the Billionaires tbl
-
-#9 Activities
-    Billionaire.personID, SourcesOfWealth.source ID
-    Conjuction (Inner join) of people and sources based on Billionaire.source = SourcesOfWealth.source
-    (See create_Activities.sql for more)
