@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="search-container">
+  <form method="POST" action="{{ url_for('countries')}}" class="search-form">
+     <h2>Search for Countries</h2>
+    <label for="name">Nome:</label>
+    <input type="text" id="name" name="name" value="{{ request.form.get('name', '') }}">
+
+    <label for="min_taxe_rate">Taxa de Imposto Mínima:</label>
+    <input type="number" id="min_tax_rate" name="min_tax_rate" step="0.01" value="{{ request.form.get('min_tax_rate', '') }}">
+
+    <label for="max_tax_rate">Taxa de Imposto Máxima:</label>
+    <input type="number" id="max_tax_rate" name="max_tax_rate" step="0.01" value="{{ request.form.get('max_tax_rate', '') }}">
+
+    <label for="continent">Continente:</label>
+    <select id="continent" name="continent">
+      <option value="" {% if request.form.get('continent') == '' %}selected{% endif %}>Todos</option>
+      <option value="Europe" {% if request.form.get('continent') == 'Europe' %}selected{% endif %}>Europa</option>
+      <option value="North America" {% if request.form.get('continent') == 'North America' %}selected{% endif %}>América do norte</option>
+      <option value="South America" {% if request.form.get('continent') == 'South America' %}selected{% endif %}>América do sul</option>
+      <option value="Asia" {% if request.form.get('continent') == 'Asia' %}selected{% endif %}>Asia</option>
+      <option value="Oceania" {% if request.form.get('continent') == 'Oceania' %}selected{% endif %}>Oceania</option>
+      <option value="Africa" {% if request.form.get('continent') == 'Africa' %}selected{% endif %}>África</option>
+    </select>
+    
+    <button type="submit">Filtrar</button>
+  </form>
+
+  <div class="filtered-table">
+    <h2>Filtered Countries</h2>
+    <ul class="filtered-list">
+      {% for country in countries %}
+      <li class="filtered-item">
+	<a href="/countries/{{ country.countryID }}" class="table-link">
+	  {{ country.name }}
+	</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+{% endblock %}
