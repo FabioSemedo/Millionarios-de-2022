@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<table>
+  <caption>Database</caption>
+  <thead>
+    <tr>
+      {% for col in columns %}
+        <th>{{ col }}</th>
+      {% endfor %}
+    <tr>
+  </thead>
+  <tbody>
+    {% for row in data %}
+      <tr>
+	{% for col in columns %}
+	  <td>{{ row[loop.index0] }}</td>
+	{% endfor %}
+      </tr>	
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

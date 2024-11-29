@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Search for Billionaires</h2>
+<div class="search-container">
+  <form method="POST" action="{{ url_for('billionaires')}}" class="search-form">
+    <label for="name">Nome:</label>
+    <input type="text" id="name" name="name" value="{{ request.form.get('name', '') }}">
+    <label for="min_age">Idade Mínima:</label>
+    <input type="number" id="min_age" name="min_age" value="{{ request.form.get('min_age', '') }}">
+
+    <label for="max_age">Idade Máxima:</label>
+    <input type="number" id="max_age" name="max_age" value="{{ request.form.get('max_age', '') }}">
+
+    <label for="min_money">Dinheiro Mínimo (em bilhões):</label>
+    <input type="number" id="min_money" name="min_money" step="0.01" value="{{ request.form.get('min_money', '') }}">
+
+    <label for="max_money">Dinheiro Máximo (em bilhões):</label>
+    <input type="number" id="max_money" name="max_money" step="0.01" value="{{ request.form.get('max_money', '') }}">
+
+    <label for="gender">Gênero:</label>
+    <select id="gender" name="gender">
+      <option value="" {% if request.form.get('gender') == '' %}selected{% endif %}>Todos</option>
+      <option value="F" {% if request.form.get('gender') == 'F' %}selected{% endif %}>Mulher</option>
+      <option value="M" {% if request.form.get('gender') == 'M' %}selected{% endif %}>Homem</option>
+      <option value="O" {% if request.form.get('gender') == 'O' %}selected{% endif %}>Outro</option>
+    </select>
+    
+    <button type="submit">Filtrar</button>
+  </form>
+
+  <div class="filtered-table">
+    <h2>Filtered Billionaires</h2>
+    <ul>
+      {% for billionaire in billionaires %}
+      <li>
+	<a href="/billionaires/{{ billionaire.billionaireID }}" class="table-link">
+	  {{ billionaire.first_name ~ " " ~ billionaire.last_name }}
+	</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+{% endblock %}
