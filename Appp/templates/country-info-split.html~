@@ -1,6 +1,0 @@
-{% extends 'base.html' %}
-{% block content %}
-<a href="{{ url_for('geographic', id=countryID) }}">Geographic Data</a>
-<a href="{{ url_for('economy', id=countryID) }}">Economic Data</a>
-
-{% endblock %}
