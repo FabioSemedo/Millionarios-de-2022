@@ -1,19 +1,19 @@
-industryID,name
-1,Automotive
-2,Construction & Engineering
-3,Diversified
-4,Energy
-5,Fashion & Retail
-6,Finance & Investments
-7,Food & Beverage
-8,Gambling & Casinos
-9,Healthcare
-10,Logistics
-11,Manufacturing
-12,Media & Entertainment
-13,Metals & Mining
-14,Real Estate
-15,Service
-16,Sports
-17,Technology
-18,Telecom
+"industryID","name"
+"1","Automotive"
+"2","Construction & Engineering"
+"3","Diversified"
+"4","Energy"
+"5","Fashion & Retail"
+"6","Finance & Investments"
+"7","Food & Beverage"
+"8","Gambling & Casinos"
+"9","Healthcare"
+"10","Logistics"
+"11","Manufacturing"
+"12","Media & Entertainment"
+"13","Metals & Mining"
+"14","Real Estate"
+"15","Service"
+"16","Sports"
+"17","Technology"
+"18","Telecom"

@@ -1,89 +1,89 @@
-countryNameID,name
-1,Algeria
-2,Andorra
-3,Argentina
-4,Armenia
-5,Australia
-6,Austria
-7,Bahamas
-8,Bahrain
-9,Bangladesh
-10,Barbados
-11,Belgium
-12,Belize
-13,Bermuda
-14,Brazil
-15,British Virgin Islands
-16,Bulgaria
-17,Cambodia
-18,Canada
-19,Cayman Islands
-20,Chile
-21,China
-22,Colombia
-23,Cyprus
-24,Czech Republic
-25,Denmark
-26,Egypt
-27,Estonia
-28,Eswatini (Swaziland)
-29,Finland
-30,France
-31,Georgia
-32,Germany
-33,Greece
-34,Guernsey
-35,Hong Kong
-36,Hungary
-37,Iceland
-38,India
-39,Indonesia
-40,Ireland
-41,Israel
-42,Italy
-43,Japan
-44,Kazakhstan
-45,Latvia
-46,Lebanon
-47,Liechtenstein
-48,Luxembourg
-49,Macau
-50,Malaysia
-51,Mexico
-52,Monaco
-53,Morocco
-54,Nepal
-55,Netherlands
-56,New Zealand
-57,Nigeria
-58,Norway
-59,Oman
-60,Peru
-61,Philippines
-62,Poland
-63,Portugal
-64,Qatar
-65,Romania
-66,Russia
-67,Singapore
-68,Slovakia
-69,South Africa
-70,South Korea
-71,Spain
-72,St. Kitts and Nevis
-73,Sweden
-74,Switzerland
-75,Taiwan
-76,Tanzania
-77,Thailand
-78,Turkey
-79,Turks and Caicos Islands
-80,Ukraine
-81,United Arab Emirates
-82,United Kingdom
-83,United States
-84,Uruguay
-85,Uzbekistan
-86,Venezuela
-87,Vietnam
-88,Zimbabwe
+"countryNameID","name"
+"1","Algeria"
+"2","Andorra"
+"3","Argentina"
+"4","Armenia"
+"5","Australia"
+"6","Austria"
+"7","Bahamas"
+"8","Bahrain"
+"9","Bangladesh"
+"10","Barbados"
+"11","Belgium"
+"12","Belize"
+"13","Bermuda"
+"14","Brazil"
+"15","British Virgin Islands"
+"16","Bulgaria"
+"17","Cambodia"
+"18","Canada"
+"19","Cayman Islands"
+"20","Chile"
+"21","China"
+"22","Colombia"
+"23","Cyprus"
+"24","Czech Republic"
+"25","Denmark"
+"26","Egypt"
+"27","Estonia"
+"28","Eswatini (Swaziland)"
+"29","Finland"
+"30","France"
+"31","Georgia"
+"32","Germany"
+"33","Greece"
+"34","Guernsey"
+"35","Hong Kong"
+"36","Hungary"
+"37","Iceland"
+"38","India"
+"39","Indonesia"
+"40","Ireland"
+"41","Israel"
+"42","Italy"
+"43","Japan"
+"44","Kazakhstan"
+"45","Latvia"
+"46","Lebanon"
+"47","Liechtenstein"
+"48","Luxembourg"
+"49","Macau"
+"50","Malaysia"
+"51","Mexico"
+"52","Monaco"
+"53","Morocco"
+"54","Nepal"
+"55","Netherlands"
+"56","New Zealand"
+"57","Nigeria"
+"58","Norway"
+"59","Oman"
+"60","Peru"
+"61","Philippines"
+"62","Poland"
+"63","Portugal"
+"64","Qatar"
+"65","Romania"
+"66","Russia"
+"67","Singapore"
+"68","Slovakia"
+"69","South Africa"
+"70","South Korea"
+"71","Spain"
+"72","St. Kitts and Nevis"
+"73","Sweden"
+"74","Switzerland"
+"75","Taiwan"
+"76","Tanzania"
+"77","Thailand"
+"78","Turkey"
+"79","Turks and Caicos Islands"
+"80","Ukraine"
+"81","United Arab Emirates"
+"82","United Kingdom"
+"83","United States"
+"84","Uruguay"
+"85","Uzbekistan"
+"86","Venezuela"
+"87","Vietnam"
+"88","Zimbabwe"
