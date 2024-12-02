@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+  <h1>{{ city.name }}</h1>
+  <table>
+    <tr>
+      <th>Attribute</th>
+      <th>Value</th>
+    </tr>
+    <tr>
+      <td>Name</td>
+      <td>{{ city.name }}</td>
+    </tr>
+    <tr>
+      <td>State</td>
+      <td>{{ state.state }}</td>
+    </tr>
+    <tr>
+      <td>Region</td>
+      <td>{{ state.region }}</td>
+    </tr>
+  </table>
+</div>
+{% endblock %}
+
