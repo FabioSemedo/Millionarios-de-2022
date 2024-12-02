@@ -1,3 +1,4 @@
+
 body {
   font-family: Helvetica, arial, sans-serif;
   font-size: 14px;
@@ -132,6 +133,76 @@ table {
     border-bottom-right-radius: 50px;
 }
 
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+
+.dropdown > .nav-link {
+    padding: 10px 15px;
+    background-color: #333;
+    border-radius: 50px;
+    display: block;
+    transition: background-color 0.3s ease; /
+}
+
+.dropdown > .nav-link:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    top: 100%;
+    border-radius: 20px;
+    left: 0;
+    z-index: 1;
+    padding: 0;
+    margin: 0;
+}
+
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+
+.dropdown-menu .dropdown-item {
+    padding: 10px;
+    border-bottom: 1px solid #444;
+    list-style-type: none;
+    margin: 0;
+    display: block;
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown-menu .dropdown-item:last-child {
+    border-bottom: none;
+}
+
+
+.dropdown-menu .dropdown-item:first-child {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.dropdown-menu .dropdown-item:last-child {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #555;
+}
+
+
 .table-link {
     color: #0000EE;
 }
@@ -143,8 +214,11 @@ table {
 
 .search-container {
     display: flex;
+    
     justify-content: space-between;
-    gap: 30px; 
+    gap: 15px;
+    padding: 20px;
+    margin-top: 40px;
 }
 
 .filtered-table {
@@ -152,63 +226,85 @@ table {
     padding: 30px;
     flex: 1;
     border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 600px;
-    margin-top: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-.filtered-title {
+.search-form h2,
+.filtered-table h2 {
     color: #343a40;
+    font-size: 1.8em;
     margin-bottom: 20px;
-    font-size: 1.5em;
     text-align: center;
+    font-weight: 600; 
 }
 
-.billionaire-list {
+.filtered-list {
     list-style-type: none;
     padding-left: 0;
     margin: 0;
 }
 
-.billionaire-item {
-    margin-bottom: 15px;
-    font-size: 1.1em;
-    padding: 12px;
+
+.filtered-item {
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
     border-radius: 8px;
-    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    font-size: 1.2em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.billionaire-item:hover {
+
+.filtered-item:hover {
     background-color: #f1f1f1;
+    transform: translateY(-5px); 
 }
+
 
 .table-link {
-    color: #007bff;
     text-decoration: none;
+    color: #0056b3;
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
 .table-link:hover {
-    color: #3399ff;
+    color: #003d82;
     text-decoration: underline;
 }
+
+.no-results {
+    font-size: 1.5em;
+    color: #999;
+    text-align: center;
+    margin-top: 50px;
+    font-style: italic;
+}
+
 .search-form {
-    background-color: #fff;
-    padding: 20px;
+    background-color: #ffffff;
+    padding: 30px;
     flex: 1;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 400px;
+    max-width: 450px;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: all 0.3s ease;
 }
 
 label {
-    font-size: 16px;
-    color: #555;
-    margin-bottom: 8px;
+    font-size: 18px;
+    color: #333;
+    
+    font-weight: 500;
     display: block;
 }
 
@@ -216,35 +312,47 @@ input[type="text"],
 input[type="number"],
 select {
     width: 100%;
-    padding: 10px;
-    margin: 8px 0 16px 0;
+    padding: 12px;
     border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 14px;
+    border-radius: 6px;
+    font-size: 16px;
     box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
+
 
 input[type="text"]:focus,
 input[type="number"]:focus,
 select:focus {
-    border-color: #0056b3;
+    border-color: #007bff;
     outline: none;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
 }
+
 
 button {
-    background-color: #0056b3;
+    background-color: #007bff;
     color: white;
-    font-size: 16px;
-    padding: 10px 20px;
+    font-size: 18px;
+    padding: 12px 25px;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     cursor: pointer;
     width: 100%;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: 600;
 }
 
-button:hover {
-    background-color: #003d82;
+button:not(.fixed-button):hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+
+input::placeholder,
+select::placeholder {
+    color: #aaa;
+    font-style: italic;
 }
 
 .container {
@@ -334,3 +442,142 @@ table {
   .btn-secondary:hover {
     background-color: #5a6268;
   }
+
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.column {
+  flex: 1;
+}
+
+.checkbox-container {
+    max-height: 300px;            
+    overflow-y: auto;            
+    padding: 15px;               
+    background-color: #f9f9f9;    
+    border: 1px solid #ccc;      
+    border-radius: 8px;           
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  
+  }
+
+
+  .checkbox-container label {
+    display: flex;                
+    align-items: center;          
+    margin-bottom: 12px;         
+    padding: 8px;                 
+    font-size: 14px;              
+    cursor: pointer;            
+    transition: background-color 0.3s ease, padding 0.3s ease; 
+  }
+
+  .checkbox-container label:hover {
+    background-color: #e6f7ff;  
+    padding-left: 12px;            
+  }
+
+ 
+  .checkbox-container input[type="checkbox"] {
+    margin-right: 10px;          
+    transform: scale(1.2);    
+    transition: transform 0.2s ease;
+  }
+
+  .checkbox-container input[type="checkbox"]:checked {
+    background-color: #3399ff;    
+    border-color: #3399ff;         
+  }
+
+  .filter-category {
+      margin-bottom: 30px;
+  }
+
+  .fixed-button {      
+      position: sticky;
+      bottom: 20px;       
+      left: 50%;          
+      transform: translateX(-50%);
+      z-index: 1000;
+      padding: 6px 15px;        
+      font-size: 18px;        
+      width: auto;            
+      max-width: 200px;         
+      border-radius: 5px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  .fixed-button:hover {
+     
+     background-color: #0056b3;
+     transform: translate(-50%,-2px);
+  }
+  
+
+.row-count {
+  background-color: #f8f9fa;  
+  padding: 15px 20px;           
+  margin-bottom: 15px;         
+  border-radius: 5px;          
+  border: 1px solid #dddddd;  
+  font-size: 1.1em;           
+  font-weight: bold;          
+  color: #333;                 
+  display: flex;               
+  justify-content: center;}
+
+.row-count p {
+  margin: 0;                    
+  text-align: center;         
+}
+
+.row-count strong {
+  color: #007bff;              
+}
+
+.order-by-container {
+  display: flex;
+  align-items: center;
+  justify-content:
+  margin-bottom: 20px;
+  gap: 10px; 
+}
+
+.order-by-label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.order-by-dropdown {
+    width: 100%;
+  max-width: 300px;
+  padding: 10px; 
+  border: 1px solid #ddd; 
+  border-radius: 8px;
+  font-size: 16px;
+  color: #555;
+  background-color: #fff; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.order-by-dropdown:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.2); 
+  outline: none;
+}
+
+.order-by-dropdown:hover {
+  border-color: #0056b3; 
+  background-color: #f8f9fa;
+}
+
+.search-form {
+    position: sticky;
+    top: 0;
+    z-index: 1000; 
+}

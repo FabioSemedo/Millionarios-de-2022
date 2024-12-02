@@ -1,31 +1,15 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="container">
-  <h1>{{ billionaire.name }}</h1>
+  <h1>{{ billionaire.first_name ~ " " ~ billionaire.last_name }}</h1>
   <table>
     <tr>
       <th>Attribute</th>
       <th>Value</th>
     </tr>
     <tr>
-      <td>Idade</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>Cidade</td>
-      <td>
-        <a href="/cities/{{ billionaire.cityID }}">
-          {{ city.name }}
-        </a>
-      </td>
-    </tr>
-    <tr>
-      <td>País de nascimento</td>
-      <td>
-	<a href="/countries/{{ billionaire.citizenshipID }}">
-	  {{ country.name }}
-	</a>
-      </td>
+      <td>Fortuna</td>
+      <td>${{ billionaire.wealth_millions }}</td>
     </tr>
     <tr>
       <td>Indústria</td>
@@ -36,12 +20,36 @@
       <td>{{ billionaire.conglomorate }}</td>
     </tr>
     <tr>
-      <td>Fortuna</td>
-      <td>${{ billionaire.wealth_millions }}</td>
+      <td>País de nascimento</td>
+      <td>
+        <a href="/countries/{{ billionaire.citizenshipID }}">
+          {{ country.name }}
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>Cidade</td>
+      <td>
+        <a href="/cities/{{ billionaire.cityID }}">
+          {{ city.name }}
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>Idade</td>
+      <td>{{ billionaire.age }}</td>
     </tr>
     <tr>
       <td>Género</td>
-      <td>{{ billionaire.gender }}</td>
+      <td>
+        {% if billionaire.gender == 'M' %}
+          Male
+        {% elif billionaire.gender == 'F' %}
+          Female
+        {% else %}
+          Other
+        {% endif %}
+      </td>
     </tr>
     <tr>
       <td>Fonte</td>

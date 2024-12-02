@@ -1,1 +1,27 @@
-s
+{% extends 'base.html' %}
+{% block content %}
+<div class="search-container">
+  <form method="POST" action="{{ url_for('cities')}}" class="search-form">
+    <h2>Search for Cities</h2>
+    <label for="name">Nome:</label>
+    <input type="text" id="name" name="name" value="{{ request.form.get('name', '') }}">
+    <label for="location">Location:</label>
+    <input type="text" id="location" name="location" value="{{ request.form.get('location', '') }}">
+    <button type="submit">Filtrar</button>
+  </form>
+
+  <div class="filtered-table">
+    <h2>Filtered Cities</h2>
+    <ul class="filtered-list">
+      {% for city in cities %}
+      <li class="filtered-item">
+	<a href="/cities/{{ city.cityID }}" class="table-link">
+	  {{ city.name }}
+	</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+{% endblock %}
+
