@@ -2,23 +2,21 @@
 counts how many billionaires moved out from their home country and where did they go
 
 SELECT 
-    cn.name AS Origin_Country,
-    rcn.name AS Destination_Country,
-    COUNT(b.billionaireID) AS Total_Billionaires
+    c1.name AS Origin_Country,
+    c2.name AS Destination_Country,
+    COUNT(b.personId) AS Total_Billionaires
 FROM 
     Billionaires b
 JOIN 
-    CountriesNames cn ON b.citizenshipID = cn.countryNameID
+    Countries c1 ON b.citizenshipID = c1.countryid
 JOIN 
-    Cities c ON b.cityID = c.cityID
+    Cities ci ON b.cityID = ci.cityid
 JOIN 
-    ResidenceCountries rc ON c.countryID = rc.countryNameID
-JOIN 
-    CountriesNames rcn ON rc.countryNameID = rcn.countryNameID
+    Countries c2 ON ci.countryid = c2.countryid
 WHERE 
-    b.citizenshipID != rc.countryNameID
+    b.citizenshipID != ci.countryid
 GROUP BY 
-    cn.name, rcn.name
+    c1.name, c2.name
 ORDER BY 
     Total_Billionaires DESC;
 
@@ -26,44 +24,48 @@ ORDER BY
 
 checks billionaires younger than 40 in industries with equal or less than 5 billionaires. useful to check young ententrepreneurs on emerging fields
 
+WITH IndustryCounts AS (
+    SELECT 
+        b.industry,
+        COUNT(*) AS Total_Billionaires
+    FROM 
+        Billionaires b
+    GROUP BY 
+        b.industry
+    HAVING 
+        COUNT(*) <= 50 /* CHANGE MAX NUMBER OF BILLIONAIRES PER INDUSTRY */
+)
 SELECT 
-    b.first_name,
-    b.last_name,
-    i.name AS Industry_Name,
-    s.name AS Source_of_Wealth,
-    b.wealth_millions AS Wealth_Millions,
-    (CAST((JULIANDAY('now') - JULIANDAY(b.date_of_birth)) AS INTEGER) / 365) AS Age
+    b.first_name AS First_name,
+    b.last_name AS Last_name,
+    b.industry AS Industry,
+    b.wealth_millions AS Wealth_in_Millions,
+    (CAST((JULIANDAY('now') - JULIANDAY(b.birth_date)) AS INTEGER) / 365) AS Age
 FROM 
     Billionaires b
 JOIN 
-    Industries i ON b.industryID = i.industryID
-JOIN 
-    SourcesOfWealth s ON b.sourceID = s.sourceID
+    IndustryCounts ic ON b.industry = ic.industry
 WHERE 
-    (CAST((JULIANDAY('now') - JULIANDAY(b.date_of_birth)) AS INTEGER) / 365) < 40
-GROUP BY 
-    i.name
-HAVING 
-    COUNT(b.billionaireID) <= 5
+    (CAST((JULIANDAY('now') - JULIANDAY(b.birth_date)) AS INTEGER) / 365) < 45 /* CHANGE AGE OF BILLIONAIRES */
 ORDER BY 
-    Age ASC, i.name;
+    Age ASC, Wealth_in_Millions DESC;
 
 --------------------------------------------------------------------
 
 this ones a bit funny, i thought that we could check how many billionaires have the same name and the avg location those ppl live in
 
 SELECT 
-    COUNT(b.billionaireID) AS Total_Billionaires_With_Same_Name,
-    AVG(rc.latitude) AS Avg_Latitude,
-    AVG(rc.longitude) AS Avg_Longitude
+    COUNT(b.personId) AS Total_Billionaires_With_Same_Name,
+    AVG(c.latitude) AS Avg_Latitude,
+    AVG(c.longitude) AS Avg_Longitude
 FROM 
     Billionaires b
 JOIN 
-    CountriesNames cn ON b.citizenshipID = cn.countryNameID
+    Cities ci ON b.cityID = ci.cityid
 JOIN 
-    ResidenceCountries rc ON cn.countryNameID = rc.countryNameID
+    Countries c ON ci.countryid = c.countryid
 WHERE 
-    b.first_name = 'João';
+    b.first_name like '%John%';
 
 --------------------------------------------------------------------
 """
