@@ -48,6 +48,8 @@ PLEASE FOLLOW ALONG. See create_[tableName].sql queries for more information on 
     FelcsÃºt            Felcsút     (Felcsút)
     Sant'' Elpidio A Mare       Sant'Elpidio a Mare     (Sant'Elpidio a Mare)  
 
+    Greated by getting the City-Country combinations. Noted that we do not know all cities of origin (unknown-country).
+
 #2 Industries
     -Check character encodin:
     (All good)
