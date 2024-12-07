@@ -14,6 +14,8 @@
         <option value="country_asc" {% if request.form.get('order_by') == 'country_asc' %}selected{% endif %}>Country (A-Z)</option>
       </select>
     </div>
+    <h1>Name</h1>
+    <input type="text" id="name" name="name" placeholder="e.g. Maria Fernanda Amorim" value="{{ request.form.get('name', '') }}">
     <h1>Country</h1>
     <div class="filter-category">
       <div class="checkbox-container">
@@ -36,7 +38,7 @@
 	{% endfor %}
       </div>  
     </div>
-    <h1>Wealth (Billions)</h1>
+    <h1>Wealth (millions $)</h1>
     <div class="filter-category">
       <div class="row">
 	<div class="column">
@@ -54,7 +56,7 @@
 	{% for option in source %}
 	<label>
 	  <input type="checkbox" name="source_filter[]" value="{{ option.sourceID }}">
-	  {{ option.source ~ " " ~option.sourceID}}
+	  {{ option.source }}
 	</label>
 	{% endfor %}
       </div> 
@@ -153,7 +155,7 @@
             {% for row in data %}
             <tr>
 	      <td>{{ row.personId }}</td>
-                    <td><a href="{{ url_for('billionaire_info', id=row.personId) }}">{{ row.first_name ~ " " ~ row.last_name ~ " " ~ row.suffix }}</a></td>
+                    <td><a href="{{ url_for('billionaire_info', id=row.personId) }}">{{ row.first_name ~ " " ~ row.last_name ~ " " ~ row.name_suffix }}</a></td>
                     <td>{{ row.wealth }}</td>
                     <td>{{ row.source }}</td>
 	      <td>{{ row.country }}</td>

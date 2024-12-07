@@ -1,1 +1,76 @@
-a
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="accordion">
+  <div class="accordion-item">
+    <input type="radio" id="query1" name="accordion" class="accordion-toggle" />
+    <label for="query1" class="accordion-header">The amount of opposite gender billionaires who are not as wealthy as the billionaire in question is.</label>
+    <div class="accordion-body">
+      <div class="sub-accordion-item">
+	<input type="radio" id="sub-query1" name="sub-accordion" class="sub-accordion-toggle" />
+	<label for="sub-query1" class="sub-accordion-header">For females:</label>
+	<div class="sub-accordion-body">
+	  <p>Results go here...</p>
+	</div>
+      </div>
+      <div class="sub-accordion-item">
+	<input type="radio" id="sub-query2" name="sub-accordion" class="sub-accordion-toggle"/>
+	<label for="sub-query2" class="sub-accordion-header">For males:</label>
+	<div class="sub-accordion-body">
+	  <p>Results go here...</p>
+	</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <input type="radio" id="query2" name="accordion" class="accordion-toggle" />
+    <label for="query2" class="accordion-header">Total amount of money per industry</label>
+    <div class="accordion-body">
+      <p>Results go here...</p>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <input type="radio" id="query3" name="accordion" class="accordion-toggle" />
+    <label for="query3" class="accordion-header">Percentage of billionaires per continent</label>
+    <div class="accordion-body">
+      <p>Results go here...</p>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <input type="radio" id="query4" name="accordion" class="accordion-toggle" />
+    <label for="query4" class="accordion-header">Query 4: Active Sessions</label>
+    <div class="accordion-body">
+      <p>Results go here...</p>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <input type="radio" id="query5" name="accordion" class="accordion-toggle" />
+    <label for="query5" class="accordion-header">Query 5: Active Sessions</label>
+    <div class="accordion-body">
+      <p>Results go here...</p>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <input type="radio" id="query6" name="accordion" class="accordion-toggle" />
+    <label for="query6" class="accordion-header">Query 6: Active Sessions</label>
+    <div class="accordion-body">
+      <p>Results go here...</p>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <input type="radio" id="query7" name="accordion" class="accordion-toggle" />
+    <label for="query7" class="accordion-header">Query 7: Active Sessions</label>
+    <div class="accordion-body">
+      <p>Results go here...</p>
+    </div>
+  </div>
+
+  
+</div>
+{% endblock %}

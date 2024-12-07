@@ -4,26 +4,58 @@ from flask import abort, render_template, Flask, request
 import logging
 import db
 
+
+#--select personID, first_name, last_name, wealth_millions, (2591 - personID - (gender_row - 1)) as quantity, printf("%.4f", ((100*(2591 - personID - (gender_row - 1)) / 1.0) / ((select count(gender) from Billionaires where gender = "F" group by gender)))) as percentage from (select *, ROW_NUMBER() over (partition by gender order by personID desc) as gender_row from Billionaires) where gender = "M" order by quantity desc, wealth_millions desc
+
+#select personID, first_name, last_name, wealth_millions, (2591 - personID - (gender_row - 1)) as quantity, printf("%.4f", ((100*(2591 - personID - (gender_row - 1)) / 1.0) / ((select count(gender) from Billionaires where gender = "M" group by gender)))) as percentage from (select *, row_number() over (partition by gender order by personID desc) as gender_row from Billionaires) where gender = "F" order by quantity desc, wealth_millions desc
+
+
 APP = Flask(__name__,static_folder='css')
-min_limit = "-1000000000000"
-max_limit = "1000000000000"
+min_limit = "-10000000000000000"
+max_limit = "10000000000000000"
+
+
+def convert(num):
+    if len(num) >= 15 :
+        if num[0] == '-':
+            num = min_limit
+        else:
+            num = max_limit
+    
+    return num
 
 # Start page
 @APP.route('/')
 def index():
-    return render_template('index.html')
+    query = '''SELECT
+                   b.personId, b.first_name, b.personId, b.last_name, c2.country, b.wealth_millions as wealth, b.name_suffix,
+                   c3.nationality,c2.continent, Group_Concat(s.source, ', ') as source
+               FROM
+                   Billionaires b
+               JOIN
+                   Cities c1 ON c1.cityID = b.cityID
+               JOIN
+                   (SELECT f1.continent, f1.countryID, f1.name as country FROM Countries f1) c2 ON c2.countryID = c1.countryID
+               JOIN
+                   (SELECT f2.countryID as nationalityID, f2.name as nationality FROM Countries f2) c3 ON c3.nationalityID = b.citizenshipID
+               JOIN
+                   Activities a ON a.personId = b.personId
+               JOIN
+                   (SELECT f3.sourceID, f3.source FROM SourcesOfWealth f3) s ON s.sourceID = a.sourceID
+               GROUP BY b.personId
+               LIMIT 50;
+            '''
+    data = db.execute(query).fetchall()
+    return render_template('index.html',data=data)
 
 
-
-@APP.route('/stats')
-# Statistics page
-def stats():
-    return render_template('stats.html')
 
 @APP.route('/about')
 # About page
 def about():
     return render_template('about.html')
+
+
 
 @APP.route('/countries', methods=['GET','POST'])
 # Search Country
@@ -68,51 +100,65 @@ def countries():
 
         if min_tax_rate:
             query += " AND ? <= m.tax_rate"
+            min_tax_rate = convert(min_tax_rate)
             filters.append(float(min_tax_rate))
         if max_tax_rate:
             query += " AND m.tax_rate <= ?"
+            max_tax_rate = convert(max_tax_rate)
             filters.append(float(max_tax_rate))
             
         if min_tax_rev:
             query += " AND ? <= m.tax_rev"
+            min_tax_rev = convert(min_tax_rev)
             filters.append(float(min_tax_rev))
         if max_tax_rev:
             query += " AND m.tax_rev <= ?"
+            max_tax_rev = convert(max_tax_rev)
             filters.append(float(max_tax_rev))
             
         if min_cpi:
             query += " AND ? <= m.cpi"
+            min_cpi = convert(min_cpi)
             filters.append(float(min_cpi))
         if max_cpi:
             query += " AND m.cpi <= ?"
+            max_cpi = convert(max_cpi)
             filters.append(float(max_cpi))
 
         if min_change:
             query += " AND ? <= m.cpi_change"
+            min_change = convert(min_change)
             filters.append(float(min_change))
         if max_change:
             query += " AND m.cpi_change <= ?"
+            max_change = convert(max_change)
             filters.append(float(max_change))
 
         if min_gdp:
             query += " AND ? <= m.gdp"
+            min_gdp = convert(min_gdp)
             filters.append(int(min_gdp))
         if max_gdp:
             query += " AND m.gdp <= ?"
+            max_gdp = convert(max_gdp)
             filters.append(int(max_gdp))
 
         if min_trt:
             query += " AND ? <= m.grs_trt_enroll"
+            min_trt = convert(min_trt)
             filters.append(float(min_trt))
         if max_trt:
             query += " AND m.grs_trt_enroll <= ?"
+            max_trt = convert(max_trt)
             filters.append(float(max_trt))
 
         if min_prm:
             query += " AND ? <= m.grs_prm_enroll"
+            min_prm = convert(min_prm)
             filters.append(float(min_prm))
         if max_prm:
             query += " AND m.grs_prm_enroll <= ?"
+            max_prm = convert(max_prm)
             filters.append(float(max_prm))
             
         if continent_n:
@@ -145,24 +191,28 @@ def billionaires():
             filters.append(f"%{name}%")
         
         if min_age:
-           query += " AND (CAST((JULIANDAY('now') - JULIANDAY(b.birth_date)) / 365.25 AS INTEGER)) = ?"
+           query += " AND (CAST((JULIANDAY('now') - JULIANDAY(b.birth_date)) / 365.25 AS INTEGER)) >= ?"
+           min_age = convert(min_age)
            filters.append(int(min_age))
         
         if max_age:
-            query += " AND (CAST((JULIANDAY('now') - JULIANDAY(b.birth_date)) / 365.25 AS INTEGER)) = ?"
+            query += " AND (CAST((JULIANDAY('now') - JULIANDAY(b.birth_date)) / 365.25 AS INTEGER)) <= ?"
+            max_age = convert(max_age)
             filters.append(int(max_age))
         
         if min_money:
             query += " AND b.wealth_millions >= ?"
+            min_money = convert(min_money)
             filters.append(int(min_money))
         
         if max_money:
             query += " AND b.wealth_millions <= ?"
+            max_money = convert(max_money)
             filters.append(int(max_money))
         if gender:
             query += " AND b.gender = ?"
             filters.append(gender)
-    query += " ORDER BY b.first_name, b.last_name"        
+    query += " ORDER BY b.first_name, b.last_name, b.name_suffix"        
     result = db.execute(query, tuple(filters))
     billionaires = result.fetchall()
     return render_template('search-billionaires.html', billionaires=billionaires)
@@ -175,15 +225,20 @@ def billionaire_info(id):
 
     # billionaire
     query_billionaire = '''SELECT
-                               *
+                              b.*, Group_Concat(s.source, ', ') as source,(CAST((JULIANDAY('now') - JULIANDAY(b.birth_date)) / 365.25 AS INTEGER)) as age
                            FROM
                                Billionaires b
+                           JOIN
+                               Activities a ON a.personId = b.personId
+                           JOIN
+                               SourcesOfWealth s ON s.sourceID = a.sourceID
                            WHERE
                                b.personId = ?
+                           GROUP BY b.personId
                         '''
     billionaire = db.execute(query_billionaire,[id]).fetchone()
 
-    #country
+    # country
     query_country = '''SELECT
                            c.name
                         FROM
@@ -194,20 +249,6 @@ def billionaire_info(id):
                             b.personId = ?
                     '''
     country = db.execute(query_country,[id]).fetchone()
-
-    #source
-    source_query = '''SELECT
-                          s.source, s.sourceID
-                      FROM
-                          Billionaires b
-                      JOIN
-                          Activities a ON b.personId = a.personId
-                      JOIN 
-                          SourcesOfWealth s ON a.sourceID = s.sourceID
-                      WHERE
-                          b.personId = ?
-                   '''
-    source = db.execute(source_query,[id]).fetchone()
 
     #city
     city_query = '''SELECT
@@ -220,7 +261,7 @@ def billionaire_info(id):
                         b.personId = ?
                   '''
     city = db.execute(city_query,[id]).fetchone()
-    return render_template('billionaire-info.html',billionaire=billionaire,country=country,source=source,city=city)
+    return render_template('billionaire-info.html',billionaire=billionaire,country=country,city=city)
 
 
 @APP.route('/countries/<int:id>')
@@ -242,8 +283,8 @@ def geographic(id):
     return render_template('country-geographic.html', country=country)
 
 
-@APP.route('/countries/<int:id>/economy')
-def economy(id):
+@APP.route('/countries/<int:id>/economic')
+def economic(id):
     query = '''SELECT
                    *
                FROM
@@ -319,7 +360,7 @@ def cities_info(id):
 # Search page
 def search():
     query = '''SELECT
-                   b.personId, b.first_name, b.personId, b.last_name, c2.country, b.wealth_millions as wealth, 
+                   b.personId, b.first_name, b.last_name, c2.country, b.wealth_millions as wealth, b.name_suffix, 
                    c3.nationality,c2.continent, Group_Concat(s.source, ', ') as source
                FROM
                    Billionaires b
@@ -404,7 +445,6 @@ def search():
         gender_n = request.form.getlist('gender_filter[]')
         industry_n = request.form.getlist('industry_filter[]')
         source_id = request.form.getlist('source_filter[]')
-        print(source_id)
         city_id = request.form.getlist('city_filter[]')
         state_id = request.form.getlist('state_filter[]')
         region_n = request.form.getlist('region_filter[]')
@@ -424,19 +464,23 @@ def search():
             filters.extend(country_id)
         
         if min_age:
-           query += " AND (CAST((JULIANDAY('now') - JULIANDAY(b.birth_date)) / 365.25 AS INTEGER)) = ?"
+           query += " AND (CAST((JULIANDAY('now') - JULIANDAY(b.birth_date)) / 365.25 AS INTEGER)) >= ?"
+           min_age = convert(min_age)
            filters.append(int(min_age))
         
         if max_age:
-            query += " AND (CAST((JULIANDAY('now') - JULIANDAY(b.birth_date)) / 365.25 AS INTEGER)) = ?"
+            query += " AND (CAST((JULIANDAY('now') - JULIANDAY(b.birth_date)) / 365.25 AS INTEGER)) <= ?"
+            max_age = convert(max_age)
             filters.append(int(max_age))
         
         if min_money:
             query += " AND b.wealth_millions >= ?"
+            min_money = convert(min_money)
             filters.append(int(min_money))
         
         if max_money:
             query += " AND b.wealth_millions <= ?"
+            max_money = convert(max_money)
             filters.append(int(max_money))
         if gender_n:
             placeholders = ', '.join(['?'] * len(gender_n))
@@ -489,3 +533,173 @@ def search():
     query += order_s
     data = db.execute(query, tuple(filters)).fetchall()
     return render_template('search.html',country=country,industry=industry,source=source,gender=gender,city=city,state=state,region=region,continent=continent,data=data)
+
+
+
+
+
+@APP.route('/stats')
+# Statistics page
+def stats():
+    # Query 4
+    sub_query_1 = db.execute('''SELECT 
+                         personID, first_name, last_name, wealth_millions, (2591 - personID - (gender_row - 1)) AS quantity, 
+                         printf("%.4f", ((100*(2591 - personID - (gender_row - 1)) / 1.0) / ((SELECT count(gender) FROM Billionaires WHERE gender = "F" GROUP BY gender)))) AS percentage
+                     FROM 
+                         (SELECT *, ROW_NUMBER() OVER (PARTITION BY gender ORDER BY personID DESC) AS gender_row FROM Billionaires)
+                     WHERE gender = "M" 
+                     ORDER BY quantity DESC, wealth_millions DESC''').fetchall()
+
+    sub_query_2 = db.execute('''SELECT 
+                         personID, first_name, last_name, wealth_millions, (2591 - personID - (gender_row - 1)) AS quantity, 
+                         printf("%.4f", ((100*(2591 - personID - (gender_row - 1)) / 1.0) / ((SELECT count(gender) FROM Billionaires WHERE gender = "M" GROUP BY gender)))) as percentage 
+                     FROM 
+                         (SELECT *, ROW_NUMBER() OVER (PARTITION BY gender ORDER BY personID DESC) AS gender_row FROM Billionaires) 
+                     WHERE 
+                         gender = "F" 
+                     ORDER BY quantity DESC, wealth_millions DESC''').fetchall()
+
+    # Query 5
+    query_2 = db.execute('''SELECT 
+                     industry, SUM(wealth_millions) AS total 
+                 FROM 
+                     Billionaires 
+                 GROUP BY industry ORDER BY total DESC, industry''').fetchall()
+
+
+    # Query 6
+    query_3 = db.execute('''SELECT 
+                                o.continent, printf("%.1f", ((100 * count(b.personID)) / 2591.0)) AS percentage
+                            FROM 
+                                Billionaires b 
+                            JOIN 
+                                Cities c ON b.cityID = c.cityID 
+                            JOIN 
+                                Countries o ON c.countryID = o.countryID 
+                            GROUP BY o.continent 
+                            ORDER BY o.continent''').fetchall()
+    
+    # Query 1
+    query_4 = db.execute('''SELECT 
+                                quantity, 
+                                printf("%.2f", ((total_wealth / 1.0) / (SELECT SUM(wealth_millions) FROM (SELECT personID, conglomorate, wealth_millions FROM Billionaires) WHERE conglomorate = 0 GROUP BY personID, conglomorate))) AS total_wealth_perc, 
+                                grs_prm_enroll, grs_trt_enroll 
+                            FROM 
+                                (SELECT 
+                                     COUNT(wealth_millions) AS quantity, SUM(wealth_millions) AS total_wealth, 
+                                     e.grs_prm_enroll, ABS(e.grs_prm_enroll - 100), e.grs_trt_enroll, ABS(e.grs_trt_enroll) 
+                                 FROM 
+                                     Billionaires b 
+                                 JOIN 
+                                     Cities c ON b.cityID = c.cityID 
+                                 JOIN 
+                                     EconomicDetails e ON c.countryID = e.countryID 
+                                 WHERE b.conglomorate = 0 
+                                     GROUP BY ABS(grs_prm_enroll - 100), ABS(grs_trt_enroll - 100) 
+                                     ORDER BY ABS(grs_prm_enroll - 100), ABS(grs_trt_enroll - 100))''').fetchall()
+
+
+    # Query 2
+    query_5 = db.execute('''SELECT 
+                                o.name, printf("%.2E", (count(b.personID) / (e.population / 1.0))) AS ratio
+                            FROM 
+                                Billionaires b 
+                            JOIN 
+                                Cities c ON b.cityID = c.cityID 
+                            JOIN 
+                                EconomicDetails e ON c.countryID = e.countryID 
+                            JOIN 
+                                Countries o ON e.countryID = o.countryID 
+                            GROUP BY population 
+                            ORDER BY o.name DESC
+                         ''').fetchall()
+
+
+    # Query 3
+    query_6 = db.execute('''SELECT 
+                                b.industry, COUNT(b.personID) AS quantity 
+                            FROM 
+                                Billionaires b 
+                            JOIN 
+                                Cities c ON b.cityID = c.cityID 
+                            JOIN 
+                                EconomicDetails e ON c.countryID = e.countryID 
+                            WHERE (CAST((julianday('now') - julianday(b.birth_date)) AS integer) / 365.25) > e.life_expect AND (b.industry = "Metals & Mining" OR b.industry = "Construction & Engineering") 
+                            GROUP BY b.industry 
+                            ORDER BY b.industry DESC
+                         ''').fetchall()
+
+    # Query 7
+    query_7 = db.execute('''SELECT 
+                                s.region, b.industry, COUNT(b.personID) AS quantity, SUM(b.wealth_millions) AS total_wealth 
+                            FROM 
+                                Billionaires b 
+                            JOIN 
+                                Cities c ON b.cityID = c.cityID 
+                            JOIN 
+                                USCities uc ON c.cityID = uc.cityID 
+                            JOIN
+                                USStates s ON uc.stateID = s.stateID 
+                            GROUP BY s.region, b.industry 
+                            ORDER BY s.region, quantity desc, b.industry
+                         ''').fetchall()
+
+    # Query 8
+    query_8 = db.execute('''SELECT
+                                 k.first_name, k.last_name, k.wealth_millions, k.name, k.tax_rate 
+                            FROM 
+                                (SELECT b.first_name, b.last_name, b.wealth_millions, o.name, e.tax_rate, (ROW_NUMBER() OVER (PARTITION BY e.tax_rate ORDER BY b.wealth_millions desc)) AS ROW 
+                                FROM 
+                                   (Billionaires b 
+                                JOIN 
+                                    Cities c ON b.cityID = c.cityID 
+                                JOIN 
+                                    EconomicDetails e ON c.countryID = e.countryID
+                                JOIN 
+                                    Countries o ON e.countryID = o.countryID
+                                )
+                                ORDER BY e.tax_rate DESC) k
+                             WHERE row <= 5
+                         ''').fetchall()
+
+    query_9 = db.execute('''SELECT k.name,
+                                (k.sum / k.population) AS wealth
+                            FROM (
+                                SELECT 
+                                    o.name AS name,
+                                    sum(b.wealth_millions)*1000000 AS sum,
+                                    e.population AS population
+                                FROM (
+                                Billionaires b
+                                JOIN
+                                Cities c ON b.cityID = c.cityID
+                                JOIN
+                                Countries o ON c.countryID = o.countryID
+                                JOIN
+                                EconomicDetails e ON o.countryID = e.countryID
+                                )
+                            GROUP BY o.name
+                            ) k
+                         ''').fetchall()
+
+    query_10 = db.execute('''SELECT 
+                                 name, source, MAX(soma) AS best_total 
+                             FROM 
+                                 (SELECT 
+                                      o.name AS name, s.source AS source, SUM(b.wealth_millions) AS soma 
+                                 FROM 
+                                     Billionaires b 
+                                 JOIN 
+                                     Activities a ON b.personID = a.personID 
+                                 JOIN 
+                                     SourcesOfWealth s ON a.sourceID = s.sourceID 
+                                 JOIN 
+                                     Cities c ON b.cityID = c.cityID 
+                                 JOIN 
+                                     Countries o ON c.countryID = o.countryID 
+                                 GROUP BY o.name) 
+                             GROUP BY name 
+                             ORDER BY best_total DESC, name, source
+                         ''')
+    
+    return render_template('stats.html',sub_query_1=sub_query_1, sub_query_2=sub_query_2,query_2=query_2,query_3=query_3,query_4=query_4,query_5=query_5,query_6=query_6,query_7=query_7,query_8=query_8,query_9=query_9,query_10=query_10)

@@ -15,7 +15,7 @@
       </select>
     </div>
     <h1>Name</h1>
-    <input type="text" id="name" name="name" placeholder="type..." value="{{ request.form.get('name', '') }}">
+    <input type="text" id="name" name="name" placeholder="e.g. Maria Fernanda Amorim" value="{{ request.form.get('name', '') }}">
     <h1>Country</h1>
     <div class="filter-category">
       <div class="checkbox-container">
@@ -38,7 +38,7 @@
 	{% endfor %}
       </div>  
     </div>
-    <h1>Wealth (Billions)</h1>
+    <h1>Wealth (millions $)</h1>
     <div class="filter-category">
       <div class="row">
 	<div class="column">
@@ -155,8 +155,8 @@
             {% for row in data %}
             <tr>
 	      <td>{{ row.personId }}</td>
-                    <td><a href="{{ url_for('billionaire_info', id=row.personId) }}">{{ row.first_name ~ " " ~ row.last_name ~ " " ~ row.suffix }}</a></td>
-                    <td>{{ row.wealth }}</td>
+                    <td><a href="{{ url_for('billionaire_info', id=row.personId) }}">{{ row.first_name ~ " " ~ row.last_name ~ " " ~ row.name_suffix }}</a></td>
+                    <td>${{ row.wealth }}M</td>
                     <td>{{ row.source }}</td>
 	      <td>{{ row.country }}</td>
 	      <td>{{ row.nationality }}</td>

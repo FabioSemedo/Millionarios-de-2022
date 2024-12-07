@@ -36,7 +36,7 @@ h5 tt, h5 code {
 h6 tt, h6 code {
   font-size: inherit; }
 
-h1 {
+h1:not(.hero h1) {
     font-size: 2.5em;
     text-align: center;
     padding: 20px;
@@ -82,17 +82,13 @@ ul :first-child, ol :first-child {
 
 .nav {
     background-color: #333;
-    position: fixed;
+   
     display: flex;
     justify-content: space-between;
     list-style-type: none;    
-    top: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1000;
     width: 50%;
     padding: 0;
-    margin: 0;
+    margin-top: 10px;
     border: 1px solid black;
     border-radius: 50px;
 }
@@ -120,7 +116,7 @@ table {
 }
 
 .nav-link:hover {
-    background-color: #ddd;
+    background-color: #DDD;
     color: black;
 }
 
@@ -330,7 +326,7 @@ select:focus {
 }
 
 
-button {
+button:not(.stack-nav) {
     background-color: #007bff;
     color: white;
     font-size: 18px;
@@ -511,7 +507,6 @@ table {
   }
 
   .fixed-button:hover {
-     
      background-color: #0056b3;
      transform: translate(-50%,-2px);
   }
@@ -576,8 +571,248 @@ table {
   background-color: #f8f9fa;
 }
 
-.search-form {
-    position: sticky;
-    top: 0;
-    z-index: 1000; 
+
+.top-50 {
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
+  width: 80%; 
+  max-width: 1000px;
+  margin: 30px auto 0 auto; 
+  min-height: 100vh;
+  background: #ffffff; 
+  border: 1px solid #ddd; 
+  border-radius: 8px; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  padding: 20px; 
+}
+
+.intro {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.hero {
+    margin-top: 50px;
+  text-align: center;
+  background-color: #f9f9f9; 
+  padding: 40px 20px;
+}
+
+.hero h1 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #555;
+}
+
+
+.accordion {
+  max-width: 1000px;
+  margin: 60px auto;
+  background-color: #ffffff; 
+  border: 1px solid #ddd; 
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  font-family: Helvetica, Arial, sans-serif;
+  padding: 15px;
+}
+
+.accordion-item {
+  margin-bottom: 15px;
+}
+
+
+.accordion-toggle {
+  display: none;
+}
+
+
+.accordion-header {
+  display: block;
+  padding: 15px;
+  background-color: #343a40;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2em;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.accordion-header:hover {
+  background-color: #0056b3; 
+  transform: scale(1.05);
+}
+
+
+.accordion-body {
+  display: none;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-top: 1px solid #ddd;
+  font-size: 1.1em;
+  color: #333;
+  border-radius: 5px;
+  transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+  max-height: 0;
+  overflow: hidden;
+}
+
+
+.accordion-toggle:checked + .accordion-header + .accordion-body {
+  display: block;
+  max-height: 500px; 
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.accordion-item:hover {
+  background-color: #f1f1f1;
+  border-radius: 8px;
+}
+
+.accordion-body p {
+  margin: 0;
+  font-size: 1em;
+  line-height: 1.6;
+  color: #666;
+}
+
+.sub-accordion-item {
+  margin-bottom: 15px;
+}
+
+
+.sub-accordion-toggle {
+  display: none;
+}
+
+
+.sub-accordion-header {
+  display: block;
+  padding: 15px;
+  background-color: #343a40;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2em;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.sub-accordion-header:hover {
+  background-color: #0056b3; 
+  transform: scale(1.05);
+}
+
+
+.sub-accordion-body {
+  display: none;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-top: 1px solid #ddd;
+  font-size: 1.1em;
+  color: #333;
+  border-radius: 5px;
+  transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+  max-height: 0;
+  overflow: hidden;
+}
+
+
+.sub-accordion-toggle:checked + .sub-accordion-header + .sub-accordion-body {
+  display: block;
+  max-height: 500px; 
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.sub-accordion-item:hover {
+  background-color: #f1f1f1;
+  border-radius: 8px;
+}
+
+.sub-accordion-body p {
+  margin: 0;
+  font-size: 1em;
+  line-height: 1.6;
+  color: #666;
+}
+
+.nav-container {
+    position: fixed;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.stack-nav {
+    background-color: #007bff;
+    color: white;
+    top: 15px;
+    font-size: 14px;
+    padding: 15px 15px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transform: translateY(-2px);
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    width: 150px; /* Ensure buttons are the same size */
+    height: 40px; 
+}
+
+.stack-nav:hover {
+    background-color: #0056b3;
+}
+
+#back {
+    position: static;
+    background-color: #343a40;
+    color: white;
+    font-size: 14px;
+    padding: 10px 20px;
+    margin-right: 200px;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 1px solid black;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#back:hover {
+    background-color: #DDD;
+    color: black;
+}
+
+#forward {
+    position: static;
+    background-color: #343a40;
+    color: white;
+    font-size: 14px;
+    margin-left: 200px;
+    padding: 10px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 1px solid black;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#forward:hover {
+    background-color: #DDD;
+    color: black;
 }

@@ -8,9 +8,10 @@
       <th>Value</th>
     </tr>
     <tr>
-      <td>Name</td>
-      <td>{{ city.name }}</td>
+      <td>Location</td>
+      <td><a href="{{ url_for('country', id=city.countryID)}}">{{ city.countryName }}</a></td>
     </tr>
+    {% if state.state %}
     <tr>
       <td>State</td>
       <td>{{ state.state }}</td>
@@ -19,6 +20,7 @@
       <td>Region</td>
       <td>{{ state.region }}</td>
     </tr>
+    {% endif %}
   </table>
 </div>
 {% endblock %}

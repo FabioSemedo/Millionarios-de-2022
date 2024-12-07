@@ -9,11 +9,23 @@
     </tr>
     <tr>
       <td>Gross domestic Product</td>
-      <td>{{ country.gdp }}</td>
+      <td>
+	{% if country.gdp == 0 %}
+        -
+	{% else %}
+	${{ (country.gdp / 1000000)|round(2) }}M
+	{% endif %}
+      </td>
     </tr>
     <tr>
-      <td>Tax Revenue</td>
-      <td>{{ country.tax_rev }}</td>
+      <td>Tax Revenue (%)</td>
+      <td>
+	{% if country.tax_rev == 0 %}
+        -
+	{% else %}
+        {{ country.tax_rev }}
+	{% endif %}
+      </td>
     </tr>
     <tr>
       <td>Population</td>
@@ -24,48 +36,54 @@
       <td>{{ country.life_expect }}</td>
     </tr>
     <tr>
-      <td>Gross Tertiary Enrollment</td>
+      <td>Gross Tertiary Enrollment (%)</td>
       <td>
-	  {% if country.grs_trt_enroll == 0 %}
-              -
-	  {% else %}
-              {{ country.grs_trt_enroll }}
-	  {% endif %}
+	{% if country.grs_trt_enroll == 0 %}
+        -
+	{% else %}
+        {{ country.grs_trt_enroll }}
+	{% endif %}
       </td>
     </tr>
     <tr>
-      <td>Gross Primary Enrollment</td>
+      <td>Gross Primary Enrollment (%)</td>
       <td>
-	  {% if country.grs_prm_enroll == 0 %}
-              -
-	  {% else %}
-              {{ country.grs_prm_enroll }}
-	  {% endif %}
+	{% if country.grs_prm_enroll == 0 %}
+        -
+	{% else %}
+        {{ country.grs_prm_enroll }}
+	{% endif %}
       </td>
     </tr>
     <tr>
-      <td>Consumer Price Index (CPI)</td>
+      <td>Consumer Price Index (%)</td>
       <td>
-	  {% if country.cpi == 0 %}
-              -
-	  {% else %}
-              {{ country.cpi }}
-	  {% endif %}
+	{% if country.cpi == 0 %}
+        -
+	{% else %}
+        {{ country.cpi }}
+	{% endif %}
       </td>
     </tr>
-     <tr>
-      <td>CPI Change</td>
+    <tr>
+      <td>CPI Change (%)</td>
       <td>
-	  {% if country.cpi_change == 0 %}
-              -
-	  {% else %}
-              {{ country.cpi_change }}
-	  {% endif %}
+	{% if country.cpi_change == 0 %}
+        -
+	{% else %}
+        {{ country.cpi_change }}
+	{% endif %}
       </td>
-     </tr>
-      <tr>
-      <td>Tax Rate</td>
-      <td>{{ country.tax_rate }}</td>
+    </tr>
+    <tr>
+      <td>Tax Rate (%)</td>
+      <td>
+	{% if country.tax_rate == 0 %}
+        -
+	{% else %}
+        {{ country.tax_rate }}
+	{% endif %}
+      </td>
     </tr>
   </table>
 </div>

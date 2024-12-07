@@ -3,7 +3,7 @@
 <div class="search-container">
   <form method="POST" action="{{ url_for('billionaires')}}" class="search-form">
     <h1>Name</h1>
-    <input type="text" id="name" name="name" placeholder="type..." value="{{ request.form.get('name', '') }}">
+    <input type="text" id="name" name="name" placeholder="e.g. Maria Fernanda Amorim" value="{{ request.form.get('name', '') }}">
     <h1>Age</h1>
     <div class="row">
       <div class="column">
@@ -13,7 +13,7 @@
 	<input type="number" id="max_age" name="max_age" placeholder="Max"  value="{{ request.form.get('max_age', '') }}">
       </div>
     </div>
-    <h1>Wealth (Billions)</h1>
+    <h1>Wealth (millions $)</h1>
     <div class="row">
       <div class="column">
 	<input type="number" id="min_money" name="min_money" placeholder="Min" step="0.01" value="{{ request.form.get('min_money', '') }}">
@@ -25,25 +25,25 @@
      
     <h1>Gender</h1>
     <select id="gender" name="gender">
-      <option value="" {% if request.form.get('gender') == '' %}selected{% endif %}>Todos</option>
-      <option value="F" {% if request.form.get('gender') == 'F' %}selected{% endif %}>Mulher</option>
-      <option value="M" {% if request.form.get('gender') == 'M' %}selected{% endif %}>Homem</option>
-      <option value="O" {% if request.form.get('gender') == 'O' %}selected{% endif %}>Outro</option>
+      <option value="" {% if request.form.get('gender') == '' %}selected{% endif %}>All</option>
+      <option value="F" {% if request.form.get('gender') == 'F' %}selected{% endif %}>Female</option>
+      <option value="M" {% if request.form.get('gender') == 'M' %}selected{% endif %}>Male</option>
+      <option value="O" {% if request.form.get('gender') == 'O' %}selected{% endif %}>Other</option>
     </select>
     
-    <button type="submit">Filtrar</button>
+    <button type="submit">Filter</button>
   </form>
 
   <div class="filtered-table">
     <div class="filtered-table">
    <div class="row-count">
-    <p>Showing <strong>{{ billionaires|length }}</strong> results</p> <!-- Display number of rows -->
+    <p>Showing <strong>{{ billionaires|length }}</strong> results</p>
   </div>
     <ul class="filtered-list">
       {% for billionaire in billionaires %}
       <li class="filtered-item">
 	<a href="/billionaires/{{ billionaire.personId }}" class="table-link">
-	  {{ billionaire.first_name ~ " " ~ billionaire.last_name }}
+	  {{ billionaire.first_name ~ " " ~ billionaire.last_name ~ " " ~ billionaire.name_suffix}}
 	</a>
       </li>
       {% endfor %}
