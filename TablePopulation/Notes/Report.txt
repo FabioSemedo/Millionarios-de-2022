@@ -1,0 +1,93 @@
+#Chapter (Thoughts)
+    #Example text
+--Side note, might be nice to run the report through chatgpt after we are done
+
+Universe (Consider being more exact)
+    Details related to some Billionaire - most importably their wealth,
+    , as well as, economic and geographical information on the countries where these people reside.
+    There is also missing information for some Billionaire so some fields have place holder values representing unknows.
+    -It is worth noting that these place holders are not all in appropriate data types.
+        (eg. some cpi's are set as "No CPI info" however cpi's would be best represented as floating point numbers)
+    
+    Details related to Billionaires
+    (
+        position                - number showing the rank based on highest wealth
+        wealth                  - number showing attributed wealth in millions of dolars
+        industry                - economic sector
+        full_name               - shows the names, pseudonims, titles, and indicates if wealth is linked to family
+        age                     - age in 2022
+        country_of_residence    - name of the contry of residence
+        city_of_residence       - name of the city of residence
+        source                  - company name or market of interest
+        citizenship             - name a country indicating citizenship
+        gender                  - F or M indicating if this person is male or female
+        birth_date              
+        last_name
+        first_name
+        residence_state         - name of a US state where defined ("No subdivision info" if not)
+        residence_region        - name of a US region where defined ("No subdivision info" if not)
+        birth_year
+        birth_month
+        birth_day
+    )
+
+    Information on countries of residence
+    (
+        cpi_country         - consumer price index, the price of goods as a percentage of a previously defined base value for those goods 
+        cpi_change_country  - consumer price index change, the change in the consumer price index relative to the recent past
+        gdp_country         - country gross domestic product
+        g_tertiary_ed_enroll - gross tertiary education enrollment in country, percentage of people (within the expected age group) that frequent tertiary education
+        g_primary_ed_enroll - gross primary education enrollment in country,  percentage of people (within the expected age group) that frequent primary education
+        life_expectancy
+        tax_revenue         - governmental earnings as a percentage of the GDP
+        tax_rate            - percentage of a given Billionaire's earnings surrendered as tax
+        country_pop         - country population
+        country_lat         - latitude coordinate
+        country_long        - longitude coordinate
+        continent
+    )
+
+UML (Conciseness)
+    We setout to ensure our database is robust so we structured both our UML and relational table models for a corrected and normalised version of the dataset.
+    Thus, adicional considerations were made for possible deletion, insertions, updates, and some real world cases that may not be show in the dataset.
+    We also avoided nulls insertion as much as possible but since the dataset is incomplete it was not possible to put the dataset in 1st Normal form (specifically atomised and completeness) correctly.
+    # (Person {Citizenship} <-> Country)
+        I see what you are trying to do but I would lean towards using
+        (Person.Citizenship U Country) C= {CountriesOfTheWorld}
+    #Decidimos que era boa ideia relacionarmos a nacionalidade ao conjunto de informação dos países (Person {Citizenship} <-> Country), uma vez que desta forma podíamos, também, perceber a relação que existe entre determinado bilionário (da tabela “Person”).
+        Im not sure how well this sentece reads
+    #declared our classes..
+    #"repetir em funcao de" I like that you showed that we understand normalisation 
+    #Keep it formal, simple, concise, and readable as much as possible.
+    #cities are in reality a part of states/country so a city of residence would define  (transitive dependancy) the state/country of residence
+    #citizenship points to countries because the words come from the same set of possible names
+    #Note how Source is a table because it neded to be atomised
+        #You explained this very well I'd say.
+    #The decision to make citizenship point to country
+    
+RT models
+    #we choose to restrict states to only US cities, therefore the states table does not point to a country since it is inherantly American
+    #I think the reasons for the existance of the tables was well explained in your report.
+
+Population
+    #select {*”Billionaires” Table Columns*}, row_number() over (order by wealth_millions desc) from dataset 
+        #I dont understand your formating
+    Challenges during population
+    - Character encoding erroes in string values like names of in German or Portuguese possed a problem for typing as well as being wrong in the original Excel.
+        We first used a Glob querry to find the special characters and did an UPDATE to replace each instance, however later on we learned to use a python library (unicodedata) to automate all the character formating.
+            São --> Sao
+    - As good practice we implemented IDs instead of using natural primary keys ths was done by defining the a table's schema
+      with an ID field set as Integer Primary Key. Allowing SQLite Studio to automatically generate a primary key for every insert that did not have an ID
+    - It was at this point that inconsistancies in our dataset became more toublesome.
+        Unfilled cells and errors were found when making the States table with states that were given more than one region in the dataset;
+        using a "GROUP BY state, region" and "COUNT()", we found the most common cocurances and did an UPDATE FROM using the most common regions;
+        later we noticed that "Unknown" should not have been considered but this was fixed.
+    - Created a csv from sources and a temporary personID to atomised SourcesOfWealth using python and then importing it back to SQLite Studio.
+    - Even without character encoding errors not all Cities were following the same string format which affected how distinct cities were identified so we changed the names of all the cities to uppercase.
+    - SourcesOfWealth has Many "almost the same" entries like "Coal" and "Coal Mining", "Aluminum" and "Aluminium"m etc.
+        Since it is still possible to querry similar cells by joining the SourcesOfWealth to itself and doing a group by,
+        we choose to keep the subtle differences in the SourcesOfWealth table as the still carry some distinct bits of information (Airport != Airport management)
+    - We picked up on the existance of name_suffixes late in the project which affected how the tables needed to be structured.
+        As a quick solution we added a column to the Billionaires table. This is okay since our data is not taking too much space and this field does not affect dependacies nor previous queries,
+        however, as an improvement
+    It is worth noting that since citizenship points to countries there are some countries that do not have economic Details.
