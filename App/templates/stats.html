@@ -338,6 +338,30 @@
         </tbody>
       </table>
     </div>
+  </div>
+   <div class="accordion-item">
+    <input type="radio" id="query13" name="accordion" class="accordion-toggle" />
+    <label for="query13" class="accordion-header">Among the countries where Billionaires live, what is the average gdp of a country (adjusted to population) in each continent?</label>
+    <div class="accordion-body">
+      <table>
+        <thead>
+          <tr>
+	    <th>Continent</th>
+            <th>Relative GDP</th>
+	    <th>Percentage</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for row in query_13 %}
+          <tr>
+            <td>{{ row.continent }}</td>
+	    <td>{{ row.Relative_Gdp }}</td>
+	    <td>{{ row.percentage }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
   </div>  
 </div>
 {% endblock %}

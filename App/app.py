@@ -187,7 +187,7 @@ def countries():
 @APP.route('/billionaires', methods=['GET','POST'])
 # Search Billionaire
 def billionaires():
-    query = '''SELECT b.*, (CAST((JULIANDAY('now') - JULIANDAY(b.birth_date)) / 365.25 AS INTEGER)) as age
+    query = '''SELECT b.*, (CAST((JULIANDAY('2023-06-30') - JULIANDAY(b.birth_date)) / 365.25 AS INTEGER)) as age
              FROM Billionaires b
              WHERE 1=1'''
     filters = []
@@ -205,12 +205,12 @@ def billionaires():
             filters.append(f"%{name}%")
         
         if min_age:
-           query += " AND (CAST((JULIANDAY('now') - JULIANDAY(b.birth_date)) / 365.25 AS INTEGER)) >= ?"
+           query += " AND (CAST((JULIANDAY('2023-06-30') - JULIANDAY(b.birth_date)) / 365.25 AS INTEGER)) >= ?"
            min_age = convert(min_age)
            filters.append(int(min_age))
         
         if max_age:
-            query += " AND (CAST((JULIANDAY('now') - JULIANDAY(b.birth_date)) / 365.25 AS INTEGER)) <= ?"
+            query += " AND (CAST((JULIANDAY('2023-06-30') - JULIANDAY(b.birth_date)) / 365.25 AS INTEGER)) <= ?"
             max_age = convert(max_age)
             filters.append(int(max_age))
         
@@ -239,7 +239,7 @@ def billionaire_info(id):
 
     # billionaire
     query_billionaire = '''SELECT
-                              b.*, Group_Concat(s.source, ', ') as source,(CAST((JULIANDAY('now') - JULIANDAY(b.birth_date)) / 365.25 AS INTEGER)) as age
+                              b.*, Group_Concat(s.source, ', ') as source,(CAST((JULIANDAY('2023-06-30') - JULIANDAY(b.birth_date)) / 365.25 AS INTEGER)) as age
                            FROM
                                Billionaires b
                            JOIN
@@ -480,12 +480,12 @@ def search():
             filters.extend(country_id)
         
         if min_age:
-           query += " AND (CAST((JULIANDAY('now') - JULIANDAY(b.birth_date)) / 365.25 AS INTEGER)) >= ?"
+           query += " AND (CAST((JULIANDAY('2023-06-30') - JULIANDAY(b.birth_date)) / 365.25 AS INTEGER)) >= ?"
            min_age = convert(min_age)
            filters.append(int(min_age))
         
         if max_age:
-            query += " AND (CAST((JULIANDAY('now') - JULIANDAY(b.birth_date)) / 365.25 AS INTEGER)) <= ?"
+            query += " AND (CAST((JULIANDAY('2023-06-30') - JULIANDAY(b.birth_date)) / 365.25 AS INTEGER)) <= ?"
             max_age = convert(max_age)
             filters.append(int(max_age))
         
@@ -640,7 +640,7 @@ def stats():
                                 Cities c ON b.cityID = c.cityID 
                             JOIN 
                                 EconomicDetails e ON c.countryID = e.countryID 
-                            WHERE (CAST((julianday('now') - julianday(b.birth_date)) AS integer) / 365.25) > e.life_expect AND (b.industry = "Metals & Mining" OR b.industry = "Construction & Engineering") 
+                            WHERE (CAST((julianday('2023-06-30') - julianday(b.birth_date)) AS integer) / 365.25) > e.life_expect AND (b.industry = "Metals & Mining" OR b.industry = "Construction & Engineering") 
                             GROUP BY b.industry 
                             ORDER BY b.industry DESC
                          ''').fetchall()
@@ -756,16 +756,37 @@ def stats():
                                  b.industry AS Industry,
                                  b.wealth_millions AS Wealth_in_Millions,
                                  Total_billionaires,
-                                 (CAST((JULIANDAY('now') - JULIANDAY(b.birth_date)) AS INTEGER) / 365) AS Age
+                                 (CAST((JULIANDAY('2023-06-30') - JULIANDAY(b.birth_date)) AS INTEGER) / 365) AS Age
                              FROM 
                                  Billionaires b
                              JOIN 
                                  IndustryCounts ic ON b.industry = ic.industry
                              WHERE 
-                                 (CAST((JULIANDAY('now') - JULIANDAY(b.birth_date)) AS INTEGER) / 365) < 45
+                                 (CAST((JULIANDAY('2023-06-30') - JULIANDAY(b.birth_date)) AS INTEGER) / 365) < 45
                              ORDER BY Age ASC, Wealth_in_Millions DESC;
                           ''').fetchall()
 
+    query_13 = db.execute('''SELECT t1.continent, ROUND(t1.RelativeGdp,2) AS Relative_Gdp, ROUND(t1.RelativeGdp/(SUM(t2.RelativeGdp))*100, 2) as percentage
+                             FROM 
+                             (    SELECT continent, AVG(AdjGdp) as RelativeGdp
+                                 FROM
+                                 (SELECT cn.name, cn.continent, e1.gdp/e1.population AS AdjGdp, e1.*
+                                 FROM EconomicDetails e1 INNER JOIN Countries cn on e1.countryid = cn.countryid
+                                 )
+                                 GROUP BY continent
+                                 ORDER BY AVG(AdjGdp) Desc
+                             ) t1, 
+                             (    SELECT continent, AVG(AdjGdp) as RelativeGdp
+                                 FROM
+                                 (SELECT cn.name, cn.continent, e1.gdp/e1.population AS AdjGdp, e1.*
+                                 FROM EconomicDetails e1 INNER JOIN Countries cn on e1.countryid = cn.countryid
+                                 )
+                                 GROUP BY continent
+                                 ORDER BY AVG(AdjGdp) Desc
+                             ) t2
+                             GROUP BY t1.continent
+                             ORDER BY percentage DESC
+                                 ''').fetchall()
 
     
-    return render_template('stats.html',sub_query_1=sub_query_1, sub_query_2=sub_query_2,query_2=query_2,query_3=query_3,query_4=query_4,query_5=query_5,query_6=query_6,query_7=query_7,query_8=query_8,query_9=query_9,query_10=query_10,query_11=query_11,query_12=query_12)
+    return render_template('stats.html',sub_query_1=sub_query_1, sub_query_2=sub_query_2,query_2=query_2,query_3=query_3,query_4=query_4,query_5=query_5,query_6=query_6,query_7=query_7,query_8=query_8,query_9=query_9,query_10=query_10,query_11=query_11,query_12=query_12,query_13=query_13)
