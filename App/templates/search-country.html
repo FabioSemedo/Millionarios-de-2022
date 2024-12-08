@@ -86,10 +86,12 @@
     <div class="filter-category">
       <div class="checkbox-container">
 	{% for option in continent %}
+        {% if loop.index != 7 %}
 	<label>
 	  <input type="checkbox" name="continent_filter[]" value="{{ option.continent }}">
 	  {{ option.continent }}
 	</label>
+	{% endif %}
 	{% endfor %}
       </div> 
     </div>

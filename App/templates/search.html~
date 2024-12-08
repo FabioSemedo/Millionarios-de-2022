@@ -127,10 +127,12 @@
     <div class="filter-category">
       <div class="checkbox-container">
 	{% for option in continent %}
+	{% if loop.index != 7 %}
 	<label>
 	  <input type="checkbox" name="continent_filter[]" value="{{ option.continent }}">
-	  {{ option.continent }}
+	    {{ option.continent }}
 	</label>
+	{% endif %}
 	{% endfor %}
       </div> 
     </div>
@@ -156,7 +158,7 @@
             <tr>
 	      <td>{{ row.personId }}</td>
                     <td><a href="{{ url_for('billionaire_info', id=row.personId) }}">{{ row.first_name ~ " " ~ row.last_name ~ " " ~ row.name_suffix }}</a></td>
-                    <td>{{ row.wealth }}</td>
+                    <td>${{ row.wealth }}M</td>
                     <td>{{ row.source }}</td>
 	      <td>{{ row.country }}</td>
 	      <td>{{ row.nationality }}</td>

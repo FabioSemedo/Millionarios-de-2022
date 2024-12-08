@@ -1,7 +1,7 @@
 
 # Sumário
 
-Aplicação Python demonstrando o acesso à BD MovieStream
+Aplicação Python demonstrando o acesso à BD Billionaires
 
 #  Referência
 

@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block content %}
+<header>
+    <h1>Projeto de Base de Dados</h1>
+    <p>Faculdade de Ciências, Universidade do Porto</p>
+  </header>
+
+  <section class="content">
+    <h2>Sobre</h2>
+    <p>Este projeto foi desenvolvido no âmbito da unidade curricular CC2005 (2024/2025).</p>
+    <p>A base de dados utilizada foi retirada do Kaggle (Billionaires Statistics Dataset - 2023), explorando informações relevantes sobre bilionários ao redor do mundo.</p>
+
+    <h2>Tecnologias Utilizadas</h2>
+    <ul>
+      <li><strong>Frontend:</strong> Jinja, HTML</li>
+      <li><strong>Backend:</strong> Flask, Python (bibliotecas como Unidecode e Anaconda)</li>
+    </ul>
+
+    <h2>Supervisores</h2>
+    <ul>
+      <li>Prof. Gabriel de Sousa Torcato David</li>
+      <li>Prof. Hugo Cunha Cardante</li>
+      <li>Prof. João Miguel Maia Soares de Resende</li>
+    </ul>
+
+    <h2>Equipa de Desenvolvimento</h2>
+    <ul>
+      <li>Fábio Elmiro Ramos Semedo</li>
+      <li>Gabriel Adriano Ramalho Almeida Carlos</li>
+      <li>Gonçalo de Carvalho Fernandes Branquinho Mota</li>
+      <li>Rafael Arruda Costa</li>
+    </ul>
+  </section>
+{% endblock %}

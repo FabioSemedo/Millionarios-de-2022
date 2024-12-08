@@ -3,7 +3,7 @@
 <div class="search-container">
   <form method="POST" action="{{ url_for('countries')}}" class="search-form">
     <h1>Name</h1>
-    <input type="text" id="name" name="name" placeholder="Type..." value="{{ request.form.get('name', '') }}">
+    <input type="text" id="name" name="name" placeholder="e.g. Portugal" value="{{ request.form.get('name', '') }}">
     <h1>Tax Rate</h1>
     <div class="filter-category">
       <div class="row">

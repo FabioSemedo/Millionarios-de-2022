@@ -5,15 +5,26 @@ import logging
 import db
 
 
-#--select personID, first_name, last_name, wealth_millions, (2591 - personID - (gender_row - 1)) as quantity, printf("%.4f", ((100*(2591 - personID - (gender_row - 1)) / 1.0) / ((select count(gender) from Billionaires where gender = "F" group by gender)))) as percentage from (select *, ROW_NUMBER() over (partition by gender order by personID desc) as gender_row from Billionaires) where gender = "M" order by quantity desc, wealth_millions desc
-
-#select personID, first_name, last_name, wealth_millions, (2591 - personID - (gender_row - 1)) as quantity, printf("%.4f", ((100*(2591 - personID - (gender_row - 1)) / 1.0) / ((select count(gender) from Billionaires where gender = "M" group by gender)))) as percentage from (select *, row_number() over (partition by gender order by personID desc) as gender_row from Billionaires) where gender = "F" order by quantity desc, wealth_millions desc
-
-
 APP = Flask(__name__,static_folder='css')
 min_limit = "-10000000000000000"
 max_limit = "10000000000000000"
 
+
+def create():
+    result = db.execute("""
+    SELECT name
+    FROM sqlite_master
+    WHERE type = 'view' AND name = 'Ranks';
+   """).fetchone()
+
+    if result is None:
+        db.execute('''CREATE VIEW Ranks AS
+    SELECT
+        DISTINCT b.personId,
+        Rank() Over( ORDER BY wealth_millions DESC) as rank
+    FROM
+        Billionaires b
+    ''')
 
 def convert(num):
     if len(num) >= 15 :
@@ -27,8 +38,9 @@ def convert(num):
 # Start page
 @APP.route('/')
 def index():
+    create()
     query = '''SELECT
-                   b.personId, b.first_name, b.personId, b.last_name, c2.country, b.wealth_millions as wealth, b.name_suffix,
+                   r.rank, b.personId, b.first_name, b.personId, b.last_name, c2.country, b.wealth_millions as wealth, b.name_suffix,
                    c3.nationality,c2.continent, Group_Concat(s.source, ', ') as source
                FROM
                    Billionaires b
@@ -42,6 +54,8 @@ def index():
                    Activities a ON a.personId = b.personId
                JOIN
                    (SELECT f3.sourceID, f3.source FROM SourcesOfWealth f3) s ON s.sourceID = a.sourceID
+               JOIN
+                   Ranks r ON b.personId = r.personId
                GROUP BY b.personId
                LIMIT 50;
             '''
@@ -360,7 +374,7 @@ def cities_info(id):
 # Search page
 def search():
     query = '''SELECT
-                   b.personId, b.first_name, b.last_name, c2.country, b.wealth_millions as wealth, b.name_suffix, 
+                   r.rank, b.personId, b.first_name, b.last_name, c2.country, b.wealth_millions as wealth, b.name_suffix, 
                    c3.nationality,c2.continent, Group_Concat(s.source, ', ') as source
                FROM
                    Billionaires b
@@ -374,6 +388,8 @@ def search():
                    Activities a ON a.personId = b.personId
                JOIN
                    (SELECT f3.sourceID, f3.source FROM SourcesOfWealth f3) s ON s.sourceID = a.sourceID
+               JOIN
+                   Ranks r ON r.personId = b.personId
                WHERE 
                    1 = 1
             '''
@@ -547,6 +563,7 @@ def stats():
                          printf("%.4f", ((100*(2591 - personID - (gender_row - 1)) / 1.0) / ((SELECT count(gender) FROM Billionaires WHERE gender = "F" GROUP BY gender)))) AS percentage
                      FROM 
                          (SELECT *, ROW_NUMBER() OVER (PARTITION BY gender ORDER BY personID DESC) AS gender_row FROM Billionaires)
+
                      WHERE gender = "M" 
                      ORDER BY quantity DESC, wealth_millions DESC''').fetchall()
 
@@ -700,6 +717,70 @@ def stats():
                                  GROUP BY o.name) 
                              GROUP BY name 
                              ORDER BY best_total DESC, name, source
-                         ''')
+                         ''').fetchall()
+
+
+    # Query 1 Rafael
+    query_11 = db.execute('''SELECT 
+                                 c1.name AS Origin_Country,
+                                 c2.name AS Destination_Country,
+                                 COUNT(b.personId) AS Total_Billionaires
+                             FROM 
+                                 Billionaires b
+                             JOIN 
+                                 Countries c1 ON b.citizenshipID = c1.countryid
+                             JOIN 
+                                 Cities ci ON b.cityID = ci.cityid
+                             JOIN 
+                                 Countries c2 ON ci.countryid = c2.countryid
+                             WHERE 
+                                 b.citizenshipID != ci.countryid
+                             GROUP BY c1.name, c2.name
+                             ORDER BY Total_Billionaires DESC;
+                          ''').fetchall()
+
+    # Query 2 Rafael
+    query_12 = db.execute('''WITH IndustryCounts AS (
+                                 SELECT 
+                                 b.industry,
+                                 COUNT(*) AS Total_Billionaires
+                             FROM 
+                                 Billionaires b
+                             GROUP BY 
+                                 b.industry
+                             HAVING 
+                                 COUNT(*) <= 50
+                             )
+                             SELECT 
+                                 b.first_name AS First_name,
+                                 b.last_name AS Last_name,
+                                 b.industry AS Industry,
+                                 b.wealth_millions AS Wealth_in_Millions,
+                                 Total_billionaires,
+                                 (CAST((JULIANDAY('now') - JULIANDAY(b.birth_date)) AS INTEGER) / 365) AS Age
+                             FROM 
+                                 Billionaires b
+                             JOIN 
+                                 IndustryCounts ic ON b.industry = ic.industry
+                             WHERE 
+                                 (CAST((JULIANDAY('now') - JULIANDAY(b.birth_date)) AS INTEGER) / 365) < 45
+                             ORDER BY Age ASC, Wealth_in_Millions DESC;
+                          ''').fetchall()
+
+
+    # Query 3 Rafael
+    query_13 = db.execute('''SELECT 
+                                 COUNT(b.personId) AS Total_Billionaires_With_Same_Name,
+                                 AVG(c.latitude) AS Avg_Latitude,
+                                 AVG(c.longitude) AS Avg_Longitude
+                             FROM 
+                                 Billionaires b
+                             JOIN 
+                                 Cities ci ON b.cityID = ci.cityid
+                             JOIN 
+                                 Countries c ON ci.countryid = c.countryid
+                             WHERE 
+                                 b.first_name like '%Hugo%';
+                          ''').fetchall()
     
-    return render_template('stats.html',sub_query_1=sub_query_1, sub_query_2=sub_query_2,query_2=query_2,query_3=query_3,query_4=query_4,query_5=query_5,query_6=query_6,query_7=query_7,query_8=query_8,query_9=query_9,query_10=query_10)
+    return render_template('stats.html',sub_query_1=sub_query_1, sub_query_2=sub_query_2,query_2=query_2,query_3=query_3,query_4=query_4,query_5=query_5,query_6=query_6,query_7=query_7,query_8=query_8,query_9=query_9,query_10=query_10,query_11=query_11,query_12=query_12,query_13=query_13)

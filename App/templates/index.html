@@ -21,7 +21,7 @@
     <tbody>
       {% for row in data %}
       <tr>
-	<td>{{ row.personId }}</td>
+	<td>{{ row.rank }}</td>
         <td><a href="{{ url_for('billionaire_info', id=row.personId) }}">{{ row.first_name ~ " " ~ row.last_name ~ " " ~ row.name_suffix }}</a></td>
         <td>${{ row.wealth }}M</td>
         <td>{{ row.source }}</td>
