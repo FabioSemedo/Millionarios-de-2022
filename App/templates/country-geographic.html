@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+  <h1>{{ country.name }}</h1>
+  <table>
+    <tr>
+      <th>Attribute</th>
+      <th>Value</th>
+    </tr>
+    <tr>
+      <td>Latitude</td>
+      <td>{{ country.latitude }}</td>
+    </tr>
+    <tr>
+      <td>Longitude</td>
+      <td>{{ country.longitude }}</td>
+    </tr>
+    <tr>
+      <td>Continent</td>
+      <td>{{ country.continent }}</td>
+    </tr>
+  </table>
+</div>
+{% endblock %}
+

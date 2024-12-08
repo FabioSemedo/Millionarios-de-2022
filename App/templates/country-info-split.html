@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="split-container">
+  <h1>Country Details</h1>
+  <p>Choose the type of information you'd like to view for this country:</p>
+  <div class="button-group">
+    <a class="btn btn-primary" href="{{ url_for('geographic', id=countryID) }}">Geographic Data</a>
+    <a class="btn btn-secondary" href="{{ url_for('economic', id=countryID) }}">Economic Data</a>
+  </div>
+</div>
+
+{% endblock %}
