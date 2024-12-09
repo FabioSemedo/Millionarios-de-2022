@@ -373,6 +373,7 @@ def cities_info(id):
 @APP.route('/search', methods=['GET','POST'])
 # Search page
 def search():
+    create()
     query = '''SELECT
                    r.rank, b.personId, b.first_name, b.last_name, c2.country, b.wealth_millions as wealth, b.name_suffix, 
                    c3.nationality,c2.continent, Group_Concat(s.source, ', ') as source
@@ -557,6 +558,7 @@ def search():
 @APP.route('/stats')
 # Statistics page
 def stats():
+    create()
     # Query 4
     sub_query_1 = db.execute('''SELECT 
                          rank, personId, first_name, last_name, wealth_millions, (2591 - rank - (gender_row - 1)) AS quantity, 
