@@ -567,7 +567,7 @@ def stats():
                      ORDER BY quantity DESC, wealth_millions DESC''').fetchall()
 
     sub_query_2 = db.execute('''SELECT 
-                         rank, personId, first_name, last_name, wealth_millions, (2591 - personID - (gender_row - 1)) AS quantity, 
+                         rank, personId, first_name, last_name, wealth_millions, (2591 - rank - (gender_row - 1)) AS quantity, 
                          printf("%.4f", ((100*(2591 - rank - (gender_row - 1)) / 1.0) / ((SELECT count(gender) FROM Billionaires WHERE gender = "M" GROUP BY gender)))) as percentage 
                      FROM 
                          (SELECT *, Rank() OVER (PARTITION BY gender ORDER BY rank DESC) AS gender_row FROM (Billionaires b join Ranks r on b.personID = r.personID)) 
