@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+  <h1>{{ billionaire.first_name ~ " " ~ billionaire.last_name ~ " " ~ billionaire.name_suffix}}</h1>
+  <table>
+    <tr>
+      <th>Attribute</th>
+      <th>Value</th>
+    </tr>
+    <tr>
+      <td>Wealth</td>
+      <td>${{ billionaire.wealth_millions }}M</td>
+    </tr>
+    <tr>
+      <td>Industry</td>
+      <td>{{ billionaire.industry }}</td>
+    </tr>
+    <tr>
+      <td>Nationality</td>
+      <td>
+        <a href="/countries/{{ billionaire.citizenshipID }}">
+          {{ country.name }}
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>City</td>
+      <td>
+        <a href="/cities/{{ billionaire.cityID }}" class="city-name">
+          {{ city.name | title }}
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td>Age</td>
+      <td>{{ billionaire.age }}</td>
+    </tr>
+    <tr>
+      <td>Gender</td>
+      <td>
+        {% if billionaire.gender == 'M' %}
+          Male
+        {% elif billionaire.gender == 'F' %}
+          Female
+        {% else %}
+          Other
+        {% endif %}
+      </td>
+    </tr>
+    <tr>
+      <td>Source</td>
+      <td>{{ billionaire.source }}</td>
+    </tr>
+    <tr>
+      <td>Part of a Conglomerate</td>
+      <td>
+	{% if billionaire.conglomorate == 1 %}
+	Yes
+	{% else %}
+	No
+	{% endif %}
+      </td>
+    </tr>
+    <tr>
+  </table>
+</div>
+{% endblock %}

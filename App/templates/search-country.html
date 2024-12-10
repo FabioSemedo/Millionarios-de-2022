@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="search-container">
+  <form method="POST" action="{{ url_for('countries')}}" class="search-form">
+    <h1>Name</h1>
+    <input type="text" id="name" name="name" placeholder="e.g. Portugal" value="{{ request.form.get('name', '') }}">
+    <h1>Tax Rate</h1>
+    <div class="filter-category">
+      <div class="row">
+	<div class="columns">
+	  <input type="number" id="min_tax_rate" placeholder="Min "name="min_tax_rate" step="0.01" value="{{ request.form.get('min_tax_rate', '') }}">
+	</div>
+	<div class="columns">
+	  <input type="number" id="max_tax_rate" name="max_tax_rate" placeholder="Max"step="0.01" value="{{ request.form.get('max_tax_rate', '') }}">
+	</div>
+      </div>
+    </div>
+    <h1>Tax Revenue</h1>
+    <div class="filter-category">
+      <div class="row">
+	<div class="columns">
+	  <input type="number" id="min_tax_rev" placeholder="Min "name="min_tax_rev" step="0.01" value="{{ request.form.get('min_tax_rev', '') }}">
+	</div>
+	<div class="columns">
+	  <input type="number" id="max_tax_rev" name="max_tax_rev" placeholder="Max"step="0.01" value="{{ request.form.get('max_tax_rev', '') }}">
+	</div>
+      </div>
+    </div>
+    <h1>CPI</h1>
+    <div class="filter-category">
+      <div class="row">
+	<div class="columns">
+	  <input type="number" id="min_cpi" placeholder="Min "name="min_cpi" step="0.01" value="{{ request.form.get('min_cpi', '') }}">
+	</div>
+	<div class="columns">
+	  <input type="number" id="max_cpi" name="max_cpi" placeholder="Max"step="0.01" value="{{ request.form.get('max_cpi', '') }}">
+	</div>
+      </div>
+    </div>
+    <h1>CPI Change</h1>
+    <div class="filter-category">
+      <div class="row">
+	<div class="columns">
+	  <input type="number" id="min_change" placeholder="Min "name="min_change" step="0.01" value="{{ request.form.get('min_change', '') }}">
+	</div>
+	<div class="columns">
+	  <input type="number" id="max_change" name="max_change" placeholder="Max"step="0.01" value="{{ request.form.get('max_change', '') }}">
+	</div>
+      </div>
+    </div>
+    <h1>GDP</h1>
+    <div class="filter-category">
+      <div class="row">
+	<div class="columns">
+	  <input type="number" id="min_gdp" placeholder="Min "name="min_gdp" step="0.01" value="{{ request.form.get('min_gdp', '') }}">
+	</div>
+	<div class="columns">
+	  <input type="number" id="max_gdp" name="max_gdp" placeholder="Max"step="0.01" value="{{ request.form.get('max_gdp', '') }}">
+	</div>
+      </div>
+    </div>
+     <h1>Gross Primary Education Enrollment</h1>
+    <div class="filter-category">
+      <div class="row">
+	<div class="columns">
+	  <input type="number" id="min_prm" placeholder="Min "name="min_prm" step="0.01" value="{{ request.form.get('min_prm', '') }}">
+	</div>
+	<div class="columns">
+	  <input type="number" id="max_prm" name="max_prm" placeholder="Max"step="0.01" value="{{ request.form.get('max_prm', '') }}">
+	</div>
+      </div>
+    </div>
+    <h1>Gross Tertiary Education Enrollment</h1>
+    <div class="filter-category">
+      <div class="row">
+	<div class="columns">
+	  <input type="number" id="min_trt" placeholder="Min "name="min_trt" step="0.01" value="{{ request.form.get('min_trt', '') }}">
+	</div>
+	<div class="columns">
+	  <input type="number" id="max_trt" name="max_trt" placeholder="Max"step="0.01" value="{{ request.form.get('max_trt', '') }}">
+	</div>
+      </div>
+    </div>
+    
+     <h1>Continent</h1>
+    <div class="filter-category">
+      <div class="checkbox-container">
+	{% for option in continent %}
+        {% if loop.index != 7 %}
+	<label>
+	  <input type="checkbox" name="continent_filter[]" value="{{ option.continent }}">
+	  {{ option.continent }}
+	</label>
+	{% endif %}
+	{% endfor %}
+      </div> 
+    </div>
+	<button class="fixed-button" type="submit">Filter</button>
+  </form>
+
+  <div class="filtered-table">
+    <div class="row-count">
+    <p>Showing <strong>{{ countries|length }}</strong> results</p>
+  </div>
+    <ul class="filtered-list">
+      {% for country in countries %}
+      <li class="filtered-item">
+	<a href="/countries/{{ country.countryID }}" class="table-link">
+	  {{ country.name }}
+	</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+{% endblock %}

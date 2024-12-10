@@ -1,0 +1,367 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="accordion">
+  <div class="accordion-item has-sub-accordion">
+    <input type="radio" id="query1" name="accordion" class="accordion-toggle" />
+    <label for="query1" class="accordion-header">The amount and respective percentage of opposite gender billionaires who are not as wealthy as the billionaire in question is</label>
+    <div class="accordion-body">
+      <div class="sub-accordion-item">
+	<input type="radio" id="sub-query1" name="sub-accordion" class="sub-accordion-toggle" />
+	<label for="sub-query1" class="sub-accordion-header">For females:</label>
+	<div class="sub-accordion-body">
+	  <table>
+            <thead>
+              <tr>
+	        <th>Rank</th>
+                <th>Name</th>
+                <th>Wealth</th>
+                <th>Quantity</th>
+		<th>Percentage</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for row in sub_query_2 %}
+              <tr>
+		<td>{{ row.rank }}</td>
+                <td><a href="{{ url_for('billionaire_info', id=row.personID) }}">{{ row.first_name ~ " " ~ row.last_name }}</a></td>
+                <td>${{ row.wealth_millions }}M</td>
+                <td>{{ row.quantity }}</td>
+		<td>{{ row.percentage }}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+	  </table>
+	</div>
+      </div>
+      <div class="sub-accordion-item">
+	<input type="radio" id="sub-query2" name="sub-accordion" class="sub-accordion-toggle"/>
+	<label for="sub-query2" class="sub-accordion-header">For males:</label>
+	<div class="sub-accordion-body">
+	  <table>
+            <thead>
+              <tr>
+	        <th>Rank</th>
+                <th>Name</th>
+                <th>Wealth</th>
+                <th>Amount</th>
+		<th>Percentage</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for row in sub_query_1 %}
+              <tr>
+		<td>{{ row.rank }}</td>
+                <td><a href="{{ url_for('billionaire_info', id=row.personID) }}">{{ row.first_name ~ " " ~ row.last_name }}</a></td>
+                <td>${{ row.wealth_millions }}M</td>
+                <td>{{ row.quantity }}</td>
+		<td>{{ row.percentage }}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+	  </table>
+	</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <input type="radio" id="query2" name="accordion" class="accordion-toggle" />
+    <label for="query2" class="accordion-header">Total wealth of billionaires of each industry</label>
+    <div class="accordion-body">
+      <table>
+        <thead>
+          <tr>
+	    <th>Industry</th>
+            <th>Total Wealth</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for row in query_2 %}
+          <tr>
+            <td>{{ row.industry }}</td>
+	    <td>${{ row.total }}M</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <input type="radio" id="query3" name="accordion" class="accordion-toggle" />
+    <label for="query3" class="accordion-header">Ratio, in percentage, of billionaires by continent</label>
+    <div class="accordion-body">
+      <table>
+        <thead>
+          <tr>
+	    <th>Continent</th>
+            <th>Percentage</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for row in query_3 %}
+          <tr>
+            <td>{{ row.continent }}</td>
+	    <td>{{ row.percentage }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <input type="radio" id="query4" name="accordion" class="accordion-toggle" />
+    <label for="query4" class="accordion-header">Total wealth and amount of billionaires such that their wealth is not part of a conglomerate, sorted based on how close to 100 the levels of national education are</label>
+    <div class="accordion-body">
+      <table>
+        <thead>
+          <tr>
+	    <th>Quantity</th>
+            <th>total_wealth_percentage</th>
+	    <th>Gross Primary Enroll</th>
+	    <th>Gross Tertiary Enroll</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for row in query_4 %}
+          <tr>
+            <td>{{ row.quantity }}</td>
+	    <td>{{ row.total_wealth_perc }}</td>
+	    <td>{{ row.grs_prm_enroll }}</td>
+	    <td>{{ row.grs_trt_enroll }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <input type="radio" id="query5" name="accordion" class="accordion-toggle" />
+    <label for="query5" class="accordion-header">Percentage of billionaires relative to their own countries’ population, ordered alphabetically by the countries, in scientific notation</label>
+    <div class="accordion-body">
+      <table>
+        <thead>
+          <tr>
+	    <th>Country</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for row in query_5 %}
+          <tr>
+            <td>{{ row.name }}</td>
+	    <td>{{ row.ratio }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <input type="radio" id="query6" name="accordion" class="accordion-toggle" />
+    <label for="query6" class="accordion-header">Amount of billionaires whose age surpasses the life expectancy in their residence country and whose industry involves dangerous labour</label>
+    <div class="accordion-body">
+      <table>
+        <thead>
+          <tr>
+	    <th>Industry</th>
+            <th>Quantity</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for row in query_6 %}
+          <tr>
+            <td>{{ row.industry }}</td>
+	    <td>{{ row.quantity }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <input type="radio" id="query7" name="accordion" class="accordion-toggle" />
+    <label for="query7" class="accordion-header">Most popular industries and their total wealth, for each region in the United States</label>
+    <div class="accordion-body">
+      <table>
+        <thead>
+          <tr>
+	    <th>Region</th>
+            <th>Industry</th>
+	    <th>Quantity</th>
+	    <th>Total Wealth</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for row in query_7 %}
+          <tr>
+            <td>{{ row.region }}</td>
+	    <td>{{ row.industry }}</td>
+	    <td>{{ row.quantity }}</td>
+	    <td>${{ row.total_wealth }}M</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <input type="radio" id="query8" name="accordion" class="accordion-toggle" />
+    <label for="query8" class="accordion-header">For each tax rate value, include at most the 5 wealthiest billionaires and order by said tax rate</label>
+    <div class="accordion-body">
+      <table>
+        <thead>
+          <tr>
+	    <th>Name</th>
+            <th>Wealth</th>
+	    <th>Country</th>
+	    <th>Tax Rate</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for row in query_8 %}
+          <tr>
+            <td>{{ row.first_name ~ " " ~ row.last_name }}</td>
+	    <td>{{ row.wealth_millions }}</td>
+	    <td>{{ row.name }}</td>
+	    <td>{{ row.tax_rate }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <input type="radio" id="query9" name="accordion" class="accordion-toggle" />
+    <label for="query9" class="accordion-header">The amount of money each member of the population of a country would get if the wealth of every billionaire in that country were distributed evenly to the entire population</label>
+    <div class="accordion-body">
+      <table>
+        <thead>
+          <tr>
+	    <th>Name</th>
+            <th>Money per person</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for row in query_9 %}
+          <tr>
+            <td>{{ row.name }}</td>
+	    <td>${{ row.wealth }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <input type="radio" id="query10" name="accordion" class="accordion-toggle" />
+    <label for="query10" class="accordion-header">The amount of billionaires and total wealth of each source, for each country, ordered first by the amount of billionaires and second the total wealth</label>
+    <div class="accordion-body">
+      <table>
+        <thead>
+          <tr>
+	    <th>Country</th>
+            <th>Source</th>
+	    <th>Total money</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for row in query_10 %}
+          <tr>
+            <td>{{ row.name }}</td>
+	    <td>{{ row.source }}</td>
+	    <td>${{ row.best_total }}M</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <input type="radio" id="query11" name="accordion" class="accordion-toggle" />
+    <label for="query11" class="accordion-header">Amount of billionaires per country of residence-citizenship pair</label>
+    <div class="accordion-body">
+      <table>
+        <thead>
+          <tr>
+	    <th>Origin Country</th>
+            <th>Destination Country</th>
+	    <th>Total Billionaires</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for row in query_11 %}
+          <tr>
+            <td>{{ row.Origin_Country }}</td>
+	    <td>{{ row.Destination_Country }}</td>
+	    <td>{{ row.Total_Billionaires }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <input type="radio" id="query12" name="accordion" class="accordion-toggle" />
+    <label for="query12" class="accordion-header">Young billionaires, such that their age is less than 45 years, in unpopular industries, such that the number of billionaires per industry is less or equal than 50</label>
+    <div class="accordion-body">
+      <table>
+        <thead>
+          <tr>
+	    <th>Name</th>
+            <th>Industry</th>
+	    <th>NUMBER OF BILLIONAIRES</th>
+	    <th>Wealth</th>
+	    <th>Age</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for row in query_12 %}
+          <tr>
+            <td>{{ row.First_name ~ " " ~ row.Last_name }}</td>
+	    <td>{{ row.Industry }}</td>
+	    <td>{{ row.Total_Billionaires }}</td>
+	    <td>{{ row.Wealth_in_Millions }}</td>
+	    <td>{{ row.Age }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+   <div class="accordion-item">
+    <input type="radio" id="query13" name="accordion" class="accordion-toggle" />
+    <label for="query13" class="accordion-header">The average of GDP of countries with billionaires, in proportion to population, for each continent</label>
+    <div class="accordion-body">
+      <table>
+        <thead>
+          <tr>
+	    <th>Continent</th>
+            <th>Relative GDP</th>
+	    <th>Percentage</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for row in query_13 %}
+          <tr>
+            <td>{{ row.continent }}</td>
+	    <td>{{ row.Relative_Gdp }}</td>
+	    <td>{{ row.percentage }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>  
+</div>
+{% endblock %}
