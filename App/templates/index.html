@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="hero">
+  <h1>Welcome to the life of Billions!</h1>
+  <p>Explore the wealth and life of some of the known world's most influential people.</p>
+</div>
+
+<div class="top-50">
+  <p class="intro">Top 50 Wealthiest Billionaires</p>
+  <table>
+    <thead>
+      <tr>
+	<th>Rank</th>
+        <th>Name</th>
+        <th>Wealth</th>
+        <th>Source</th>
+	<th>Country</th>
+	<th>Nationality</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in data %}
+      <tr>
+	<td>{{ row.rank }}</td>
+        <td><a href="{{ url_for('billionaire_info', id=row.personId) }}">{{ row.first_name ~ " " ~ row.last_name ~ " " ~ row.name_suffix }}</a></td>
+        <td>${{ row.wealth }}M</td>
+        <td>{{ row.source }}</td>
+	<td>{{ row.country }}</td>
+	<td>{{ row.nationality }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}
