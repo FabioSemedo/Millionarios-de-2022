@@ -1,0 +1,13 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Billionaires Database</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <section class="content">
+      {% include 'nav-bar.html' %}
+      {% block content %}{% endblock %}
+    </section>
+  </body> 
+</html>

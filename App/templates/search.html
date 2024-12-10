@@ -1,0 +1,171 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="search-container">
+  <form method="POST" action="{{ url_for('search')}}" class="search-form">
+    <div class="filter-category order-by-container">
+      <label for="order_by" class="order-by-label"><strong>Order By:</strong></label>
+      <select name="order_by" id="order_by" class="order-by-dropdown">
+        <option value="wealth_desc" {% if request.form.get('order_by') == 'wealth_desc' %}selected{% endif %}>Wealth (Highest to Lowest)</option>
+        <option value="wealth_asc" {% if request.form.get('order_by') == 'wealth_asc' %}selected{% endif %}>Wealth (Lowest to Highest)</option>
+        <option value="name_asc" {% if request.form.get('order_by') == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
+        <option value="name_desc" {% if request.form.get('order_by') == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
+        <option value="age_asc" {% if request.form.get('order_by') == 'age_asc' %}selected{% endif %}>Age (Youngest to Oldest)</option>
+        <option value="age_desc" {% if request.form.get('order_by') == 'age_desc' %}selected{% endif %}>Age (Oldest to Youngest)</option>
+        <option value="country_asc" {% if request.form.get('order_by') == 'country_asc' %}selected{% endif %}>Country (A-Z)</option>
+      </select>
+    </div>
+    <h1>Name</h1>
+    <input type="text" id="name" name="name" placeholder="e.g. Maria Fernanda Amorim" value="{{ request.form.get('name', '') }}">
+    <h1>Country</h1>
+    <div class="filter-category">
+      <div class="checkbox-container">
+	{% for option in country %}
+	<label>
+	  <input type="checkbox" name="country_filter[]" value="{{ option.countryID }}">
+	  {{ option.name }}
+	</label>
+	{% endfor %}
+      </div>      
+    </div>
+    <h1>Industry</h1>
+    <div class="filter-category">
+       <div class="checkbox-container">
+	{% for option in industry %}
+	<label>
+	  <input type="checkbox" name="industry_filter[]" value="{{ option.industry }}">
+	  {{ option.industry }}
+	</label>
+	{% endfor %}
+      </div>  
+    </div>
+    <h1>Wealth (millions $)</h1>
+    <div class="filter-category">
+      <div class="row">
+	<div class="column">
+	  <input type="number" id="min_money" name="min_money" placeholder="Min" step="0.01" value="{{ request.form.get('min_money', '') }}">
+	</div>
+	<span style="vertical-align: middle; font-size: 24px; margin-top: 10px;">-</span>
+	<div class="column">
+	  <input type="number" id="max_money" name="max_money" placeholder="Max" step="0.01" value="{{ request.form.get('max_money', '') }}">
+	</div>
+      </div>
+    </div>
+    <h1>Source</h1>
+    <div class="filter-category">
+       <div class="checkbox-container">
+	{% for option in source %}
+	<label>
+	  <input type="checkbox" name="source_filter[]" value="{{ option.sourceID }}">
+	  {{ option.source }}
+	</label>
+	{% endfor %}
+      </div> 
+    </div>
+    <h1>Gender</h1>
+    <div class="filter-category">
+       <div class="checkbox-container">
+	{% for option in gender %}
+	<label>
+	  <input type="checkbox" name="gender_filter[]" value="{{ option.gender }}">
+	  {% if option.gender == 'M' %}
+          Male
+          {% elif option.gender == 'F' %}
+          Female
+          {% else %}
+          Other
+          {% endif %}
+	</label>
+	{% endfor %}
+      </div> 
+    </div>
+    <h1>Age</h1>
+    <div class="filter-category">
+      <div class="row">
+	<div class="column">
+	  <input type="number" id="min_age" name="min_age" placeholder="Min" step="1" value="{{ request.form.get('min_age', '') }}">
+	</div>
+	<span style="vertical-align: middle; font-size: 24px; margin-top: 10px;">-</span>
+	<div class="column">
+	  <input type="number" id="max_age" name="max_age" placeholder="Max" step="0.01" value="{{ request.form.get('max_age', '') }}">
+	</div>
+      </div>
+    </div>
+    <h1>City</h1>
+    <div class="filter-category">
+      <div class="checkbox-container">
+	{% for option in city %}
+	<label>
+	  <input type="checkbox" name="city_filter[]" value="{{ option.cityID }}">
+	  {{ option.name }}
+	</label>
+	{% endfor %}
+      </div> 
+    </div>
+    <h1>State</h1>
+    <div class="filter-category">
+      <div class="checkbox-container">
+	{% for option in state %}
+	<label>
+	  <input type="checkbox" name="state_filter[]" value="{{ option.stateID }}">
+	  {{ option.state }}
+	</label>
+	{% endfor %}
+      </div> 
+    </div>
+    <h1>Region</h1>
+    <div class="filter-category">
+      <div class="checkbox-container">
+	{% for option in region %}
+	<label>
+	  <input type="checkbox" name="region_filter[]" value="{{ option.region }}">
+	  {{ option.region }}
+	</label>
+	{% endfor %}
+      </div> 
+    </div>
+     <h1>Continent</h1>
+    <div class="filter-category">
+      <div class="checkbox-container">
+	{% for option in continent %}
+	{% if loop.index != 7 %}
+	<label>
+	  <input type="checkbox" name="continent_filter[]" value="{{ option.continent }}">
+	    {{ option.continent }}
+	</label>
+	{% endif %}
+	{% endfor %}
+      </div> 
+    </div>
+    <button class="fixed-button" type="submit">Filter</button>
+  </form>
+  <div class="filtered-table">
+   <div class="row-count">
+    <p>Showing <strong>{{ data|length }}</strong> results</p> <!-- Display number of rows -->
+  </div>
+    <table>
+        <thead>
+          <tr>
+	        <th>Rank</th>
+                <th>Name</th>
+                <th>Wealth</th>
+                <th>Source</th>
+		<th>Country</th>
+		<th>Nationality</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in data %}
+            <tr>
+	      <td>{{ row.rank }}</td>
+                    <td><a href="{{ url_for('billionaire_info', id=row.personId) }}">{{ row.first_name ~ " " ~ row.last_name ~ " " ~ row.name_suffix }}</a></td>
+                    <td>${{ row.wealth }}M</td>
+                    <td>{{ row.source }}</td>
+	      <td>{{ row.country }}</td>
+	      <td>{{ row.nationality }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+  </div>  
+</div>
+{% endblock %}

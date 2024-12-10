@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="search-container">
+  <form method="POST" action="{{ url_for('billionaires')}}" class="search-form">
+    <h1>Name</h1>
+    <input type="text" id="name" name="name" placeholder="e.g. Maria Fernanda Amorim" value="{{ request.form.get('name', '') }}">
+    <h1>Age</h1>
+    <div class="row">
+      <div class="column">
+	<input type="number" id="min_age" name="min_age" placeholder="Min"  value="{{ request.form.get('min_age', '') }}">
+      </div>
+      <div class="column">
+	<input type="number" id="max_age" name="max_age" placeholder="Max"  value="{{ request.form.get('max_age', '') }}">
+      </div>
+    </div>
+    <h1>Wealth (millions $)</h1>
+    <div class="row">
+      <div class="column">
+	<input type="number" id="min_money" name="min_money" placeholder="Min" step="0.01" value="{{ request.form.get('min_money', '') }}">
+      </div>
+      <div class="column">
+	<input type="number" id="max_money" name="max_money" placeholder="Max"  step="0.01" value="{{ request.form.get('max_money', '') }}">
+      </div>
+    </div>
+     
+    <h1>Gender</h1>
+    <select id="gender" name="gender">
+      <option value="" {% if request.form.get('gender') == '' %}selected{% endif %}>All</option>
+      <option value="F" {% if request.form.get('gender') == 'F' %}selected{% endif %}>Female</option>
+      <option value="M" {% if request.form.get('gender') == 'M' %}selected{% endif %}>Male</option>
+    </select>
+    
+    <button type="submit">Filter</button>
+  </form>
+
+  <div class="filtered-table">
+    <div class="filtered-table">
+   <div class="row-count">
+    <p>Showing <strong>{{ billionaires|length }}</strong> results</p>
+  </div>
+    <ul class="filtered-list">
+      {% for billionaire in billionaires %}
+      <li class="filtered-item">
+	<a href="/billionaires/{{ billionaire.personId }}" class="table-link">
+	  {{ billionaire.first_name ~ " " ~ billionaire.last_name ~ " " ~ billionaire.name_suffix}}
+	</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+{% endblock %}
